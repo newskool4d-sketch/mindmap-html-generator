@@ -1,0 +1,7 @@
+interface:
+  display_name: "마인드맵 HTML 생성기"
+  short_description: "데스크톱 우선 시각형 HTML 마인드맵 생성기"
+  default_prompt: "Use $mindmap-html-generator. 데스크톱과 태블릿을 우선으로 보는 수업용 HTML 마인드맵을 만들어라. 맑은 고딕 계열 글꼴, 명확한 위계, 안전한 노드 간격, 모바일 대응까지 포함하되 애니메이션과 퀴즈 요소는 반드시 사용자 확인 후에만 추가하라."
+version: 1
+policy:
+  allow_implicit_invocation: true
