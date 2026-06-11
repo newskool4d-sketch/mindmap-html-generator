@@ -1,84 +1,77 @@
 ---
 name: mindmap-html-generator
-description: Use when the user asks in Korean for a 마인드맵, 개념도, 가지형 정리, 수업용 개념 시각화, 발표용 마인드맵, or HTML/CSS/JS mind map. Create Korean HTML mind maps optimized first for laptop and desktop viewing while still remaining readable on mobile, with Malgun Gothic typography, safe node spacing, and an explicit confirmation step before adding animation or quiz features.
-metadata:
-  short-description: 데스크톱 우선 한국어 HTML 마인드맵 생성기
+description: |
+  한국어 HTML 마인드맵 생성 스킬. JSON 스펙 → 자동 빌드 스크립트, 13개 교과 테마,
+  교과용·발표용·퀴즈형 모드, 데스크톱 우선 레이아웃, 맑은고딕 타이포그래피 지원.
+  사용자가 "마인드맵 만들어줘", "개념도 그려줘", "가지형으로 정리해줘",
+  "수업용 개념 시각화", "발표용 마인드맵", "퀴즈 마인드맵", "HTML 마인드맵",
+  "인터랙티브 마인드맵", "mind map", "concept map", "체험학습 개념도",
+  "수업 정리 마인드맵" 등을 언급하면 이 스킬을 사용할 것.
+  주제를 시각적으로 구조화하거나 브랜치 형태로 정리해달라는 요청이면
+  스킬 이름을 언급하지 않더라도 이 스킬을 사용할 것.
 ---
 
 # Mindmap HTML Generator
 
-Use this skill when the user asks for any of the following in Korean or mixed Korean/English:
+중심 주제 + 좌우 브랜치 노드 + 연결선으로 구성된 단일 HTML 파일을 생성한다.
+데스크톱 우선, 모바일은 세로 나열 폴백. 인쇄 시 전체 펼침 레이아웃 내장.
 
-- `마인드맵 만들어줘`
-- `개념도 그려줘`
-- `가지형으로 정리해줘`
-- `중심 주제에서 뻗는 형태로 만들어줘`
-- `수업용 개념 시각화`
-- `발표용 마인드맵`
-- `html 마인드맵`
-- `인터랙티브 마인드맵`
+번들 파일 (필요할 때만 읽을 것):
 
-Also trigger it for English or mixed requests such as:
+- [scripts/build_mindmap.py](scripts/build_mindmap.py) — JSON 스펙 → HTML 자동 생성 (권장 경로)
+- [assets/base-mindmap-template.html](assets/base-mindmap-template.html) — 수동 편집용 템플릿
+- [references/output-modes.md](references/output-modes.md) — 모드별 스펙 (교과용·발표용·퀴즈형)
+- [references/subject-themes.md](references/subject-themes.md) — 교과별 아이콘 추천 목록
 
-- `mind map`
-- `concept map`
-- `interactive HTML mind map`
-- `branching topic summary`
+## Workflow
 
-Read these bundled files only when needed:
+1. 주제·교과·대상 수준 파악 — 대상 수준은 불릿의 어휘 난이도와 내용 깊이에 반영
+2. 교과 테마 결정 (아래 감지 표) — 명시되면 그대로, 키워드 매칭되면 추론, 불가하면 기본 테마
+3. 모드 결정 — 기본 `교과용`. 선택 기준은 [references/output-modes.md](references/output-modes.md)
+4. 코딩 전에 브랜치 구조(제목·불릿) 초안 작성
+5. JSON 스펙 작성 → `python scripts/build_mindmap.py spec.json -o 출력폴더` 실행 (권장).
+   빌더를 쓸 수 없는 경우에만 템플릿을 직접 복사·편집
+6. 품질 체크리스트 검증 (아래)
 
-- For a reusable starter file, use [assets/base-mindmap-template.html](assets/base-mindmap-template.html)
-- For choosing an output style, use [references/output-modes.md](references/output-modes.md)
+파일명 규칙: `주제_모드.html` (예: `광합성_교과용.html`) — 빌더가 자동 적용.
 
-## What this skill produces
+## 자동 생성 (권장)
 
-- A standalone HTML file by default
-- A central-topic mind map with branch nodes connected by visible lines
-- A layout optimized first for laptop and desktop screens
-- A secondary responsive layout that remains readable on mobile
-- Korean text styled with `Malgun Gothic` first
-- Click-to-expand branch content when interaction is helpful
+JSON 스펙을 UTF-8로 저장 후 빌더 실행. 스펙 형식 전체는 `build_mindmap.py` 상단 docstring 참조.
 
-## Required defaults
+```json
+{
+  "title": "광합성", "description": "한 줄 설명", "subject": "과학", "mode": "교과용",
+  "center": {"title": "광합성", "text": "중심 보조 설명"},
+  "branches": [
+    {"title": "개념", "sub": "부제", "icon": "bi-atom", "details": ["불릿 1", "불릿 2"]},
+    {"title": "과정", "details": ["..."]}
+  ]
+}
+```
 
-Apply these unless the user explicitly asks otherwise.
+퀴즈는 **사용자 승인 후에만** 브랜치에 `"quiz": {"q": "질문", "a": "정답"}` 키를 추가
+(미승인 상태에서 spec에 quiz 키를 넣지 말 것).
 
-- Use `font-family: "Malgun Gothic", "맑은 고딕", sans-serif;`
-- Use bold weight for major labels and titles
-- Differentiate sizes by importance:
-  - page title: largest
-  - central topic: second largest
-  - branch titles: medium
-  - detail bullets: smallest
-- Use calm, low-saturation colors that are easy on the eyes
-- Keep strong contrast between text and background
-- Prevent overlap between nodes, labels, connector lines, and expanded content
-- Design for desktop first, then add mobile-safe fallback behavior
-- Ensure bottom branches and expanded panels are not clipped by the container
-- Keep connector lines visually attached to the related nodes without awkward gaps
-- Prefer computed connector lines based on actual node positions instead of hard-coded SVG coordinates
-- Do not let Korean words or short phrase units break awkwardly in the middle of a line
-- Prefer line wrapping that moves the next whole word or phrase unit to the next line instead of splitting it
+빌더가 자동 처리하는 것: 좌/우 배분(미지정 시 교대, 홀수면 왼쪽 +1), HTML 이스케이프,
+브랜치 수 검증(최대 8), 교과 미지원 시 경고 후 기본 테마, `data-subject` 속성 제거, 파일명 생성.
 
-## Mandatory confirmation rule
+## 필수 확인 규칙 (애니메이션·퀴즈)
 
-Before adding either of the following, ask the user in plain Korean first:
+다음을 추가하기 전에 반드시 한국어로 먼저 물을 것:
 
-- animation
-- quiz elements
+- 애니메이션 (staged reveal, 자동 재생, 모션 효과)
+- 퀴즈 요소
 
-Use a short direct question such as:
+질문 예: `애니메이션도 넣을까요?` / `퀴즈 요소도 함께 넣을까요?`
+명시적 승인이 없으면 추가하지 않는다. 사용자에게 물을 수 없는 상황이면 미승인으로 간주.
 
-- `애니메이션도 넣을까요?`
-- `퀴즈 요소도 함께 넣을까요?`
+**승인이 필요 없는 것**: 템플릿에 내장된 클릭 expand/collapse와 그 0.35s 트랜지션은
+기본 동작이며 애니메이션으로 간주하지 않는다.
 
-If the user has not explicitly approved them, do not add them.
+## 교과 테마 (data-subject)
 
-## Subject parameter (교과 테마)
-
-When a subject is known, set `data-subject` on `<html>` and apply the matching theme.
-
-Supported values and detection:
+`data-subject`는 반드시 `<html>` 태그에 설정 (다른 요소에 달면 테마 깨짐 — 이유는 subject-themes.md).
 
 | `data-subject` | 감지 키워드 |
 |----------------|------------|
@@ -92,176 +85,89 @@ Supported values and detection:
 | `체육` | 체육, 스포츠, 건강, 운동 |
 | `역사` | 역사, 한국사, 세계사, 근현대사 |
 | `도덕` | 도덕, 윤리, 인성, 가치관 |
+| `정보` | 정보, 인공지능, AI, 데이터, 코딩, SW, 소프트웨어, 컴퓨터, 디지털 |
+| `실과` | 실과, 기술가정, 기술·가정, 가정, 요리, 의생활, 식생활 |
+| `진로` | 진로, 직업, 자기이해, 진학, 커리어 |
 
-Rules:
-- When subject is explicitly provided by the user or parent skill, use it directly.
-- When subject is not provided but the topic contains one of the detection keywords, infer the subject.
-- When subject cannot be determined, omit `data-subject` and use the default green theme.
-- Do not ask the user to confirm the inferred subject — apply silently and mention it in one line at the end.
+규칙:
 
-Bootstrap Icons usage:
-- The template already loads Bootstrap Icons CDN.
-- In branch `node-title`, replace the text label with an icon + label pattern when a relevant icon exists.
-- Use `<i class="bi bi-{icon-name}"></i>` inline before the label text.
-- Icon recommendations per subject: see [references/subject-themes.md](references/subject-themes.md)
-- Keep icons small and consistent — do not resize or recolor icons individually.
-- If no suitable icon exists for a branch, omit the icon rather than using a generic one.
+- 추론한 교과는 사용자에게 확인하지 말고 조용히 적용 — 마지막에 한 줄로만 언급
+  (기본 테마를 쓴 경우에도 동일하게 한 줄 언급)
+- 교과 판단 불가 시 `data-subject` 속성 자체를 삭제하고 기본 그린 테마 사용
+  (빈 문자열 `data-subject=""`로 남기지 말 것)
 
-Branch icon pattern (with Bootstrap Icons):
+아이콘: 템플릿이 Bootstrap Icons CDN을 로드함. 브랜치 제목 라벨 **앞에** `<i class="bi bi-{name}"></i>`를
+추가 (라벨 텍스트를 대체하는 것이 아님). 교과별 추천은 subject-themes.md.
+의미가 맞는 아이콘이 없으면 생략 — 억지로 끼워 넣지 않는다. 오프라인 환경에서는
+CDN 실패 시 아이콘만 빈칸 처리되고 레이아웃은 유지됨.
 
-```html
-<div class="node-title">
-  <span><i class="bi bi-book"></i> 개념 정의</span>
-  <span class="icon">+</span>
-</div>
-```
+## 브랜치 구조
 
-## Output workflow
+- 기본 3~5개 권장, 최대 8개. 6개는 동급 카테고리가 여럿일 때, 7~8개는 압축하면 중요한
+  구분이 사라질 때만. 8개를 넘기지 말고 인접 개념을 통합할 것
+- 좌/우 배분: 교대 배치, 홀수면 왼쪽에 1개 더 (빌더 자동 처리)
+- 학교 개념도의 기본 버킷: 의미/정의 → 중요성/목적 → 핵심 분류 → 규칙/한계 → 예시/적용 → 핵심 정리
+- 브랜치 라벨은 짧게, 불릿은 가급적 한 줄, 브랜치 제목에 번호(`1.`)는 붙이지 않음
 
-1. Identify the learning topic, subject, and target audience level.
-2. Determine subject theme from explicit input or keyword inference.
-3. Draft the branch structure before coding.
-4. Choose the interaction level:
-   - static mind map
-   - clickable expand/collapse
-   - animated or quiz-enhanced only after approval
-   - when the user wants a mode, select from `교과용`, `발표용`, `퀴즈형`
-4. Build responsive HTML with embedded CSS and small JS only when needed.
-5. Verify that the desktop layout has no collisions.
-6. Verify that the mobile layout remains readable and tap-friendly.
-7. Verify that expanded lower nodes are fully visible and not cut off at the bottom.
-8. Recompute connector lines from the current node positions whenever the layout changes.
+## 수동 편집 시 참고 (빌더 미사용)
 
-## Branch structure guidance
+템플릿 플레이스홀더:
 
-Prefer 3 to 5 main branches by default.
-Allow up to 8 branches when the topic genuinely needs finer separation.
+| 플레이스홀더 | 내용 |
+|--------------|------|
+| `{{TITLE}}` | 페이지 제목 (h1과 `<title>` 공용) |
+| `{{DESCRIPTION}}` | 제목 아래 한 줄 설명 |
+| `{{SUBJECT}}` | 교과명 — 미정 시 속성 전체 삭제 |
+| `{{MODE}}` | `교과용` / `발표용` / `퀴즈형` |
+| `{{CENTER_TITLE}}` / `{{CENTER_TEXT}}` | 중앙 원의 제목 / 보조 설명 |
+| `{{BRANCHES}}` | 브랜치 노드 마크업 (아래 패턴) |
+| `{{HINT}}` | 하단 안내 (기본: "각 가지 카드를 클릭하면 자세한 내용이 열립니다.") |
 
-For school-oriented concept maps, good default buckets are:
-
-- meaning or definition
-- importance or purpose
-- core categories
-- rules or limits
-- examples or applications
-- summary or key takeaway
-
-Keep branch labels short. Keep detailed bullets to one line when possible.
-
-When the user does not choose a mode, default to `교과용`.
-
-Branch count guidance:
-
-- 3 to 5 branches: default and recommended for most outputs
-- 6 branches: acceptable when the topic has several equally important categories
-- 7 to 8 branches: allowed, but keep each branch concise and only use them when compression would hide important distinctions
-- if the source material is too dense, combine adjacent ideas before exceeding 8 branches
-
-## Layout rules
-
-Desktop and laptop are the primary target:
-
-- Place the main topic in the center
-- Distribute branches to left and right or radially
-- Draw connector lines behind the nodes
-- Align connector endpoints so the lines appear attached to the node edges
-- Use JS to measure the center node and branch nodes, then draw connector lines from those measured positions
-- Give each node enough width and padding to avoid cramped text
-- Keep expanded content from colliding with nearby nodes
-- Prefer a fixed scenic layout over a narrow mobile-first stack
-- Reserve enough bottom space for expanded lower branches
-- Increase container height or reposition lower nodes when expanded content risks being clipped
-- Use text wrapping rules that avoid mid-word breaks and keep Korean text visually natural
-
-Mobile is a fallback view:
-
-- Switch to a stacked or simplified layout only at narrower widths
-- Remove or hide connector lines if they reduce clarity
-- Keep tap targets large enough for touch use
-- Preserve reading order from top to bottom
-
-If the user explicitly asks for a sample output, create a full HTML file from the base template and adapt it to the topic instead of replying with abstract guidance only.
-
-## Styling rules
-
-- Prefer soft greens, beige, muted blue, warm gray, or other low-fatigue tones
-- Avoid neon, overly saturated colors, and heavy dark themes unless asked
-- Use rounded cards and soft shadows sparingly
-- Keep the center node visually distinct from branch nodes
-- Apply CSS such as `word-break: keep-all;` and `overflow-wrap: normal;` to text containers unless the user explicitly needs a different rule
-
-## Interaction rules
-
-Default interactive behavior:
-
-- branch click toggles detail content
-
-Keep JS minimal and readable.
-
-Preferred connector strategy:
-
-- add a `data-connect` attribute to each branch node
-- measure the center node and each branch node with `getBoundingClientRect()`
-- convert the measured positions into map-local coordinates
-- draw or redraw SVG paths after load and on resize
-- recalculate after expand/collapse transitions and element resize events
-- skip decorative connector lines on narrow mobile layouts if they reduce clarity
-
-When filling `{{BRANCHES}}` in the base template, every branch node should include either:
-
-- `data-connect="left"`
-- `data-connect="right"`
-
-Recommended branch markup pattern:
+브랜치 마크업 패턴 — `data-connect="left|right"`는 **좌/우 컬럼 배치용** 속성이다
+(연결선은 중앙 외 모든 `.node`에 자동으로 그려지며 data-connect와 무관):
 
 ```html
 <div class="node branch-1" data-connect="left">
   <button type="button">
     <div class="node-title">
-      <span>1. Branch Title</span>
+      <span><i class="bi bi-book"></i> 브랜치 제목</span>
       <span class="icon">+</span>
     </div>
-    <div class="node-sub">Short subtitle</div>
+    <div class="node-sub">짧은 부제</div>
   </button>
   <div class="content">
-    <ul>
-      <li>Detail point</li>
-      <li>Detail point</li>
-    </ul>
+    <ul><li>불릿</li></ul>
   </div>
 </div>
 ```
 
-Use `branch-1` through `branch-8` for branch color styling.
+`branch-1`~`branch-8` 클래스가 카드 색을 결정. 단일 파일 산출물에서는 사용하지 않는
+`[data-subject]` 테마 블록을 제거해도 된다 (빌더 산출물은 그대로 둠).
 
-Do not add:
+## 스타일·레이아웃 불변 규칙
 
-- drag-and-drop
-- physics-based motion
-- autoplaying animation
-- timed quiz flows
+- `font-family: "Malgun Gothic", "맑은 고딕", sans-serif` / 주요 라벨 bold
+- 글자 크기 위계: 페이지 제목 > 중앙 주제 > 브랜치 제목 > 불릿
+- 저채도·저피로 색상 (네온·과채도·다크 테마는 요청 시에만), 텍스트 대비 확보
+- `word-break: keep-all; overflow-wrap: normal;` — body에 일괄 적용되어 있음 (한글 단어 중간 줄바꿈 방지)
+- 연결선은 실제 노드 위치에서 계산 (하드코딩 금지) — 템플릿 JS가 리사이즈·펼침 시 자동 재계산
+- 드래그앤드롭, 물리 모션, 자동재생 애니메이션, 타이머 퀴즈는 명시 요청 + 승인 없이는 금지
 
-unless the user explicitly asks and confirms.
+## 품질 체크리스트
 
-## File handling
+완료 전 전부 확인:
 
-When the user wants the result saved locally, create a standalone `.html` file in the requested folder.
+- [ ] 교과 테마 적용(또는 기본 테마) + 마지막에 한 줄 언급
+- [ ] 모드가 `data-mode`에 반영됨
+- [ ] 주제·위계(중앙 > 브랜치)가 정확
+- [ ] 데스크톱 노드 겹침 없음 / 하단 노드 잘림 없음 / 연결선이 노드에 접함
+- [ ] 한글 단어 중간 줄바꿈 없음 / 모바일 가독성 유지
+- [ ] 애니메이션·퀴즈는 승인 후에만 추가됨
 
-Use the `Write` tool to create new files and the `Edit` tool for modifications.
+검증 방법: 가능하면 chrome-devtools로 파일을 열어 데스크톱(1440px)·모바일(390px) 렌더링을
+직접 확인. 브라우저 검증이 불가한 환경이면 코드 검토로 확인하되, 결과 보고 시
+"렌더링 미검증"을 명시할 것.
 
-## Quality checklist
-
-Before finishing, confirm all of the following:
-
-- subject theme applied (or default used) and noted in one line
-- topic is reflected correctly
-- central and branch hierarchy is clear
-- text uses `Malgun Gothic` first
-- title and importance levels have different font sizes
-- desktop nodes do not overlap
-- connector lines visually meet the related nodes and do not float apart from them
-- connector lines are computed from current node positions, not frozen to outdated manual coordinates
-- lower expanded nodes are not clipped by the canvas or outer container
-- line wrapping does not split Korean words or short phrase units awkwardly in the middle
-- mobile view is still readable
-- animation and quiz features were only added after explicit approval
+코드 검토 시 주의: `data-connect` 문자열은 템플릿 내장 JS의 querySelector에도 2회 등장하므로,
+브랜치 수는 `<div class="node branch-` 패턴으로 셀 것. 템플릿의 `requestAnimationFrame`은
+연결선 재계산용 내장 코드이며 "자동재생 애니메이션"에 해당하지 않음.

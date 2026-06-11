@@ -1,60 +1,56 @@
 # Output Modes
 
-Use one of these modes when the user wants a recognizable style.
+세 가지 모드는 모두 같은 템플릿을 사용하며, `<html>`의 `data-mode` 속성으로 전환된다.
+빌더(`scripts/build_mindmap.py`)의 JSON 스펙에 `"mode"` 키로 지정하면 자동 적용됨.
 
-## 교과용
+| 모드 | `data-mode` 값 | 선택 기준 |
+|------|---------------|----------|
+| 교과용 | `교과용` (기본) | 사용자가 모드를 말하지 않으면 항상 이것 |
+| 발표용 | `발표용` | 화면 공유·교실 발표 등 시각 강조를 원할 때 |
+| 퀴즈형 | `퀴즈형` | 사용자가 퀴즈 요소를 명시적으로 승인했을 때만 |
 
-Default mode for school content.
+## 교과용 (기본)
 
-- calm colors
-- clear branch hierarchy
-- short branch labels
-- easy-to-read bullets
-- minimal interaction
-- no animation unless approved
-- no quiz unless approved
+수업 자료, 개념 정리, 학생용 복습 자료.
 
-Best for:
-
-- 수업 자료
-- 개념 정리
-- 교과서 기반 내용
-- 학생용 복습 자료
+- 차분한 색, 명확한 위계, 짧은 라벨, 읽기 쉬운 불릿
+- 클릭 expand/collapse만 (애니메이션·퀴즈는 승인 전 금지)
+- 템플릿 기본값 그대로 — 별도 조정 불필요
 
 ## 발표용
 
-Use when the user wants stronger visual emphasis for screen presentation.
+교실 발표, 연수 발표, 화면 공유. `data-mode="발표용"` 설정만으로 아래 정량 스펙이 CSS·JS에서 자동 적용된다 (수치를 직접 수정하지 말 것):
 
-- larger title and center node
-- slightly stronger contrast
-- more whitespace between branches
-- optional staged reveal only after approval
-- keep text volume lower than 교과용
+| 항목 | 교과용 | 발표용 |
+|------|--------|--------|
+| 페이지 제목 h1 | 34px | 42px |
+| 중앙 원 | 320px | 380px |
+| 중앙 제목 h2 | 38px | 46px |
+| 브랜치 노드 너비 | 260px | 280px |
+| 브랜치 제목 | 21px | 23px |
+| 세로 간격(middleGap) | 54px | 80px |
+| 본문 텍스트 색 | #24322d | #1c2925 (대비 강화) |
 
-Best for:
+콘텐츠 작성 규칙:
 
-- 교실 발표
-- 연수 발표
-- 설명용 화면 공유
+- 브랜치당 불릿 **최대 3개**, 각 불릿 한 줄
+- staged reveal(단계 공개)은 애니메이션이므로 승인 후에만
 
 ## 퀴즈형
 
-Use only when the user explicitly wants quiz behavior and has approved quiz elements first.
+복습 활동, 자기 점검, 수업 마무리 확인. **사용자가 퀴즈 요소를 명시적으로 승인한 경우에만 사용.**
 
-- preserve the same mind map structure
-- add a small question area, answer reveal, or branch-based check prompts
-- keep quiz interactions simple and readable
-- do not add timers, scoring systems, or game effects unless specifically requested
+- 마인드맵 구조는 그대로 유지
+- 브랜치 `content` 안에 퀴즈 블록 추가 — 템플릿에 CSS·JS 내장:
 
-Best for:
+```html
+<div class="quiz">
+  <p class="quiz-q"><i class="bi bi-question-circle"></i> 질문 텍스트</p>
+  <button type="button" class="quiz-toggle">정답 보기</button>
+  <p class="quiz-a hidden">정답 텍스트</p>
+</div>
+```
 
-- 복습 활동
-- 자기 점검
-- 수업 마무리 확인
-
-## Selection rule
-
-- If the user says nothing, choose `교과용`
-- If the user emphasizes visual presentation, choose `발표용`
-- If the user wants check questions or participation prompts, ask whether they want quiz elements and only then use `퀴즈형`
-
+- 빌더 사용 시: 브랜치에 `"quiz": {"q": "...", "a": "..."}` 추가하면 위 마크업 자동 생성
+- 모든 브랜치에 퀴즈를 넣을 필요 없음 — 점검 가치가 있는 브랜치에만
+- 타이머·점수 시스템·게임 효과는 별도 요청 없이는 금지

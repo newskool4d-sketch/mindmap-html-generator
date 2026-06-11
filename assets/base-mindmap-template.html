@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko" data-subject="{{SUBJECT}}">
+<html lang="ko" data-subject="{{SUBJECT}}" data-mode="{{MODE}}">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -62,8 +62,6 @@
       line-height: 1.65;
       font-size: 16px;
       font-weight: 700;
-      word-break: keep-all;
-      overflow-wrap: normal;
     }
 
     .map {
@@ -113,6 +111,12 @@
       cursor: pointer;
     }
 
+    .node button:focus-visible {
+      outline: 3px solid var(--center2);
+      outline-offset: -3px;
+      border-radius: 24px;
+    }
+
     .node-title {
       display: flex;
       justify-content: space-between;
@@ -128,8 +132,6 @@
       font-size: 15px;
       line-height: 1.5;
       font-weight: 700;
-      word-break: keep-all;
-      overflow-wrap: normal;
     }
 
     .icon {
@@ -163,8 +165,6 @@
       line-height: 1.75;
       font-size: 15px;
       font-weight: 700;
-      word-break: keep-all;
-      overflow-wrap: normal;
     }
 
     .center {
@@ -196,8 +196,6 @@
       line-height: 1.65;
       font-size: 18px;
       font-weight: 700;
-      word-break: keep-all;
-      overflow-wrap: normal;
     }
 
     .branch-1 { background: var(--card1); }
@@ -215,11 +213,65 @@
       margin-top: 16px;
       font-size: 14px;
       font-weight: 700;
-      word-break: keep-all;
-      overflow-wrap: normal;
     }
 
-    /* ── 교과별 테마 ── */
+    /* ── 퀴즈 블록 (퀴즈형 모드에서 브랜치 content 내부에 사용) ── */
+    .quiz {
+      margin-top: 12px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.65);
+    }
+
+    .quiz-q {
+      margin: 0 0 8px;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .quiz-toggle {
+      border: none;
+      border-radius: 999px;
+      padding: 6px 14px;
+      background: var(--center2);
+      color: white;
+      font: inherit;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .quiz-toggle:focus-visible {
+      outline: 3px solid var(--text);
+      outline-offset: 2px;
+    }
+
+    .quiz-a {
+      margin: 10px 0 0;
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--center2);
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    /* ── 모드: 발표용 (큰 글씨·넓은 여백·강한 대비) ── */
+    [data-mode="발표용"] {
+      --text: #1c2925;
+    }
+    [data-mode="발표용"] h1 { font-size: 42px; }
+    [data-mode="발표용"] .desc { font-size: 18px; }
+    [data-mode="발표용"] .center { width: 380px; height: 380px; }
+    [data-mode="발표용"] .center-inner h2 { font-size: 46px; }
+    [data-mode="발표용"] .center-inner p { font-size: 20px; }
+    [data-mode="발표용"] .node { width: 280px; }
+    [data-mode="발표용"] .node-title { font-size: 23px; }
+    [data-mode="발표용"] .node-sub { font-size: 16px; }
+    [data-mode="발표용"] .content ul { font-size: 16px; line-height: 1.8; }
+
+    /* ── 교과별 테마 (html 태그의 data-subject 속성에만 적용) ── */
     [data-subject="국어"] {
       --bg:#fdf7f0; --center1:#c8956c; --center2:#a5714a; --line:#ddb99a;
       --card1:#fce8d8; --card2:#f9dfc8; --card3:#f7e8c0; --card4:#f4f0e0;
@@ -270,6 +322,21 @@
       --card1:#dcf0e4; --card2:#d4ecdc; --card3:#daf0e4; --card4:#e0f4e8;
       --card5:#d8eee0; --card6:#d0e8d8; --card7:#d8f0e0; --card8:#dcf0e4;
     }
+    [data-subject="정보"] {
+      --bg:#eff6f8; --center1:#4f9cad; --center2:#377d8e; --line:#9ac8d4;
+      --card1:#d8ecf2; --card2:#d0e8ee; --card3:#d8f0f4; --card4:#e0f2f6;
+      --card5:#d4ecf0; --card6:#cce4ec; --card7:#d8eef2; --card8:#dcf0f4;
+    }
+    [data-subject="실과"] {
+      --bg:#f5f7ee; --center1:#8ba35c; --center2:#6b8342; --line:#becf9c;
+      --card1:#e8f0d4; --card2:#e0ecc8; --card3:#e8f2d0; --card4:#eef6d8;
+      --card5:#e4eecc; --card6:#dce8c4; --card7:#e6f0d0; --card8:#eaf2d8;
+    }
+    [data-subject="진로"] {
+      --bg:#faf6ec; --center1:#c0a050; --center2:#9c7e34; --line:#dcc890;
+      --card1:#f6ecd0; --card2:#f2e6c4; --card3:#f6eecc; --card4:#f8f0d4;
+      --card5:#f4eac8; --card6:#f0e2bc; --card7:#f4ecca; --card8:#f6f0d4;
+    }
 
     @media (max-width: 1200px) {
       .map {
@@ -291,6 +358,25 @@
         margin-bottom: 16px;
       }
     }
+
+    /* ── 인쇄: 전체 내용 펼침 + 세로 나열 ── */
+    @media print {
+      body { background: white; }
+      .map { box-shadow: none; min-height: auto !important; padding: 0; background: white; }
+      .lines, .icon, .hint, .quiz-toggle { display: none; }
+      .node, .center {
+        position: static;
+        width: 100%;
+        height: auto;
+        transform: none;
+        border-radius: 16px;
+        margin-bottom: 12px;
+        box-shadow: none;
+        break-inside: avoid;
+      }
+      .content { max-height: none !important; padding: 0 18px 18px; }
+      .quiz-a.hidden { display: block; }
+    }
   </style>
 </head>
 <body>
@@ -299,7 +385,7 @@
     <p class="desc">{{DESCRIPTION}}</p>
 
     <div class="map">
-      <svg class="lines" preserveAspectRatio="none"></svg>
+      <svg class="lines" preserveAspectRatio="none" aria-hidden="true"></svg>
 
       <div class="node center">
         <div class="center-inner">
@@ -319,6 +405,7 @@
     const lineSvg = document.querySelector(".lines");
     const centerNode = document.querySelector(".center");
     const nodes = Array.from(document.querySelectorAll(".node:not(.center)"));
+    const mode = document.documentElement.dataset.mode || "교과용";
     let rafId = null;
 
     function syncExpandedHeights() {
@@ -399,8 +486,9 @@
 
       const leftNodes = Array.from(document.querySelectorAll('[data-connect="left"]'));
       const rightNodes = Array.from(document.querySelectorAll('[data-connect="right"]'));
-      const topGap = 90;
-      const middleGap = 54;
+      // 발표용은 여백을 넓혀 화면 공유 시 시인성 확보
+      const topGap = mode === "발표용" ? 100 : 90;
+      const middleGap = mode === "발표용" ? 80 : 54;
       const bottomPadding = 70;
       const leftOffsets = [90, 40, 110, 60];
       const rightOffsets = [90, 40, 110, 60];
@@ -455,9 +543,11 @@
       const icon = node.querySelector(".icon");
       const content = node.querySelector(".content");
 
+      button.setAttribute("aria-expanded", "false");
       button.addEventListener("click", () => {
         const isActive = node.classList.contains("active");
         node.classList.toggle("active");
+        button.setAttribute("aria-expanded", String(!isActive));
         icon.textContent = isActive ? "+" : "−";
         refreshLayout();
       });
@@ -466,6 +556,18 @@
         content.addEventListener("transitionrun", refreshLayout);
         content.addEventListener("transitionend", refreshLayout);
       }
+    });
+
+    document.querySelectorAll(".quiz-toggle").forEach((toggle) => {
+      const answer = toggle.nextElementSibling;
+      if (!answer) return;
+      toggle.setAttribute("aria-expanded", "false");
+      toggle.addEventListener("click", () => {
+        const nowHidden = answer.classList.toggle("hidden");
+        toggle.textContent = nowHidden ? "정답 보기" : "정답 닫기";
+        toggle.setAttribute("aria-expanded", String(!nowHidden));
+        refreshLayout();
+      });
     });
 
     const resizeObserver = new ResizeObserver(() => {

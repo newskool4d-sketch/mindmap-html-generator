@@ -3,6 +3,10 @@
 교과별 색상 테마와 Bootstrap Icons 아이콘 추천 목록.
 CSS 변수는 `base-mindmap-template.html`의 `[data-subject]` 블록에 이미 정의되어 있음.
 
+**중요**: `data-subject` 속성은 반드시 `<html>` 태그에 달 것.
+`:root`(=html)에 정의된 기본 변수를 `html[data-subject]`가 덮어쓰는 구조이므로
+body나 다른 요소에 달면 `--bg` 등 테마가 깨짐.
+
 ## Bootstrap Icons CDN
 
 ```html
@@ -122,6 +126,40 @@ CSS 변수는 `base-mindmap-template.html`의 `[data-subject]` 블록에 이미 
 | 실천/행동 | `bi-hand-thumbs-up` |
 | 성찰/반성 | `bi-journal-text` |
 | 핵심 정리 | `bi-check-circle` |
+
+### 정보 (테크 틸)
+| 브랜치 유형 | 아이콘 클래스 |
+|------------|--------------|
+| 개념/정의 | `bi-cpu` |
+| 인공지능/AI | `bi-robot` |
+| 데이터/정보 | `bi-database` |
+| 코딩/프로그래밍 | `bi-code-slash` |
+| 알고리즘/원리 | `bi-gear` |
+| 네트워크/인터넷 | `bi-globe2` |
+| 정보 윤리/보안 | `bi-shield-lock` |
+| 핵심 정리 | `bi-check2-square` |
+
+### 실과 (올리브 그린)
+| 브랜치 유형 | 아이콘 클래스 |
+|------------|--------------|
+| 개념/정의 | `bi-tools` |
+| 기술/만들기 | `bi-wrench` |
+| 가정/생활 | `bi-house-heart` |
+| 식생활/요리 | `bi-egg-fried` |
+| 의생활/소비 | `bi-bag` |
+| 농업/생명 | `bi-flower1` |
+| 핵심 정리 | `bi-clipboard-check` |
+
+### 진로 (웜 골드)
+| 브랜치 유형 | 아이콘 클래스 |
+|------------|--------------|
+| 개념/정의 | `bi-signpost-split` |
+| 자기 이해 | `bi-person-heart` |
+| 직업 세계 | `bi-briefcase` |
+| 진로 탐색 | `bi-search` |
+| 진로 설계 | `bi-map` |
+| 역량/준비 | `bi-mortarboard` |
+| 핵심 정리 | `bi-flag-fill` |
 
 ## 사용 예시
 
