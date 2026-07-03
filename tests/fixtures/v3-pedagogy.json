@@ -1,0 +1,41 @@
+{
+  "title": "구름과 물의 순환",
+  "description": "구름, 증발, 응결, 강수의 관계를 학습 지원 정보와 함께 정리합니다.",
+  "subject": "과학",
+  "mode": "교과용",
+  "center": {
+    "title": "물의 순환",
+    "text": "물은 상태와 위치를 바꾸며 지구를 순환합니다."
+  },
+  "branches": [
+    {
+      "title": "증발",
+      "sub": "액체에서 기체로",
+      "details": ["햇빛과 열이 물을 수증기로 바꿉니다.", "낮은 온도에서도 천천히 일어납니다."]
+    },
+    {
+      "title": "응결",
+      "sub": "구름 만들기",
+      "details": ["수증기가 식으면 작은 물방울이 됩니다.", "물방울이 모이면 구름처럼 보입니다."]
+    },
+    {
+      "title": "강수",
+      "sub": "다시 땅으로",
+      "details": ["물방울이 무거워지면 비나 눈으로 내립니다.", "내린 물은 강과 바다로 이동합니다."]
+    }
+  ],
+  "hint": "각 단계가 어떻게 연결되는지 설명해 보세요.",
+  "pedagogy": {
+    "grade_band": "elementary 5-6",
+    "audience_level": "introductory",
+    "focus_question": "왜 <구름>은 물의 순환에서 중요한 단계일까?",
+    "lesson_purpose": "정리",
+    "achievement_standard_note": "공식 성취기준 자동 매핑이 아닌 교사용 참고 메모입니다.",
+    "prior_knowledge": ["물의 세 가지 상태", "날씨 관찰 경험"],
+    "misconceptions": ["구름은 수증기 자체라는 오해", "증발은 끓을 때만 일어난다는 오해"],
+    "vocabulary_support": ["증발", "응결", "강수", "수증기"],
+    "transfer_generalization_prompt": "젖은 운동장이 마르는 현상을 물의 순환과 연결해 보세요.",
+    "metacognitive_prompt": "내가 가장 헷갈린 단계는 무엇인가요?",
+    "assessment_prompt_types": ["explanation", "misconception check", "transfer"]
+  }
+}

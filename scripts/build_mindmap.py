@@ -21,8 +21,27 @@ JSON 스펙 형식 (UTF-8):
       "quiz": {"q": "질문", "a": "정답"}   // 선택. 퀴즈형 모드에서 사용
     }
   ],
-  "hint": "하단 안내 문구"       // 선택. 생략 시 기본 문구
+  "hint": "하단 안내 문구",      // 선택. 생략 시 기본 문구
+  "pedagogy": {                  // 선택. v3 교육 설계 메타데이터
+    "grade_band": "middle 1-3",
+    "audience_level": "introductory",
+    "focus_question": "이 개념을 왜, 어떻게 연결해야 할까?",
+    "lesson_purpose": "도입 | 정리 | 복습 | 평가 | 탐구",
+    "achievement_standard_note": "사람이 작성한 참고 메모. 공식 매핑 자동 생성 아님.",
+    "prior_knowledge": ["이미 알고 있어야 할 개념"],
+    "misconceptions": ["오개념 또는 혼동 지점"],
+    "vocabulary_support": ["핵심 어휘"],
+    "transfer_generalization_prompt": "다른 상황에 적용해 볼 질문",
+    "metacognitive_prompt": "내 이해를 점검하는 질문",
+    "assessment_prompt_types": ["explanation", "misconception check", "transfer"]
+  }
 }
+
+`pedagogy`는 모두 선택 필드이며, 없으면 기존 v2 출력은 변하지 않는다.
+향후 렌더러는 값이 있을 때만 간결한 교사/학생 지원 패널을 표시할 수 있으며,
+없는 필드 때문에 빈 라벨이나 빈 출력 영역을 만들지 않는다.
+공식 교육과정 성취기준 매핑은 자동 생성하지 않는다.
+퀴즈, 타이머, 점수, 게임, 애니메이션 동작은 계속 명시적 승인 후에만 사용한다.
 """
 import argparse
 import html
@@ -42,16 +61,74 @@ SUPPORTED_MODES = ["교과용", "발표용", "퀴즈형"]
 MAX_BRANCHES = 8
 DEFAULT_HINT = "각 가지 카드를 클릭하면 자세한 내용이 열립니다."
 QUIZ_HINT = "각 가지 카드를 클릭해 내용을 확인하고, [정답 보기] 버튼으로 스스로 점검해 보세요."
+PEDAGOGY_TEXT_FIELDS = {
+    "grade_band": "학년군",
+    "audience_level": "학습자 수준",
+    "focus_question": "초점 질문",
+    "lesson_purpose": "수업 목적",
+    "achievement_standard_note": "성취기준 메모",
+    "transfer_generalization_prompt": "전이 질문",
+    "metacognitive_prompt": "메타인지 질문",
+}
+PEDAGOGY_LIST_FIELDS = {
+    "prior_knowledge": "선수 지식",
+    "misconceptions": "오개념 점검",
+    "vocabulary_support": "어휘 지원",
+    "assessment_prompt_types": "형성 확인 유형",
+}
 
 
 def esc(value):
     return html.escape(str(value), quote=True)
 
 
+def build_pedagogy_html(pedagogy):
+    if not pedagogy:
+        return ""
+
+    items = []
+    for key, label in PEDAGOGY_TEXT_FIELDS.items():
+        value = pedagogy.get(key)
+        if isinstance(value, str) and value.strip():
+            items.append(
+                f"""<li class="pedagogy-item">
+      <strong>{esc(label)}</strong>
+      <span>{esc(value.strip())}</span>
+    </li>"""
+            )
+
+    for key, label in PEDAGOGY_LIST_FIELDS.items():
+        values = pedagogy.get(key)
+        if isinstance(values, list):
+            children = [item for item in values if isinstance(item, str) and item.strip()]
+            if children:
+                list_html = "\n".join(f"          <li>{esc(item.strip())}</li>" for item in children)
+                items.append(
+                    f"""<li class="pedagogy-item">
+      <strong>{esc(label)}</strong>
+      <ul class="pedagogy-list">
+{list_html}
+      </ul>
+    </li>"""
+                )
+
+    if not items:
+        return ""
+
+    body = "\n    ".join(items)
+    return f"""<aside class="pedagogy" aria-label="학습 지원 정보">
+  <h2>학습 지원</h2>
+  <ul class="pedagogy-grid">
+    {body}
+  </ul>
+</aside>"""
+
+
 def build_branch_html(branch, index, side):
     title = esc(branch["title"])
     icon = branch.get("icon", "").strip()
     icon_html = f'<i class="bi {esc(icon)}"></i> ' if icon else ""
+    content_id = f"branch-{index}-content"
     sub_html = ""
     if branch.get("sub"):
         sub_html = f'\n    <div class="node-sub">{esc(branch["sub"])}</div>'
@@ -60,21 +137,22 @@ def build_branch_html(branch, index, side):
     quiz_html = ""
     quiz = branch.get("quiz")
     if quiz:
+        answer_id = f"branch-{index}-quiz-answer"
         quiz_html = f"""
     <div class="quiz">
       <p class="quiz-q"><i class="bi bi-question-circle"></i> {esc(quiz["q"])}</p>
-      <button type="button" class="quiz-toggle">정답 보기</button>
-      <p class="quiz-a hidden">{esc(quiz["a"])}</p>
+      <button type="button" class="quiz-toggle" aria-controls="{answer_id}" data-label="{title}" aria-label="{title} 정답 보기">정답 보기</button>
+      <p id="{answer_id}" class="quiz-a hidden" aria-hidden="true">{esc(quiz["a"])}</p>
     </div>"""
 
     return f"""<div class="node branch-{index}" data-connect="{side}">
-  <button type="button">
+  <button type="button" aria-controls="{content_id}" data-label="{title}" aria-label="{title} 자세히 보기">
     <div class="node-title">
       <span>{icon_html}{title}</span>
-      <span class="icon">+</span>
+      <span class="icon" aria-hidden="true">+</span>
     </div>{sub_html}
   </button>
-  <div class="content">
+  <div id="{content_id}" class="content" role="region" aria-label="{title} 세부 내용" aria-hidden="true">
     <ul>
 {details}
     </ul>{quiz_html}
@@ -120,6 +198,21 @@ def validate_spec(spec):
         quiz = branch.get("quiz")
         if quiz and ("q" not in quiz or "a" not in quiz):
             errors.append(f"branches[{i}].quiz는 q와 a가 모두 필요")
+    pedagogy = spec.get("pedagogy")
+    if pedagogy is not None:
+        if not isinstance(pedagogy, dict):
+            errors.append("pedagogy는 객체여야 함")
+        else:
+            for key, label in PEDAGOGY_TEXT_FIELDS.items():
+                if key in pedagogy and not isinstance(pedagogy[key], str):
+                    errors.append(f"pedagogy.{key}({label})는 문자열이어야 함")
+            for key, label in PEDAGOGY_LIST_FIELDS.items():
+                value = pedagogy.get(key)
+                if key in pedagogy and (
+                    not isinstance(value, list)
+                    or any(not isinstance(item, str) for item in value)
+                ):
+                    errors.append(f"pedagogy.{key}({label})는 문자열 목록이어야 함")
     mode = spec.get("mode", "교과용")
     if mode not in SUPPORTED_MODES:
         errors.append(f"mode '{mode}' 미지원 — {SUPPORTED_MODES} 중 선택")
@@ -154,6 +247,7 @@ def build(spec_path, out_dir=None, template_path=None):
     branch_html = "\n\n      ".join(
         build_branch_html(branch, i + 1, sides[i]) for i, branch in enumerate(branches)
     )
+    pedagogy_html = build_pedagogy_html(spec.get("pedagogy"))
 
     default_hint = QUIZ_HINT if mode == "퀴즈형" else DEFAULT_HINT
     result = template
@@ -168,6 +262,7 @@ def build(spec_path, out_dir=None, template_path=None):
         .replace("{{DESCRIPTION}}", esc(spec.get("description", "")))
         .replace("{{CENTER_TITLE}}", esc(spec["center"]["title"]))
         .replace("{{CENTER_TEXT}}", esc(spec["center"]["text"]))
+        .replace("{{PEDAGOGY}}", pedagogy_html)
         .replace("{{BRANCHES}}", branch_html)
         .replace("{{HINT}}", esc(spec.get("hint", default_hint)))
     )

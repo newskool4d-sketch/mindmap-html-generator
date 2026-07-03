@@ -1,0 +1,66 @@
+{
+  "title": "알고리즘 사고 점검 마인드맵",
+  "description": "퀴즈형, v3 학습 지원 정보, 긴 한글 문장이 함께 있을 때 디자인 상태를 확인합니다.",
+  "subject": "정보",
+  "mode": "퀴즈형",
+  "center": {
+    "title": "알고리즘 사고",
+    "text": "문제를 작게 나누고, 절차를 세우며, 결과를 점검합니다."
+  },
+  "branches": [
+    {
+      "title": "문제 분해",
+      "sub": "복잡한 문제를 작은 단위로",
+      "icon": "bi-diagram-3",
+      "details": [
+        "한 번에 해결하기 어려운 문제를 단계와 조건으로 나눕니다.",
+        "각 부분이 전체 목표와 어떻게 연결되는지 확인합니다."
+      ],
+      "quiz": {
+        "q": "문제 분해가 필요한 까닭은 무엇인가요?",
+        "a": "복잡한 문제를 다룰 수 있는 작은 단위로 나누어 해결 가능성을 높이기 위해서입니다."
+      }
+    },
+    {
+      "title": "패턴 찾기",
+      "sub": "반복되는 구조 발견",
+      "icon": "bi-repeat",
+      "details": [
+        "비슷하게 반복되는 조건, 입력, 처리 과정을 찾아냅니다.",
+        "패턴을 찾으면 더 짧고 안정적인 절차를 만들 수 있습니다."
+      ]
+    },
+    {
+      "title": "절차 표현",
+      "sub": "순서와 조건 쓰기",
+      "icon": "bi-list-ol",
+      "details": [
+        "순서도, 의사코드, 말로 설명하기 등으로 해결 절차를 표현합니다.",
+        "조건과 반복이 어디에서 필요한지 분명히 합니다."
+      ]
+    },
+    {
+      "title": "결과 검토",
+      "sub": "오류 찾기와 수정",
+      "icon": "bi-check2-square",
+      "details": [
+        "예상 결과와 실제 결과를 비교해 오류를 찾습니다.",
+        "수정한 뒤에는 같은 오류가 다시 생기지 않는지 확인합니다."
+      ]
+    }
+  ],
+  "hint": "퀴즈가 있는 가지를 열어 스스로 설명을 점검해 보세요.",
+  "pedagogy": {
+    "grade_band": "middle 1-3",
+    "audience_level": "introductory",
+    "focus_question": "초점 질문: 좋은 알고리즘은 왜 문제를 더 쉽게 해결하게 할까?",
+    "lesson_purpose": "평가",
+    "achievement_standard_note": "공식 성취기준 자동 매핑이 아닌 교사용 참고 메모입니다.",
+    "prior_knowledge": ["순서대로 일 처리하기", "조건에 따라 다르게 행동하기"],
+    "misconceptions": ["코드는 길수록 자세해서 좋다는 오개념", "정답만 맞으면 절차는 점검하지 않아도 된다는 오개념"],
+    "vocabulary_support": ["문제 분해", "패턴", "조건", "반복", "디버깅"],
+    "transfer_generalization_prompt": "학교 행사 준비 절차를 알고리즘 사고로 다시 설명해 보세요.",
+    "metacognitive_prompt": "내가 절차를 설명할 때 빠뜨린 조건은 무엇인가요?",
+    "assessment_prompt_types": ["explanation", "misconception check", "transfer"]
+  }
+}

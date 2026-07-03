@@ -23,6 +23,48 @@
       --card7: #ece7f5;
       --card8: #f5e3f0;
       --shadow: 0 14px 30px rgba(56, 72, 66, 0.10);
+      --surface-canvas: var(--bg);
+      --surface-board: var(--panel);
+      --surface-panel: #ffffff;
+      --surface-wash: rgba(255, 255, 255, 0.52);
+      --surface-guide: rgba(92, 109, 102, 0.08);
+      --surface-note-1: var(--card1);
+      --surface-note-2: var(--card2);
+      --surface-note-3: var(--card3);
+      --surface-note-4: var(--card4);
+      --surface-note-5: var(--card5);
+      --surface-note-6: var(--card6);
+      --surface-note-7: var(--card7);
+      --surface-note-8: var(--card8);
+      --text-primary: var(--text);
+      --text-secondary: var(--muted);
+      --border-subtle: rgba(92, 109, 102, 0.22);
+      --border-on-note: rgba(255, 255, 255, 0.9);
+      --border-active: rgba(92, 109, 102, 0.38);
+      --surface-control: rgba(255, 255, 255, 0.70);
+      --surface-control-hover: rgba(255, 255, 255, 0.92);
+      --line-connector: var(--line);
+      --focus-ring: var(--center2);
+      --radius-board: 30px;
+      --radius-node: 24px;
+      --radius-panel: 18px;
+      --radius-quiz: 14px;
+      --radius-pill: 999px;
+      --space-1: 4px;
+      --space-2: 8px;
+      --space-3: 12px;
+      --space-4: 16px;
+      --space-5: 20px;
+      --space-6: 24px;
+      --space-7: 28px;
+      --space-8: 32px;
+      --space-10: 40px;
+      --shadow-rest: var(--shadow);
+      --shadow-board: 0 18px 40px rgba(75, 93, 86, 0.08);
+      --shadow-panel: 0 10px 24px rgba(56, 72, 66, 0.06);
+      --shadow-focus: 0 18px 38px rgba(89, 120, 109, 0.20);
+      --motion-expand: max-height 0.35s ease, padding 0.35s ease;
+      --motion-control: background-color 0.16s ease-out, border-color 0.16s ease-out, box-shadow 0.16s ease-out, color 0.16s ease-out, filter 0.16s ease-out, transform 0.16s ease-out;
     }
 
     * {
@@ -31,47 +73,79 @@
 
     body {
       margin: 0;
-      font-family: "Malgun Gothic", "맑은 고딕", sans-serif;
-      color: var(--text);
+      font-family: "Malgun Gothic", "맑은 고딕", system-ui, -apple-system, sans-serif;
+      color: var(--text-primary);
+      /* Korean phrases stay together, while long tokens still wrap safely. */
       word-break: keep-all;
-      overflow-wrap: normal;
+      overflow-wrap: anywhere;
+      overflow-x: hidden;
       background:
-        radial-gradient(circle at 12% 12%, #edf4ef 0, transparent 26%),
-        radial-gradient(circle at 88% 88%, #eef3f6 0, transparent 24%),
-        var(--bg);
+        linear-gradient(180deg, var(--surface-wash), transparent 38%),
+        var(--surface-canvas);
     }
 
     .wrap {
       max-width: 1500px;
       margin: 0 auto;
-      padding: 20px;
+      padding: var(--space-8) var(--space-5) var(--space-5);
+    }
+
+    .page-head {
+      max-width: 980px;
+      margin: 0 auto var(--space-6);
+      text-align: left;
+    }
+
+    .mode-label {
+      margin: 0 0 var(--space-2);
+      color: var(--focus-ring);
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.4;
     }
 
     h1 {
       margin: 0;
-      text-align: center;
       font-size: 34px;
       font-weight: 700;
-      letter-spacing: -0.02em;
+      letter-spacing: 0;
+      line-height: 1.22;
+      text-wrap: balance;
     }
 
     .desc {
-      text-align: center;
-      color: var(--muted);
-      margin: 10px 0 24px;
+      color: var(--text-secondary);
+      margin: var(--space-3) 0 0;
       line-height: 1.65;
       font-size: 16px;
       font-weight: 700;
+      text-wrap: pretty;
     }
 
     .map {
       position: relative;
       min-height: 1180px;
-      border-radius: 30px;
-      background: var(--panel);
-      box-shadow: 0 18px 40px rgba(75, 93, 86, 0.08);
+      border-radius: var(--radius-board);
+      border: 1px solid var(--border-subtle);
+      background:
+        linear-gradient(var(--surface-board), var(--surface-board)),
+        repeating-linear-gradient(0deg, transparent 0 39px, var(--surface-guide) 39px 40px),
+        repeating-linear-gradient(90deg, transparent 0 39px, var(--surface-guide) 39px 40px);
+      box-shadow: var(--shadow-board);
       overflow: hidden;
-      backdrop-filter: blur(6px);
+      isolation: isolate;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
     }
 
     .lines {
@@ -80,41 +154,60 @@
       width: 100%;
       height: 100%;
       z-index: 0;
+      pointer-events: none;
     }
 
     .line {
-      stroke: var(--line);
-      stroke-width: 4;
+      stroke: var(--line-connector);
+      stroke-width: 3.5;
       fill: none;
       stroke-linecap: round;
-      opacity: 0.95;
+      opacity: 0.86;
     }
 
     .node {
       position: absolute;
       z-index: 1;
       width: 260px;
-      border-radius: 24px;
+      border-radius: var(--radius-node);
       overflow: hidden;
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(255, 255, 255, 0.9);
-      background: white;
+      box-shadow: var(--shadow-rest);
+      border: 1px solid var(--border-on-note);
+      background: var(--surface-panel);
+      transition: var(--motion-control);
     }
 
-    .node button {
+    .node:not(.center):hover,
+    .node.active {
+      border-color: var(--border-active);
+      box-shadow: var(--shadow-focus);
+    }
+
+    .node > button {
       width: 100%;
       border: none;
       background: transparent;
-      padding: 16px 18px;
+      padding: var(--space-4) 18px;
       text-align: left;
       font: inherit;
       cursor: pointer;
+      min-height: 48px;
+      transition: var(--motion-control);
     }
 
-    .node button:focus-visible {
-      outline: 3px solid var(--center2);
+    .node > button:hover,
+    .node > button[aria-expanded="true"] {
+      background: var(--surface-control);
+    }
+
+    .node > button:active {
+      transform: translateY(1px);
+    }
+
+    .node > button:focus-visible {
+      outline: 3px solid var(--focus-ring);
       outline-offset: -3px;
-      border-radius: 24px;
+      border-radius: var(--radius-node);
     }
 
     .node-title {
@@ -124,11 +217,13 @@
       gap: 10px;
       font-size: 21px;
       font-weight: 700;
+      line-height: 1.35;
+      overflow-wrap: anywhere;
     }
 
     .node-sub {
       margin-top: 8px;
-      color: var(--muted);
+      color: var(--text-secondary);
       font-size: 15px;
       line-height: 1.5;
       font-weight: 700;
@@ -141,22 +236,30 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      background: rgba(255, 255, 255, 0.7);
-      color: #4c6259;
+      background: var(--surface-control);
+      color: var(--text-secondary);
       font-size: 18px;
       font-weight: 700;
       flex-shrink: 0;
+      transition: var(--motion-control);
+    }
+
+    .node > button:hover .icon,
+    .node > button[aria-expanded="true"] .icon {
+      background: var(--focus-ring);
+      color: white;
     }
 
     .content {
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.35s ease, padding 0.35s ease;
+      transition: var(--motion-expand);
       padding: 0 18px;
     }
 
     .node.active .content {
       padding: 0 18px 18px;
+      border-top: 1px solid var(--border-subtle);
     }
 
     .content ul {
@@ -165,6 +268,11 @@
       line-height: 1.75;
       font-size: 15px;
       font-weight: 700;
+    }
+
+    .content li + li,
+    .pedagogy-list li + li {
+      margin-top: var(--space-1);
     }
 
     .center {
@@ -180,9 +288,9 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 28px;
-      border: none;
-      box-shadow: 0 18px 38px rgba(89, 120, 109, 0.20);
+      padding: var(--space-7);
+      border: 6px solid rgba(255, 255, 255, 0.78);
+      box-shadow: var(--shadow-focus), inset 0 1px 0 rgba(255, 255, 255, 0.34);
     }
 
     .center-inner h2 {
@@ -198,28 +306,28 @@
       font-weight: 700;
     }
 
-    .branch-1 { background: var(--card1); }
-    .branch-2 { background: var(--card2); }
-    .branch-3 { background: var(--card3); }
-    .branch-4 { background: var(--card4); }
-    .branch-5 { background: var(--card5); }
-    .branch-6 { background: var(--card6); }
-    .branch-7 { background: var(--card7); }
-    .branch-8 { background: var(--card8); }
+    .branch-1 { background: var(--surface-note-1); }
+    .branch-2 { background: var(--surface-note-2); }
+    .branch-3 { background: var(--surface-note-3); }
+    .branch-4 { background: var(--surface-note-4); }
+    .branch-5 { background: var(--surface-note-5); }
+    .branch-6 { background: var(--surface-note-6); }
+    .branch-7 { background: var(--surface-note-7); }
+    .branch-8 { background: var(--surface-note-8); }
 
     .hint {
       text-align: center;
-      color: var(--muted);
-      margin-top: 16px;
+      color: var(--text-secondary);
+      margin-top: var(--space-4);
       font-size: 14px;
       font-weight: 700;
     }
 
     /* ── 퀴즈 블록 (퀴즈형 모드에서 브랜치 content 내부에 사용) ── */
     .quiz {
-      margin-top: 12px;
-      padding: 12px 14px;
-      border-radius: 14px;
+      margin-top: var(--space-3);
+      padding: var(--space-3) 14px;
+      border-radius: var(--radius-quiz);
       background: rgba(255, 255, 255, 0.65);
     }
 
@@ -231,18 +339,29 @@
 
     .quiz-toggle {
       border: none;
-      border-radius: 999px;
+      border-radius: var(--radius-pill);
       padding: 6px 14px;
-      background: var(--center2);
+      background: var(--focus-ring);
       color: white;
       font: inherit;
       font-size: 13px;
       font-weight: 700;
       cursor: pointer;
+      min-height: 40px;
+      transition: var(--motion-control);
+    }
+
+    .quiz-toggle:hover,
+    .quiz-toggle[aria-expanded="true"] {
+      filter: saturate(1.04) brightness(0.96);
+    }
+
+    .quiz-toggle:active {
+      transform: translateY(1px);
     }
 
     .quiz-toggle:focus-visible {
-      outline: 3px solid var(--text);
+      outline: 3px solid var(--text-primary);
       outline-offset: 2px;
     }
 
@@ -250,11 +369,62 @@
       margin: 10px 0 0;
       font-size: 15px;
       font-weight: 700;
-      color: var(--center2);
+      color: var(--focus-ring);
+    }
+
+    .quiz-a:not(.hidden) {
+      padding: var(--space-2) var(--space-3);
+      border-left: 3px solid var(--focus-ring);
+      border-radius: 10px;
+      background: var(--surface-control);
+      color: var(--text-primary);
     }
 
     .hidden {
       display: none;
+    }
+
+    .pedagogy {
+      max-width: 1040px;
+      margin: 0 auto var(--space-6);
+      padding: 14px var(--space-4);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-panel);
+      background: rgba(255, 255, 255, 0.72);
+      box-shadow: var(--shadow-panel);
+    }
+
+    .pedagogy h2 {
+      margin: 0 0 var(--space-2);
+      font-size: 16px;
+      letter-spacing: 0;
+    }
+
+    .pedagogy-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--space-2) var(--space-4);
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .pedagogy-item {
+      display: grid;
+      gap: 4px;
+      min-width: 0;
+      line-height: 1.55;
+      font-size: 14px;
+    }
+
+    .pedagogy-item strong {
+      color: var(--focus-ring);
+      font-size: 13px;
+    }
+
+    .pedagogy-list {
+      margin: 0;
+      padding-left: 18px;
     }
 
     /* ── 모드: 발표용 (큰 글씨·넓은 여백·강한 대비) ── */
@@ -338,7 +508,27 @@
       --card5:#f4eac8; --card6:#f0e2bc; --card7:#f4ecca; --card8:#f6f0d4;
     }
 
+    /* Desktop: full spatial map with SVG connectors. */
+    @media (min-width: 1201px) {
+      .map {
+        min-height: 1180px;
+      }
+    }
+
+    /* Tablet and small classroom displays: stack cards, hide decorative connectors. */
     @media (max-width: 1200px) {
+      .wrap {
+        padding: 14px;
+      }
+
+      .page-head {
+        margin-bottom: var(--space-4);
+      }
+
+      .pedagogy-grid {
+        grid-template-columns: 1fr;
+      }
+
       .map {
         min-height: auto;
         padding: 20px;
@@ -359,9 +549,109 @@
       }
     }
 
-    /* ── 인쇄: 전체 내용 펼침 + 세로 나열 ── */
+    /* Mobile: tighten the whiteboard while preserving full text. */
+    @media (max-width: 768px) {
+      .wrap {
+        padding: var(--space-3);
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      .desc {
+        font-size: 15px;
+      }
+
+      .map {
+        padding: var(--space-4);
+        border-radius: 22px;
+      }
+
+      .pedagogy {
+        padding: var(--space-3);
+      }
+
+      .center {
+        padding: var(--space-6);
+      }
+
+      .center-inner h2 {
+        font-size: 34px;
+      }
+
+      .center-inner p {
+        font-size: 17px;
+      }
+    }
+
+    /* Narrow mobile: keep every card inside the viewport without font viewport scaling. */
+    @media (max-width: 430px) {
+      .wrap {
+        padding: 10px;
+      }
+
+      .page-head {
+        margin-bottom: var(--space-3);
+      }
+
+      .mode-label {
+        font-size: 13px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .map {
+        padding: var(--space-3);
+        border-radius: 18px;
+      }
+
+      .node,
+      .center {
+        border-radius: 18px;
+        margin-bottom: var(--space-3);
+      }
+
+      .node > button {
+        padding: var(--space-3);
+      }
+
+      .node-title {
+        font-size: 19px;
+      }
+
+      .node-sub,
+      .content ul,
+      .quiz-q,
+      .quiz-a {
+        font-size: 14px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      .content {
+        transition: none;
+      }
+    }
+
+    /* Print: expand learning content, suppress only interactive controls. */
     @media print {
+      @page { margin: 12mm; }
       body { background: white; }
+      .wrap { max-width: none; padding: 0; }
+      .page-head { margin-bottom: 12px; }
+      .pedagogy { box-shadow: none; break-inside: avoid; }
+      .pedagogy-grid { display: block; }
+      .pedagogy-item { margin-bottom: 8px; }
       .map { box-shadow: none; min-height: auto !important; padding: 0; background: white; }
       .lines, .icon, .hint, .quiz-toggle { display: none; }
       .node, .center {
@@ -374,31 +664,38 @@
         box-shadow: none;
         break-inside: avoid;
       }
-      .content { max-height: none !important; padding: 0 18px 18px; }
+      .node > button { padding: 12px 14px; pointer-events: none; }
+      .content { max-height: none !important; overflow: visible !important; padding: 0 18px 18px; }
       .quiz-a.hidden { display: block; }
     }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <h1>{{TITLE}}</h1>
-    <p class="desc">{{DESCRIPTION}}</p>
+  <main class="wrap">
+    <header class="page-head" aria-labelledby="page-title">
+      <p class="mode-label">{{MODE}}</p>
+      <h1 id="page-title">{{TITLE}}</h1>
+      <p class="desc">{{DESCRIPTION}}</p>
+    </header>
 
-    <div class="map">
+    {{PEDAGOGY}}
+
+    <section class="map" aria-labelledby="map-region-title">
+      <h2 id="map-region-title" class="sr-only">마인드맵 영역</h2>
       <svg class="lines" preserveAspectRatio="none" aria-hidden="true"></svg>
 
-      <div class="node center">
+      <section class="node center" aria-label="중심 주제">
         <div class="center-inner">
           <h2>{{CENTER_TITLE}}</h2>
           <p>{{CENTER_TEXT}}</p>
         </div>
-      </div>
+      </section>
 
       {{BRANCHES}}
-    </div>
+    </section>
 
     <p class="hint">{{HINT}}</p>
-  </div>
+  </main>
 
   <script>
     const map = document.querySelector(".map");
@@ -465,6 +762,7 @@
 
         const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
         path.setAttribute("class", "line");
+        path.setAttribute("vector-effect", "non-scaling-stroke");
         path.setAttribute(
           "d",
           `M ${startX} ${startY} C ${control1X} ${startY}, ${control2X} ${endY}, ${endX} ${endY}`
@@ -544,10 +842,13 @@
       const content = node.querySelector(".content");
 
       button.setAttribute("aria-expanded", "false");
+      if (content) content.setAttribute("aria-hidden", "true");
       button.addEventListener("click", () => {
         const isActive = node.classList.contains("active");
         node.classList.toggle("active");
         button.setAttribute("aria-expanded", String(!isActive));
+        button.setAttribute("aria-label", `${button.dataset.label || ""} ${isActive ? "자세히 보기" : "접기"}`.trim());
+        if (content) content.setAttribute("aria-hidden", String(isActive));
         icon.textContent = isActive ? "+" : "−";
         refreshLayout();
       });
@@ -562,10 +863,13 @@
       const answer = toggle.nextElementSibling;
       if (!answer) return;
       toggle.setAttribute("aria-expanded", "false");
+      answer.setAttribute("aria-hidden", "true");
       toggle.addEventListener("click", () => {
         const nowHidden = answer.classList.toggle("hidden");
         toggle.textContent = nowHidden ? "정답 보기" : "정답 닫기";
         toggle.setAttribute("aria-expanded", String(!nowHidden));
+        toggle.setAttribute("aria-label", `${toggle.dataset.label || ""} ${nowHidden ? "정답 보기" : "정답 닫기"}`.trim());
+        answer.setAttribute("aria-hidden", String(nowHidden));
         refreshLayout();
       });
     });

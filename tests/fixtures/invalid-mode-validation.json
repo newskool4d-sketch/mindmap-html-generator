@@ -1,0 +1,16 @@
+{
+  "title": "잘못된 모드",
+  "description": "지원 모드 검증용 fixture입니다.",
+  "subject": "국어",
+  "mode": "토론용",
+  "center": {
+    "title": "표현",
+    "text": "지원하지 않는 mode는 실패해야 합니다."
+  },
+  "branches": [
+    {
+      "title": "읽기",
+      "details": ["글의 중심 생각을 찾습니다."]
+    }
+  ]
+}

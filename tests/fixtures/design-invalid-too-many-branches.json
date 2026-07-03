@@ -1,0 +1,21 @@
+{
+  "title": "디자인 실패 확인용 9개 브랜치",
+  "description": "디자인 QA fixture도 기존 최대 8개 규칙을 반드시 지키는지 확인합니다.",
+  "subject": "과학",
+  "mode": "교과용",
+  "center": {
+    "title": "검증",
+    "text": "9개 브랜치는 실패해야 합니다."
+  },
+  "branches": [
+    {"title": "1", "details": ["항목"]},
+    {"title": "2", "details": ["항목"]},
+    {"title": "3", "details": ["항목"]},
+    {"title": "4", "details": ["항목"]},
+    {"title": "5", "details": ["항목"]},
+    {"title": "6", "details": ["항목"]},
+    {"title": "7", "details": ["항목"]},
+    {"title": "8", "details": ["항목"]},
+    {"title": "9", "details": ["항목"]}
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "잘못된 교육 메타데이터",
+  "description": "pedagogy 타입 검증용 fixture입니다.",
+  "subject": "과학",
+  "mode": "교과용",
+  "center": {
+    "title": "중심",
+    "text": "pedagogy는 객체여야 합니다."
+  },
+  "branches": [
+    {
+      "title": "가지",
+      "details": ["내용"]
+    }
+  ],
+  "pedagogy": "잘못된 타입"
+}

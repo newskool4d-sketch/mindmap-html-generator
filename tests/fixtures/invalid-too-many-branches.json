@@ -1,0 +1,21 @@
+{
+  "title": "너무 많은 가지",
+  "description": "브랜치 수 제한 검증용 fixture입니다.",
+  "subject": "사회",
+  "mode": "교과용",
+  "center": {
+    "title": "중심",
+    "text": "최대 8개 제한을 넘습니다."
+  },
+  "branches": [
+    {"title": "가지 1", "details": ["내용"]},
+    {"title": "가지 2", "details": ["내용"]},
+    {"title": "가지 3", "details": ["내용"]},
+    {"title": "가지 4", "details": ["내용"]},
+    {"title": "가지 5", "details": ["내용"]},
+    {"title": "가지 6", "details": ["내용"]},
+    {"title": "가지 7", "details": ["내용"]},
+    {"title": "가지 8", "details": ["내용"]},
+    {"title": "가지 9", "details": ["내용"]}
+  ]
+}

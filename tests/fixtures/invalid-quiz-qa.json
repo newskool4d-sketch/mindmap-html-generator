@@ -1,0 +1,19 @@
+{
+  "title": "불완전한 퀴즈",
+  "description": "quiz.q와 quiz.a 동시 요구 검증용 fixture입니다.",
+  "subject": "정보",
+  "mode": "퀴즈형",
+  "center": {
+    "title": "알고리즘",
+    "text": "절차를 순서대로 생각합니다."
+  },
+  "branches": [
+    {
+      "title": "입력",
+      "details": ["문제 해결에 필요한 값을 받습니다."],
+      "quiz": {
+        "q": "입력은 무엇을 뜻하나요?"
+      }
+    }
+  ]
+}

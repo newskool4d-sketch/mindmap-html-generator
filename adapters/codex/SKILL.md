@@ -1,8 +1,8 @@
 ---
 name: mindmap-html-generator
-description: Use when the user asks in Korean for a 마인드맵, 개념도, 가지형 정리, 수업용 개념 시각화, 발표용 마인드맵, or HTML/CSS/JS mind map. Create Korean HTML mind maps from a JSON spec via the bundled builder script, with 13 subject themes, 교과용/발표용/퀴즈형 modes, desktop-first layout, Malgun Gothic typography, and an explicit confirmation step before adding animation or quiz features.
+description: Use when the user asks in Korean for a 마인드맵, 개념도, 가지형 정리, 수업용 개념 시각화, 발표용 마인드맵, or HTML/CSS/JS mind map. Create Korean HTML mind maps from a JSON spec via the bundled builder script, with 13 subject themes, 교과용/발표용/퀴즈형 modes, optional v3 pedagogy metadata, desktop-first layout, Malgun Gothic typography, a classroom whiteboard workspace design contract, and an explicit confirmation step before adding animation or quiz features.
 metadata:
-  short-description: 데스크톱 우선 시각형 HTML 마인드맵 생성기 (v2 — JSON 빌더·교과 테마·모드)
+  short-description: 데스크톱 우선 시각형 HTML 마인드맵 생성기 (v3 — JSON 빌더·교육 설계·교과 테마·모드)
 ---
 
 # Mindmap HTML Generator
@@ -27,6 +27,9 @@ Read these bundled files only when needed:
 
 - [scripts/build_mindmap.py](scripts/build_mindmap.py) — JSON spec → HTML auto-builder (preferred path)
 - [assets/base-mindmap-template.html](assets/base-mindmap-template.html) — template for manual editing
+- [DESIGN.md](DESIGN.md) — generated HTML design contract (classroom whiteboard workspace)
+- [references/educational-design.md](references/educational-design.md) — v3 pedagogy metadata contract and safe defaults
+- [references/branch-archetypes.md](references/branch-archetypes.md) — subject and lesson-purpose branch defaults
 - [references/output-modes.md](references/output-modes.md) — mode specs (교과용·발표용·퀴즈형)
 - [references/subject-themes.md](references/subject-themes.md) — per-subject icon recommendations
 - [references/layout-interaction-rules.md](references/layout-interaction-rules.md) — detailed layout/interaction rules
@@ -35,15 +38,29 @@ Read these bundled files only when needed:
 
 ## Workflow
 
-1. Identify the topic, subject, and audience level — reflect the level in bullet vocabulary and depth.
-2. Decide the subject theme (detection table below) — use it as given when stated, infer from keywords otherwise, fall back to the default theme when undecidable.
-3. Decide the mode — default `교과용`. Selection criteria: [references/output-modes.md](references/output-modes.md).
-4. Draft the branch structure (titles + bullets) before coding.
-5. Write a JSON spec and run `python scripts/build_mindmap.py spec.json -o <output folder>` (preferred).
+1. Identify the topic, subject, grade band, and audience level — reflect the level in bullet vocabulary and depth.
+2. Decide the lesson purpose — `도입`, `정리`, `복습`, `평가`, or `탐구`; this is separate from rendering `mode`.
+3. Draft the optional pedagogy layer: focus question, prior knowledge, misconception risk, vocabulary support, transfer/generalization prompt, metacognitive prompt, and assessment prompt types as needed.
+4. Choose a branch structure from [references/branch-archetypes.md](references/branch-archetypes.md), combining the subject archetype with the lesson-purpose archetype.
+5. Decide the subject theme (detection table below) — use it as given when stated, infer from keywords otherwise, fall back to the default theme when undecidable.
+6. Decide the output mode — default `교과용`. Selection criteria: [references/output-modes.md](references/output-modes.md).
+7. Ask before quiz or animation. Do not add a `quiz` key or extra motion until explicitly approved.
+8. Write a JSON spec and run `python scripts/build_mindmap.py spec.json -o <output folder>` (preferred).
    Only copy and edit the template manually when the builder cannot be used.
-6. Verify with the quality checklist below.
+9. Verify with the quality checklist below.
 
 File naming: `주제_모드.html` (e.g. `광합성_교과용.html`) — the builder applies this automatically.
+
+## Design Contract
+
+Before changing template CSS, layout, interaction states, print behavior, or reduced-motion behavior, read
+[DESIGN.md](DESIGN.md). The default direction is a **classroom whiteboard workspace**: a warm whiteboard canvas,
+precise concept-map connectors, low-fatigue classroom projection colors, Korean readability, and a restrained
+public-education hierarchy.
+
+Miro, IBM, Apple, Cursor, and Airbnb-style references are inspiration and weighting only. Do not copy palettes,
+logos, product chrome, marketing hero layouts, marketplace cards, IDE mockups, retro/campaign/developer aesthetics,
+bokeh/orbs, or generic AI gradients. If a needed token or state is missing, update `DESIGN.md` first and then use it.
 
 ## Auto-build (preferred)
 
@@ -56,9 +73,25 @@ Save the JSON spec as UTF-8 and run the builder. The full spec format is in the 
   "branches": [
     {"title": "개념", "sub": "부제", "icon": "bi-atom", "details": ["불릿 1", "불릿 2"]},
     {"title": "과정", "details": ["..."]}
-  ]
+  ],
+  "pedagogy": {
+    "grade_band": "초등 5-6",
+    "audience_level": "introductory",
+    "focus_question": "광합성은 왜 식물과 생태계에 중요할까?",
+    "lesson_purpose": "정리",
+    "achievement_standard_note": "human-authored teacher note; not automatic official mapping",
+    "prior_knowledge": ["식물의 구조", "빛과 에너지"],
+    "misconceptions": ["식물은 흙을 먹고 자란다는 오개념"],
+    "vocabulary_support": ["엽록체", "이산화탄소", "포도당"],
+    "transfer_generalization_prompt": "햇빛이 부족한 환경과 연결해 설명해 보세요.",
+    "metacognitive_prompt": "내가 헷갈린 연결은 무엇인가요?",
+    "assessment_prompt_types": ["explanation", "misconception check", "transfer"]
+  }
 }
 ```
+
+`pedagogy` is optional. When absent, v2 JSON output remains unchanged. When present, only non-empty
+fields render in a compact learning-support panel. Do not automatically claim official curriculum mapping.
 
 Add `"quiz": {"q": "질문", "a": "정답"}` to a branch **only after explicit user approval**
 (do not put a quiz key in the spec while unapproved).
@@ -117,6 +150,7 @@ only blanks the icons; the layout holds.
 - Left/right distribution: alternate, left gets one more when odd (builder handles this).
 - Standard school concept-map buckets: meaning/definition → importance/purpose → key categories →
   rules/limits → examples/applications → key takeaway.
+- Use [references/branch-archetypes.md](references/branch-archetypes.md) for subject and lesson-purpose defaults, but do not expand this skill into a full lesson plan, board plan, worksheet, or assessment rubric.
 - Keep branch labels short, bullets one line when possible, no numbering (`1.`) in branch titles.
 
 ## Manual editing reference (builder not used)
@@ -130,6 +164,7 @@ Template placeholders:
 | `{{SUBJECT}}` | Subject name — delete the whole attribute when undecided |
 | `{{MODE}}` | `교과용` / `발표용` / `퀴즈형` |
 | `{{CENTER_TITLE}}` / `{{CENTER_TEXT}}` | Center circle title / supporting text |
+| `{{PEDAGOGY}}` | Optional pedagogy metadata panel — empty string when absent |
 | `{{BRANCHES}}` | Branch node markup (pattern below) |
 | `{{HINT}}` | Bottom hint (default: "각 가지 카드를 클릭하면 자세한 내용이 열립니다.") |
 
@@ -138,14 +173,14 @@ Branch markup pattern — `data-connect="left|right"` is the **left/right column
 
 ```html
 <div class="node branch-1" data-connect="left">
-  <button type="button">
+  <button type="button" aria-controls="branch-1-content" aria-label="브랜치 제목 자세히 보기">
     <div class="node-title">
       <span><i class="bi bi-book"></i> 브랜치 제목</span>
       <span class="icon">+</span>
     </div>
     <div class="node-sub">짧은 부제</div>
   </button>
-  <div class="content">
+  <div id="branch-1-content" class="content">
     <ul><li>불릿</li></ul>
   </div>
 </div>
@@ -156,12 +191,14 @@ unused `[data-subject]` theme blocks (leave builder output untouched).
 
 ## Style and layout invariants
 
+- Follow the `DESIGN.md` classroom whiteboard workspace tokens and states
 - `font-family: "Malgun Gothic", "맑은 고딕", sans-serif` / bold for major labels
 - Font size hierarchy: page title > center topic > branch title > bullets
 - Calm, low-saturation colors (neon/oversaturated/dark themes only on request), strong text contrast
-- `word-break: keep-all; overflow-wrap: normal;` — applied globally on body (prevents mid-word Korean line breaks)
+- `word-break: keep-all; overflow-wrap: anywhere; overflow-x: hidden;` — preserves Korean readability while preventing mobile overflow
 - Compute connector lines from actual node positions (no hard-coding) — the template JS recomputes on resize/expand
 - No drag-and-drop, physics motion, autoplay animation, or timed quizzes without explicit request + approval
+- No brand-clone colors, logos, product chrome, bokeh/orbs, generic AI gradients, or marketing hero composition as defaults
 - For detailed branch, layout, styling, and interaction rules, read [references/layout-interaction-rules.md](references/layout-interaction-rules.md).
 
 ## File handling
@@ -176,13 +213,20 @@ Confirm all of the following before finishing:
 
 - [ ] Subject theme applied (or default theme) + one-line mention at the end
 - [ ] Mode reflected in `data-mode`
+- [ ] Lesson purpose is chosen separately from rendering mode
+- [ ] Focus question, prior knowledge, misconception risk, and vocabulary support are included in `pedagogy` when useful
+- [ ] Branch structure fits the subject and lesson purpose and stays within 8 branches
 - [ ] Topic and hierarchy (center > branches) are correct
+- [ ] Missing `pedagogy` creates no empty support panel or labels
 - [ ] No desktop node overlap / no clipped bottom nodes / connector lines touch the nodes
 - [ ] No mid-word Korean line breaks / mobile stays readable
 - [ ] Animation and quiz added only after approval
+- [ ] Visual/template changes match `DESIGN.md`
+- [ ] Visual/template changes have browser visual QA at 1280px+, 768px, 375-390px, print, reduced motion, branch states, and quiz states when present
 
-Verification: open the file in a browser when possible and check desktop (1440px) and mobile (390px)
-rendering. If browser verification is unavailable, verify by code review and state
+Verification: open the file in a browser when possible and check desktop (1280px+), tablet (768px), and mobile
+(375-390px), plus print/reduced-motion, branch expand/collapse, and quiz answer open/closed states. If browser
+verification is unavailable, verify by code review and state
 "렌더링 미검증" when reporting.
 
 Code-review caveat: the `data-connect` string also appears twice in the template's built-in JS
