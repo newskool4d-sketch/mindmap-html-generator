@@ -3,6 +3,8 @@
 QA 실행: `node tests/visual-qa.mjs --sample-dir .omo/evidence/design-next/out` — 4 샘플 · 28개 체크 · 실패 0 (PASS).
 스크린샷 원본: `.omo/evidence/design-next/screenshots/2026-08-07T14-28-17-640Z/` (git 추적 제외, 로컬 확인용).
 
+**추가(2026-08-08)**: `tests/fixtures/design-dense-korean.json`(발표용, 8브랜치)를 `out/`에 빌드 추가 — 표본 5종(교과용 3·퀴즈형 1·발표용 1)으로 확장. 재실행: `node tests/visual-qa.mjs --sample-dir .omo/evidence/design-next/out` — 실패 0 (PASS). 스크린샷: `.omo/evidence/design-next/screenshots/2026-08-07T16-26-06-261Z/`(git 추적 제외).
+
 - **데스크톱 1280px**: `01-_-_-1280x900-rest.png` (물의_순환_교과용.html, 과학 테마) — 4개 브랜치 노트(증발·응결·강수·흐름)가 좌 2·우 2로 겹침·잘림 없이 배치, SVG 커넥터가 각 노트 좌우 모서리에 정확히 맞물림(Task 8에서 수정된 10px 오정렬 재발 없음), 노트 상단에 회전된 테이프 조각과 화이트보드 프레임(흰색 둥근 카드 + 그림자)이 렌더링됨, 중심 원은 초록 그라디언트로 텍스트 대비 양호. 노트 4색(분홍·주황·황토·연두) 구분 확인 — 이 샘플은 브랜치 4개뿐이라 6색 미만이며, 6색 이상 확인은 아래 8브랜치 샘플로 별도 수행.
 - **모바일 390px**: `01-_-_-390x1200-rest.png` — 세로 스택 레이아웃, 가로 스크롤 없음(모든 카드가 뷰포트 폭 내 정렬), 데스크톱 전용 기울기(tilt) 미적용(카드 변이 없이 정직한 사각형). **버그 발견 및 수정**: 최초 렌더링에서 태블릿/모바일 브레이크포인트(`@media (max-width:1200px)`)가 `.node, .center`에 `position: static`을 적용해 테이프(`::after`, `position:absolute`)의 앵커 기준(positioning context)이 깨짐 → 노트별 테이프 4개가 모두 `.map` 기준 동일 좌표로 겹쳐 보이는 테이프 1개로 뭉쳐 보이는 결함을 확인. `assets/base-mindmap-template.html`의 해당 규칙을 `position: relative`로 변경했더니 이번엔 `.center`가 데스크톱 전용 `left:50%; top:50%`(absolute 중심정렬용)를 그대로 물려받아 오른쪽으로 밀려나는 2차 회귀 발생 → `top: 0; left: 0`을 명시적으로 리셋해 최종 수정. 재검증 결과 노트 4개 각각 독립된 테이프가 정상 위치에 렌더링됨(본 스크린샷에 반영됨).
 - **퀴즈 열림**: `03-_-_-_-1280x900-quiz-open.png` (상태_점검_쇼케이스_퀴즈형.html, 정보 테마, 퀴즈형 모드) — "예시" 브랜치를 펼친 뒤 [정답 보기]를 눌러 퀴즈 패널 확장. 질문("이 브랜치의 상태는 무엇으로 점검하나요?")과 정답 텍스트("정답 보기 버튼의 열림·닫힘 상태로 점검합니다.")가 흰 배경에 짙은 텍스트로 대비 충분히 노출됨, 버튼 라벨이 "정답 닫기"로 토글되어 열림 상태 표시. 잘리거나 가려진 텍스트 없음.
@@ -13,3 +15,8 @@ QA 실행: `node tests/visual-qa.mjs --sample-dir .omo/evidence/design-next/out`
 - `assets/base-mindmap-template.html` `@media (max-width: 1200px)` 블록: `.node, .center { position: static; ... }` → `position: relative; top: 0; left: 0;` (모바일/태블릿 테이프 앵커 정상화, 중심 원 오프셋 회귀 방지)
 - `assets/base-mindmap-template.html` `@media print` 블록: `.node { ...; background-image: none; }` → `.node:not(.center) { ...; background-image: none; }` (인쇄 시 중심 원 그라디언트 보존)
 - 두 수정 모두 자동 QA 체크(overlap/overflow/placeholder/focus/print-content)에는 걸리지 않았고, 본 수동 스크린샷 검수로만 발견됨 — DESIGN.md 토큰 값은 변경하지 않고 기존 CSS 변수·선택자 범위 내에서 수정.
+
+## 수정 요약 (2026-08-08 — commit aaa8ede 리뷰 후속)
+- `assets/base-mindmap-template.html` `[data-mode="발표용"] .center/.node` 고정폭(380px/280px, 특이도 0,2,0) 규칙이 `@media (max-width: 1200px)` 블록의 `.node, .center { width: 100% }`(특이도 0,1,0)보다 캐스케이드 우선순위가 높아, 발표용 모드에서 390px 뷰포트까지도 카드 폭이 좁게 고정되던 결함(가로 스크롤 없음 — 시각적 결함, Task 9 자동 체크로는 미검출). `@media (max-width: 1200px)` 블록 내부에 `[data-mode="발표용"] .node, [data-mode="발표용"] .center { width: 100%; }`(동일 특이도, 후행 규칙)를 추가해 태블릿·모바일에서 정상 폭(390px 기준 344px, 컨테이너 폭 채움)으로 렌더링되도록 수정. 데스크톱(≥1201px) 발표용 고정폭은 이 블록 스코프 밖이라 영향 없음(1280px에서 재확인: 변경 전후 동일).
+- 실측: Playwright로 `.center`/`.node` 컴퓨티드 `width` 직접 측정 — 390px: 344px/344px(수정 전 280px/280px), 1200px: 1130px/1130px, 1280px(데스크톱): 380px 규칙과 280px 규칙이 동일 특이도로 후행 규칙이 이기는 기존 특성 그대로 유지(본 수정과 무관, 스코프 밖).
+- 회귀 가드: `tests/test_build_mindmap.py::TemplateContractTests::test_tablet_breakpoint_overrides_presentation_mode_fixed_width` 추가 — `@media (max-width: 1200px)` 블록 안에 발표용 재정의 selector가 있는지 텍스트 검사(수정 전 템플릿으로 재현 시 FAIL 확인함).

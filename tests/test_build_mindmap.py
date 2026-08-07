@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 import shutil
 import subprocess
 import sys
@@ -290,6 +291,21 @@ class TemplateContractTests(unittest.TestCase):
                       "--paper-sheen", "--surface-tape", "--surface-frame"):
             self.assertIn(token, self.template)
         self.assertIn(".node:not(.center)::after", self.template)
+
+    def test_tablet_breakpoint_overrides_presentation_mode_fixed_width(self) -> None:
+        # [data-mode="발표용"] .node/.center (0,2,0)는 @media(max-width:1200px) 안의
+        # .node, .center { width:100% } (0,1,0)보다 우선순위가 높아 캐스케이드에서 이김.
+        # 이 미디어쿼리 내부에 동일 특이도(0,2,0)의 재정의가 없으면 발표용 모드가
+        # 태블릿/모바일에서 280px/380px 고정폭으로 남아 컨테이너 폭을 못 채운다.
+        match = re.search(
+            r"@media \(max-width: 1200px\)\s*\{(.*)\n    \}",
+            self.template,
+            re.DOTALL,
+        )
+        self.assertIsNotNone(match, "@media (max-width: 1200px) 블록을 찾을 수 없음")
+        block = match.group(1)
+        self.assertIn('[data-mode="발표용"] .node', block)
+        self.assertIn('[data-mode="발표용"] .center', block)
 
 
 if __name__ == "__main__":
