@@ -2,23 +2,23 @@
 __pycache__/
 *.py[cod]
 
-# OMO workspace artifacts: keep reviewable plans/evidence, ignore generated bulk.
+# Test scratch output (Task 3 이후 테스트가 여기에만 씀)
+tests/.out/
+
+# SDD 실행 레저 (세션 진행 기록 — 커밋 금지)
+.superpowers/
+
+# OMO workspace artifacts: 리뷰 가능한 plan/evidence 마크다운은 추적, 생성물 벌크는 무시.
 .omo/**
 !.omo/
 !.omo/plans/
-!.omo/plans/mindmap-html-generator-design-upgrade.md
-!.omo/plans/mindmap-html-generator-design-next.md
+!.omo/plans/*.md
 !.omo/evidence/
-!.omo/evidence/evidence-retention-policy.md
-!.omo/evidence/f1-plan-compliance-audit.md
-!.omo/evidence/f2-code-quality-review.md
-!.omo/evidence/f3-real-manual-qa.md
-!.omo/evidence/f4-scope-fidelity.md
-!.omo/evidence/high-accuracy-review-summary-mindmap-html-generator-design-upgrade.md
-!.omo/evidence/plan-self-review-mindmap-html-generator-design-upgrade.md
-!.omo/evidence/task-*-mindmap-html-generator-design-upgrade.md
-!.omo/evidence/task-8-mindmap-html-generator-design-upgrade-pass-a-rereview-gate-review.md
+!.omo/evidence/*.md
 !.omo/evidence/task-8-mindmap-html-generator-design-upgrade/
 !.omo/evidence/task-8-mindmap-html-generator-design-upgrade/visual-qa.mjs
 !.omo/evidence/task-8-mindmap-html-generator-design-upgrade/screenshots/
 !.omo/evidence/task-8-mindmap-html-generator-design-upgrade/screenshots/browser-visual-qa-report.json
+!.omo/evidence/design-next/
+!.omo/evidence/design-next/*.md
+!.omo/evidence/design-next/browser-visual-qa-report.json
