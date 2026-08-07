@@ -21,13 +21,10 @@ references/
   output-modes.md             ← [코어] 모드별 정량 스펙 (교과용·발표용·퀴즈형)
   subject-themes.md           ← [코어] 13개 교과 테마 + 아이콘 추천
 tests/
-  test_build_mindmap.py       ← [검증] stdlib 기반 빌더 회귀 테스트
-  fixtures/                   ← [검증] v2/v3/오류/퀴즈 fixture
-    current-v2-valid.json
-    v3-pedagogy.json
-    quiz-approved.json
-    quiz-mode-no-quiz.json
-    invalid-*.json
+  test_build_mindmap.py       ← [검증] stdlib 기반 빌더 회귀 테스트 (E2E + in-process)
+  visual-qa.mjs               ← [검증] Playwright 브라우저 visual QA (기존 설치본 필요)
+  .out/                       ← 테스트 스크래치 (gitignore, 커밋 금지)
+  fixtures/                   ← [검증] v2/v3/오류/퀴즈/디자인 QA fixture
 adapters/
   codex/
     SKILL.md                  ← Codex CLI용 스킬 정의 (영어, 핸드오프·apply_patch 지침 포함)
@@ -55,9 +52,11 @@ adapters/
 ```powershell
 python -m py_compile scripts/build_mindmap.py
 python tests/test_build_mindmap.py
-python scripts/build_mindmap.py tests/fixtures/current-v2-valid.json -o .omo/evidence/readme-release/out/v2
-python scripts/build_mindmap.py tests/fixtures/v3-pedagogy.json -o .omo/evidence/readme-release/out/v3
-python scripts/build_mindmap.py tests/fixtures/quiz-approved.json -o .omo/evidence/readme-release/out/quiz
+python scripts/build_mindmap.py tests/fixtures/current-v2-valid.json -o .omo/evidence/design-next/out
+python scripts/build_mindmap.py tests/fixtures/design-long-title.json -o .omo/evidence/design-next/out
+python scripts/build_mindmap.py tests/fixtures/design-vocab-heavy.json -o .omo/evidence/design-next/out
+python scripts/build_mindmap.py tests/fixtures/design-state-showcase.json -o .omo/evidence/design-next/out
+node tests/visual-qa.mjs --sample-dir .omo/evidence/design-next/out
 ```
 
 문서 회귀 확인:
@@ -121,6 +120,7 @@ print('sync done')
 
 ## 버전 이력
 
+- **v3.1** — 절제된 스큐어모피즘(스티키 노트·테이프·화이트보드 프레임·데스크톱 미세 기울기) + 전 교과 테마 6색 이상 노트 팔레트, 빌더 내부 리팩토링(SpecError·순수 render_html), 테스트 스크래치 분리, D1 토큰 계약 실측 정렬, D2~D4 fixture(장문 제목·어휘 중심·부분 pedagogy·상태 showcase), visual QA 스크립트 tests/ 승격, .gitignore 일반화
 - **v3** — 선택 `pedagogy` 메타데이터, 교육 설계 기준, 교과·수업 목적별 브랜치 archetype, v2/v3 fixture 회귀 테스트, 접근성·리플로우 보강
 - **v2** — JSON 빌더(`build_mindmap.py`), 모드 3종 정량 스펙, 교과 테마 13종, 인쇄·접근성, 퀴즈 블록
 - **v1** — 최초 릴리스 (수동 템플릿 편집, 교과 테마·빌더 없음)

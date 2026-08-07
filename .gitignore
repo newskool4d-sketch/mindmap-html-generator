@@ -21,3 +21,5 @@ tests/.out/
 !.omo/evidence/design-next/
 !.omo/evidence/design-next/*.md
 !.omo/evidence/design-next/browser-visual-qa-report.json
+!.omo/evidence/design-next/screenshots/
+!.omo/evidence/design-next/screenshots/browser-visual-qa-report.json
