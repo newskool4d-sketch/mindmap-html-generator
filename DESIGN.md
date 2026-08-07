@@ -33,7 +33,8 @@ Do not clone any brand identity. The reference files are inspiration, not source
 | Active border | `--border-active` | stronger warm gray-green | Expanded and active state boundary |
 | Center start | `--center-start` | subject-aware middle tone | Center node gradient start |
 | Center end | `--center-end` | subject-aware deep tone | Center node gradient end |
-| Note 1-8 | `--note-1` to `--note-8` | soft subject-compatible tints | Branch note surfaces |
+| Note 1-8 | `--surface-note-1` to `--surface-note-8` | soft subject-compatible tints | Branch note surfaces |
+| Border on note | `--border-on-note` | translucent white | Branch note inner border |
 
 ### Subject Themes
 
@@ -87,6 +88,7 @@ All spacing is based on 4px increments. Template work should migrate informal va
 | `--space-4` | 16px | Button and branch inner spacing |
 | `--space-5` | 20px | Page padding on small screens |
 | `--space-6` | 24px | Panel rhythm |
+| `--space-7` | 28px | Wide card inner spacing |
 | `--space-8` | 32px | Map and section spacing |
 | `--space-10` | 40px | Desktop breathing room |
 
@@ -165,6 +167,22 @@ All spacing is based on 4px increments. Template work should migrate informal va
 - Do not add autoplay, decorative motion, timers, scoring, game mechanics, drag/drop, physics, or staged reveal without explicit user approval.
 - Avoid layout-shifting animation. Expansion behavior must remain predictable and tested.
 
+### Motion & Radius Tokens (template-implemented)
+
+| Token | Value | Usage |
+| --- | --- | --- |
+| `--motion-expand` | `max-height 0.35s ease, padding 0.35s ease` | Branch expand/collapse |
+| `--motion-control` | 0.16s ease-out multi-property | Control hover/active/focus |
+| `--radius-board` | 30px | Main board |
+| `--radius-node` | 24px | Branch notes / center |
+| `--radius-panel` | 18px | Pedagogy panel |
+| `--radius-quiz` | 14px | Quiz block |
+| `--radius-pill` | 999px | Toggle pill |
+
+### Legacy Alias Layer
+
+Subject themes override the legacy tokens `--bg`, `--panel`, `--text`, `--muted`, `--line`, `--center1/2`, `--card1`-`--card8`, `--shadow`. The semantic tokens above consume them via `var()` aliases (e.g. `--surface-canvas: var(--bg)`). This alias layer is the intentional theme-override surface; new CSS must reference the semantic tokens, never the legacy names directly.
+
 ## 7. Depth
 
 ### Strategy
@@ -173,7 +191,8 @@ Use mixed depth: tonal shift plus very soft shadows. Borders and hairlines carry
 
 | Level | Token | Usage |
 | --- | --- | --- |
-| Flat | `--shadow-none` | Print and connector SVG |
+| Flat | (`box-shadow: none` 직접 지정 — print/connector 전용 one-off) | Print and connector SVG |
+| Panel | `--shadow-panel` | Pedagogy panel separation |
 | Rest | `--shadow-rest` | Branch notes at rest |
 | Board | `--shadow-board` | Main map board |
 | Focus | `--shadow-focus` | Focused or expanded node when helpful |

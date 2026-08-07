@@ -15,7 +15,6 @@ description: |
 # Mindmap HTML Generator
 
 > **정본(Claude)**: 이 개발 repo(`.git` 포함)가 편집 정본. `~/.codex/skills/mindmap-html-generator/`는 경량 미러. 수정은 Claude에서 하고 필요 시 Codex로 동기화한다.
-> 참고: 이 폴더의 `.omo`·`.git` 캐시가 약 43MB로 비대함 — 스킬 로직과 무관한 별도 정리 대상.
 
 중심 주제 + 좌우 브랜치 노드 + 연결선으로 구성된 단일 HTML 파일을 생성한다.
 데스크톱 우선, 모바일은 세로 나열 폴백. 인쇄 시 전체 펼침 레이아웃 내장.
