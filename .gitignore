@@ -16,7 +16,6 @@ tests/.out/
 !.omo/evidence/
 !.omo/evidence/*.md
 !.omo/evidence/task-8-mindmap-html-generator-design-upgrade/
-!.omo/evidence/task-8-mindmap-html-generator-design-upgrade/visual-qa.mjs
 !.omo/evidence/task-8-mindmap-html-generator-design-upgrade/screenshots/
 !.omo/evidence/task-8-mindmap-html-generator-design-upgrade/screenshots/browser-visual-qa-report.json
 !.omo/evidence/design-next/

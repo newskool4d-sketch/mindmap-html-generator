@@ -550,7 +550,9 @@
 
       .node,
       .center {
-        position: static;
+        position: relative;
+        top: 0;
+        left: 0;
         width: 100%;
         height: auto;
         transform: none;
@@ -665,7 +667,7 @@
       .map { box-shadow: none; min-height: auto !important; padding: 0; background: white; }
       .lines, .icon, .hint, .quiz-toggle { display: none; }
       .node:not(.center)::after { display: none; }
-      .node { transform: none; box-shadow: none; background-image: none; }
+      .node:not(.center) { transform: none; box-shadow: none; background-image: none; }
       .map { border: 1px solid var(--border-subtle); outline: none; }
       .node, .node.active, .center {
         position: static;

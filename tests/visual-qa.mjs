@@ -4,16 +4,16 @@ import { basename, dirname, extname, join, resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 import { chromium } from "playwright";
 
-const DEFAULT_EVIDENCE_DIR = ".omo/evidence/task-8-mindmap-html-generator-design-upgrade";
+const DEFAULT_EVIDENCE_DIR = ".omo/evidence/design-next";
 const DEFAULT_OUT_DIR = `${DEFAULT_EVIDENCE_DIR}/screenshots`;
 const DEFAULT_VIEWPORTS = "1280,768,390";
 const DEFAULT_STATES = "rest,hover,focus-visible,active,expanded,collapsed,quiz-open,quiz-closed,reduced-motion,print";
 const USAGE = `visual-qa.mjs
 
 Usage:
-  node .omo/evidence/task-8-mindmap-html-generator-design-upgrade/visual-qa.mjs --help
-  node .omo/evidence/task-8-mindmap-html-generator-design-upgrade/visual-qa.mjs --sample <html> --viewports 1280,768,390 --states ${DEFAULT_STATES} --out <dir>
-  node .omo/evidence/task-8-mindmap-html-generator-design-upgrade/visual-qa.mjs --sample-dir .omo/evidence/task-8-mindmap-html-generator-design-upgrade/out
+  node tests/visual-qa.mjs --help
+  node tests/visual-qa.mjs --sample <html> --viewports 1280,768,390 --states ${DEFAULT_STATES} --out <dir>
+  node tests/visual-qa.mjs --sample-dir .omo/evidence/design-next/out
 
 This harness drives a real Playwright browser, captures fresh screenshot evidence,
 and writes browser-visual-qa-report.json with objective layout/state metrics.`;
