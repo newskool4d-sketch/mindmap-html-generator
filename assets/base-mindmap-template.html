@@ -139,11 +139,9 @@
         linear-gradient(var(--surface-board), var(--surface-board)),
         repeating-linear-gradient(0deg, transparent 0 39px, var(--surface-guide) 39px 40px),
         repeating-linear-gradient(90deg, transparent 0 39px, var(--surface-guide) 39px 40px);
-      box-shadow: var(--shadow-board);
+      box-shadow: var(--shadow-board), inset 0 0 0 10px var(--surface-frame), 0 0 0 1px var(--border-frame);
       overflow: hidden;
       isolation: isolate;
-      border: 10px solid var(--surface-frame);
-      outline: 1px solid var(--border-frame);
     }
 
     .sr-only {
@@ -323,14 +321,14 @@
       font-weight: 700;
     }
 
-    .branch-1 { background: var(--surface-note-1); }
-    .branch-2 { background: var(--surface-note-2); }
-    .branch-3 { background: var(--surface-note-3); }
-    .branch-4 { background: var(--surface-note-4); }
-    .branch-5 { background: var(--surface-note-5); }
-    .branch-6 { background: var(--surface-note-6); }
-    .branch-7 { background: var(--surface-note-7); }
-    .branch-8 { background: var(--surface-note-8); }
+    .branch-1 { background-color: var(--surface-note-1); }
+    .branch-2 { background-color: var(--surface-note-2); }
+    .branch-3 { background-color: var(--surface-note-3); }
+    .branch-4 { background-color: var(--surface-note-4); }
+    .branch-5 { background-color: var(--surface-note-5); }
+    .branch-6 { background-color: var(--surface-note-6); }
+    .branch-7 { background-color: var(--surface-note-7); }
+    .branch-8 { background-color: var(--surface-note-8); }
 
     .node:not(.center)::after {
       content: "";
@@ -669,7 +667,7 @@
       .node:not(.center)::after { display: none; }
       .node { transform: none; box-shadow: none; background-image: none; }
       .map { border: 1px solid var(--border-subtle); outline: none; }
-      .node, .center {
+      .node, .node.active, .center {
         position: static;
         width: 100%;
         height: auto;
