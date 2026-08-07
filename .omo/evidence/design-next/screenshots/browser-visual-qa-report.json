@@ -1,0 +1,4074 @@
+{
+  "generatedAt": "2026-08-07T14:28:17.953Z",
+  "launchMode": "chrome-channel",
+  "sourceMtimeNote": "Screenshots in this report were captured by this run after the latest template edit known to the executor.",
+  "requestedViewports": [
+    {
+      "width": 1280,
+      "height": 900,
+      "label": "1280x900"
+    },
+    {
+      "width": 768,
+      "height": 1000,
+      "label": "768x1000"
+    },
+    {
+      "width": 390,
+      "height": 1200,
+      "label": "390x1200"
+    }
+  ],
+  "requestedStates": [
+    "rest",
+    "hover",
+    "focus-visible",
+    "active",
+    "expanded",
+    "collapsed",
+    "quiz-open",
+    "quiz-closed",
+    "reduced-motion",
+    "print"
+  ],
+  "runDir": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z",
+  "samples": [
+    {
+      "sample": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\out\\물의_순환_교과용.html",
+      "sampleLabel": "01-_-_",
+      "checks": [
+        {
+          "id": "01-_-_-1280x900",
+          "viewport": {
+            "width": 1280,
+            "height": 900,
+            "label": "1280x900"
+          },
+          "media": "screen",
+          "metrics": {
+            "title": "물의 순환",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "scrollWidth": 1280,
+            "clientWidth": 1280,
+            "horizontalOverflow": false,
+            "branchCount": 4,
+            "connectorCount": 0,
+            "placeholderCount": 0,
+            "pedagogyPanelCount": 0,
+            "quizToggleCount": 0,
+            "overlaps": [],
+            "overflowElements": [],
+            "activeElement": "body",
+            "activeOutline": {
+              "outlineStyle": "none",
+              "outlineWidth": "3px",
+              "boxShadow": "none"
+            }
+          },
+          "interactions": {
+            "focusMetrics": {
+              "title": "물의 순환",
+              "viewport": {
+                "width": 1280,
+                "height": 900
+              },
+              "scrollWidth": 1280,
+              "clientWidth": 1280,
+              "horizontalOverflow": false,
+              "branchCount": 4,
+              "connectorCount": 0,
+              "placeholderCount": 0,
+              "pedagogyPanelCount": 0,
+              "quizToggleCount": 0,
+              "overlaps": [],
+              "overflowElements": [],
+              "activeElement": "button",
+              "activeOutline": {
+                "outlineStyle": "solid",
+                "outlineWidth": "3px",
+                "boxShadow": "none"
+              }
+            },
+            "expandedMetrics": {
+              "title": "물의 순환",
+              "viewport": {
+                "width": 1280,
+                "height": 900
+              },
+              "scrollWidth": 1280,
+              "clientWidth": 1280,
+              "horizontalOverflow": false,
+              "branchCount": 4,
+              "connectorCount": 0,
+              "placeholderCount": 0,
+              "pedagogyPanelCount": 0,
+              "quizToggleCount": 0,
+              "overlaps": [],
+              "overflowElements": [],
+              "activeElement": "button",
+              "activeOutline": {
+                "outlineStyle": "solid",
+                "outlineWidth": "3px",
+                "boxShadow": "none"
+              }
+            },
+            "collapsedMetrics": {
+              "title": "물의 순환",
+              "viewport": {
+                "width": 1280,
+                "height": 900
+              },
+              "scrollWidth": 1280,
+              "clientWidth": 1280,
+              "horizontalOverflow": false,
+              "branchCount": 4,
+              "connectorCount": 0,
+              "placeholderCount": 0,
+              "pedagogyPanelCount": 0,
+              "quizToggleCount": 0,
+              "overlaps": [],
+              "overflowElements": [],
+              "activeElement": "button",
+              "activeOutline": {
+                "outlineStyle": "solid",
+                "outlineWidth": "3px",
+                "boxShadow": "none"
+              }
+            }
+          },
+          "captures": [
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\01-_-_-1280x900-rest.png",
+              "sampleLabel": "01-_-_",
+              "viewportLabel": "1280x900",
+              "state": "rest"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\01-_-_-1280x900-hover.png",
+              "sampleLabel": "01-_-_",
+              "viewportLabel": "1280x900",
+              "state": "hover"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\01-_-_-1280x900-focus-visible.png",
+              "sampleLabel": "01-_-_",
+              "viewportLabel": "1280x900",
+              "state": "focus-visible"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\01-_-_-1280x900-active-pressed.png",
+              "sampleLabel": "01-_-_",
+              "viewportLabel": "1280x900",
+              "state": "active-pressed"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\01-_-_-1280x900-expanded-mid.png",
+              "sampleLabel": "01-_-_",
+              "viewportLabel": "1280x900",
+              "state": "expanded-mid"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\01-_-_-1280x900-expanded-settled.png",
+              "sampleLabel": "01-_-_",
+              "viewportLabel": "1280x900",
+              "state": "expanded-settled"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\01-_-_-1280x900-collapsed.png",
+              "sampleLabel": "01-_-_",
+              "viewportLabel": "1280x900",
+              "state": "collapsed"
+            }
+          ]
+        },
+        {
+          "id": "01-_-_-1280x900-reduced-motion",
+          "viewport": {
+            "width": 1280,
+            "height": 900,
+            "label": "1280x900"
+          },
+          "media": "screen",
+          "reducedMotion": true,
+          "metrics": {
+            "title": "물의 순환",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "scrollWidth": 1280,
+            "clientWidth": 1280,
+            "horizontalOverflow": false,
+            "branchCount": 4,
+            "connectorCount": 0,
+            "placeholderCount": 0,
+            "pedagogyPanelCount": 0,
+            "quizToggleCount": 0,
+            "overlaps": [],
+            "overflowElements": [],
+            "activeElement": "body",
+            "activeOutline": {
+              "outlineStyle": "none",
+              "outlineWidth": "3px",
+              "boxShadow": "none"
+            }
+          },
+          "reducedMotionMetrics": [
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            }
+          ],
+          "captures": [
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\01-_-_-1280x900-reduced-motion.png",
+              "sampleLabel": "01-_-_",
+              "viewportLabel": "1280x900",
+              "state": "reduced-motion"
+            }
+          ]
+        },
+        {
+          "id": "01-_-_-768x1000",
+          "viewport": {
+            "width": 768,
+            "height": 1000,
+            "label": "768x1000"
+          },
+          "media": "screen",
+          "metrics": {
+            "title": "물의 순환",
+            "viewport": {
+              "width": 768,
+              "height": 1000
+            },
+            "scrollWidth": 768,
+            "clientWidth": 768,
+            "horizontalOverflow": false,
+            "branchCount": 4,
+            "connectorCount": 0,
+            "placeholderCount": 0,
+            "pedagogyPanelCount": 0,
+            "quizToggleCount": 0,
+            "overlaps": [],
+            "overflowElements": [],
+            "activeElement": "body",
+            "activeOutline": {
+              "outlineStyle": "none",
+              "outlineWidth": "3px",
+              "boxShadow": "none"
+            }
+          },
+          "interactions": {
+            "focusMetrics": {
+              "title": "물의 순환",
+              "viewport": {
+                "width": 768,
+                "height": 1000
+              },
+              "scrollWidth": 768,
+              "clientWidth": 768,
+              "horizontalOverflow": false,
+              "branchCount": 4,
+              "connectorCount": 0,
+              "placeholderCount": 0,
+              "pedagogyPanelCount": 0,
+              "quizToggleCount": 0,
+              "overlaps": [],
+              "overflowElements": [],
+              "activeElement": "button",
+              "activeOutline": {
+                "outlineStyle": "solid",
+                "outlineWidth": "3px",
+                "boxShadow": "none"
+              }
+            },
+            "expandedMetrics": {
+              "title": "물의 순환",
+              "viewport": {
+                "width": 768,
+                "height": 1000
+              },
+              "scrollWidth": 768,
+              "clientWidth": 768,
+              "horizontalOverflow": false,
+              "branchCount": 4,
+              "connectorCount": 0,
+              "placeholderCount": 0,
+              "pedagogyPanelCount": 0,
+              "quizToggleCount": 0,
+              "overlaps": [],
+              "overflowElements": [],
+              "activeElement": "button",
+              "activeOutline": {
+                "outlineStyle": "solid",
+                "outlineWidth": "3px",
+                "boxShadow": "none"
+              }
+            },
+            "collapsedMetrics": {
+              "title": "물의 순환",
+              "viewport": {
+                "width": 768,
+                "height": 1000
+              },
+              "scrollWidth": 768,
+              "clientWidth": 768,
+              "horizontalOverflow": false,
+              "branchCount": 4,
+              "connectorCount": 0,
+              "placeholderCount": 0,
+              "pedagogyPanelCount": 0,
+              "quizToggleCount": 0,
+              "overlaps": [],
+              "overflowElements": [],
+              "activeElement": "button",
+              "activeOutline": {
+                "outlineStyle": "solid",
+                "outlineWidth": "3px",
+                "boxShadow": "none"
+              }
+            }
+          },
+          "captures": [
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\01-_-_-768x1000-rest.png",
+              "sampleLabel": "01-_-_",
+              "viewportLabel": "768x1000",
+              "state": "rest"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\01-_-_-768x1000-hover.png",
+              "sampleLabel": "01-_-_",
+              "viewportLabel": "768x1000",
+              "state": "hover"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\01-_-_-768x1000-focus-visible.png",
+              "sampleLabel": "01-_-_",
+              "viewportLabel": "768x1000",
+              "state": "focus-visible"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\01-_-_-768x1000-active-pressed.png",
+              "sampleLabel": "01-_-_",
+              "viewportLabel": "768x1000",
+              "state": "active-pressed"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\01-_-_-768x1000-expanded-mid.png",
+              "sampleLabel": "01-_-_",
+              "viewportLabel": "768x1000",
+              "state": "expanded-mid"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\01-_-_-768x1000-expanded-settled.png",
+              "sampleLabel": "01-_-_",
+              "viewportLabel": "768x1000",
+              "state": "expanded-settled"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\01-_-_-768x1000-collapsed.png",
+              "sampleLabel": "01-_-_",
+              "viewportLabel": "768x1000",
+              "state": "collapsed"
+            }
+          ]
+        },
+        {
+          "id": "01-_-_-768x1000-reduced-motion",
+          "viewport": {
+            "width": 768,
+            "height": 1000,
+            "label": "768x1000"
+          },
+          "media": "screen",
+          "reducedMotion": true,
+          "metrics": {
+            "title": "물의 순환",
+            "viewport": {
+              "width": 768,
+              "height": 1000
+            },
+            "scrollWidth": 768,
+            "clientWidth": 768,
+            "horizontalOverflow": false,
+            "branchCount": 4,
+            "connectorCount": 0,
+            "placeholderCount": 0,
+            "pedagogyPanelCount": 0,
+            "quizToggleCount": 0,
+            "overlaps": [],
+            "overflowElements": [],
+            "activeElement": "body",
+            "activeOutline": {
+              "outlineStyle": "none",
+              "outlineWidth": "3px",
+              "boxShadow": "none"
+            }
+          },
+          "reducedMotionMetrics": [
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            }
+          ],
+          "captures": [
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\01-_-_-768x1000-reduced-motion.png",
+              "sampleLabel": "01-_-_",
+              "viewportLabel": "768x1000",
+              "state": "reduced-motion"
+            }
+          ]
+        },
+        {
+          "id": "01-_-_-390x1200",
+          "viewport": {
+            "width": 390,
+            "height": 1200,
+            "label": "390x1200"
+          },
+          "media": "screen",
+          "metrics": {
+            "title": "물의 순환",
+            "viewport": {
+              "width": 390,
+              "height": 1200
+            },
+            "scrollWidth": 390,
+            "clientWidth": 390,
+            "horizontalOverflow": false,
+            "branchCount": 4,
+            "connectorCount": 0,
+            "placeholderCount": 0,
+            "pedagogyPanelCount": 0,
+            "quizToggleCount": 0,
+            "overlaps": [],
+            "overflowElements": [],
+            "activeElement": "body",
+            "activeOutline": {
+              "outlineStyle": "none",
+              "outlineWidth": "3px",
+              "boxShadow": "none"
+            }
+          },
+          "interactions": {
+            "focusMetrics": {
+              "title": "물의 순환",
+              "viewport": {
+                "width": 390,
+                "height": 1200
+              },
+              "scrollWidth": 390,
+              "clientWidth": 390,
+              "horizontalOverflow": false,
+              "branchCount": 4,
+              "connectorCount": 0,
+              "placeholderCount": 0,
+              "pedagogyPanelCount": 0,
+              "quizToggleCount": 0,
+              "overlaps": [],
+              "overflowElements": [],
+              "activeElement": "button",
+              "activeOutline": {
+                "outlineStyle": "solid",
+                "outlineWidth": "3px",
+                "boxShadow": "none"
+              }
+            },
+            "expandedMetrics": {
+              "title": "물의 순환",
+              "viewport": {
+                "width": 390,
+                "height": 1200
+              },
+              "scrollWidth": 390,
+              "clientWidth": 390,
+              "horizontalOverflow": false,
+              "branchCount": 4,
+              "connectorCount": 0,
+              "placeholderCount": 0,
+              "pedagogyPanelCount": 0,
+              "quizToggleCount": 0,
+              "overlaps": [],
+              "overflowElements": [],
+              "activeElement": "button",
+              "activeOutline": {
+                "outlineStyle": "solid",
+                "outlineWidth": "3px",
+                "boxShadow": "none"
+              }
+            },
+            "collapsedMetrics": {
+              "title": "물의 순환",
+              "viewport": {
+                "width": 390,
+                "height": 1200
+              },
+              "scrollWidth": 390,
+              "clientWidth": 390,
+              "horizontalOverflow": false,
+              "branchCount": 4,
+              "connectorCount": 0,
+              "placeholderCount": 0,
+              "pedagogyPanelCount": 0,
+              "quizToggleCount": 0,
+              "overlaps": [],
+              "overflowElements": [],
+              "activeElement": "button",
+              "activeOutline": {
+                "outlineStyle": "solid",
+                "outlineWidth": "3px",
+                "boxShadow": "none"
+              }
+            }
+          },
+          "captures": [
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\01-_-_-390x1200-rest.png",
+              "sampleLabel": "01-_-_",
+              "viewportLabel": "390x1200",
+              "state": "rest"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\01-_-_-390x1200-hover.png",
+              "sampleLabel": "01-_-_",
+              "viewportLabel": "390x1200",
+              "state": "hover"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\01-_-_-390x1200-focus-visible.png",
+              "sampleLabel": "01-_-_",
+              "viewportLabel": "390x1200",
+              "state": "focus-visible"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\01-_-_-390x1200-active-pressed.png",
+              "sampleLabel": "01-_-_",
+              "viewportLabel": "390x1200",
+              "state": "active-pressed"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\01-_-_-390x1200-expanded-mid.png",
+              "sampleLabel": "01-_-_",
+              "viewportLabel": "390x1200",
+              "state": "expanded-mid"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\01-_-_-390x1200-expanded-settled.png",
+              "sampleLabel": "01-_-_",
+              "viewportLabel": "390x1200",
+              "state": "expanded-settled"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\01-_-_-390x1200-collapsed.png",
+              "sampleLabel": "01-_-_",
+              "viewportLabel": "390x1200",
+              "state": "collapsed"
+            }
+          ]
+        },
+        {
+          "id": "01-_-_-390x1200-reduced-motion",
+          "viewport": {
+            "width": 390,
+            "height": 1200,
+            "label": "390x1200"
+          },
+          "media": "screen",
+          "reducedMotion": true,
+          "metrics": {
+            "title": "물의 순환",
+            "viewport": {
+              "width": 390,
+              "height": 1200
+            },
+            "scrollWidth": 390,
+            "clientWidth": 390,
+            "horizontalOverflow": false,
+            "branchCount": 4,
+            "connectorCount": 0,
+            "placeholderCount": 0,
+            "pedagogyPanelCount": 0,
+            "quizToggleCount": 0,
+            "overlaps": [],
+            "overflowElements": [],
+            "activeElement": "body",
+            "activeOutline": {
+              "outlineStyle": "none",
+              "outlineWidth": "3px",
+              "boxShadow": "none"
+            }
+          },
+          "reducedMotionMetrics": [
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            }
+          ],
+          "captures": [
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\01-_-_-390x1200-reduced-motion.png",
+              "sampleLabel": "01-_-_",
+              "viewportLabel": "390x1200",
+              "state": "reduced-motion"
+            }
+          ]
+        },
+        {
+          "id": "01-_-_-1280x900-print",
+          "viewport": {
+            "width": 1280,
+            "height": 900,
+            "label": "1280x900"
+          },
+          "media": "print",
+          "metrics": {
+            "title": "물의 순환",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "scrollWidth": 1280,
+            "clientWidth": 1280,
+            "horizontalOverflow": false,
+            "branchCount": 4,
+            "connectorCount": 0,
+            "placeholderCount": 0,
+            "pedagogyPanelCount": 0,
+            "quizToggleCount": 0,
+            "overlaps": [],
+            "overflowElements": [],
+            "activeElement": "body",
+            "activeOutline": {
+              "outlineStyle": "none",
+              "outlineWidth": "3px",
+              "boxShadow": "none"
+            }
+          },
+          "printMetrics": {
+            "contentStates": [
+              {
+                "maxHeight": "none",
+                "overflow": "visible",
+                "display": "block",
+                "ariaHidden": "true"
+              },
+              {
+                "maxHeight": "none",
+                "overflow": "visible",
+                "display": "block",
+                "ariaHidden": "true"
+              },
+              {
+                "maxHeight": "none",
+                "overflow": "visible",
+                "display": "block",
+                "ariaHidden": "true"
+              },
+              {
+                "maxHeight": "none",
+                "overflow": "visible",
+                "display": "block",
+                "ariaHidden": "true"
+              }
+            ],
+            "quizAnswerStates": [],
+            "hiddenControlStates": [
+              {
+                "selector": {},
+                "display": "none"
+              },
+              {
+                "selector": "icon",
+                "display": "none"
+              },
+              {
+                "selector": "icon",
+                "display": "none"
+              },
+              {
+                "selector": "icon",
+                "display": "none"
+              },
+              {
+                "selector": "icon",
+                "display": "none"
+              },
+              {
+                "selector": "hint",
+                "display": "none"
+              }
+            ]
+          },
+          "captures": [
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\01-_-_-1280x900-print.png",
+              "sampleLabel": "01-_-_",
+              "viewportLabel": "1280x900",
+              "state": "print"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sample": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\out\\물질의_상태_변화_어휘_정리_교과용.html",
+      "sampleLabel": "02-_-_-_-_-_",
+      "checks": [
+        {
+          "id": "02-_-_-_-_-_-1280x900",
+          "viewport": {
+            "width": 1280,
+            "height": 900,
+            "label": "1280x900"
+          },
+          "media": "screen",
+          "metrics": {
+            "title": "물질의 상태 변화 어휘 정리",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "scrollWidth": 1280,
+            "clientWidth": 1280,
+            "horizontalOverflow": false,
+            "branchCount": 4,
+            "connectorCount": 0,
+            "placeholderCount": 0,
+            "pedagogyPanelCount": 1,
+            "quizToggleCount": 0,
+            "overlaps": [],
+            "overflowElements": [],
+            "activeElement": "body",
+            "activeOutline": {
+              "outlineStyle": "none",
+              "outlineWidth": "3px",
+              "boxShadow": "none"
+            }
+          },
+          "interactions": {
+            "focusMetrics": {
+              "title": "물질의 상태 변화 어휘 정리",
+              "viewport": {
+                "width": 1280,
+                "height": 900
+              },
+              "scrollWidth": 1280,
+              "clientWidth": 1280,
+              "horizontalOverflow": false,
+              "branchCount": 4,
+              "connectorCount": 0,
+              "placeholderCount": 0,
+              "pedagogyPanelCount": 1,
+              "quizToggleCount": 0,
+              "overlaps": [],
+              "overflowElements": [],
+              "activeElement": "button",
+              "activeOutline": {
+                "outlineStyle": "solid",
+                "outlineWidth": "3px",
+                "boxShadow": "none"
+              }
+            },
+            "expandedMetrics": {
+              "title": "물질의 상태 변화 어휘 정리",
+              "viewport": {
+                "width": 1280,
+                "height": 900
+              },
+              "scrollWidth": 1280,
+              "clientWidth": 1280,
+              "horizontalOverflow": false,
+              "branchCount": 4,
+              "connectorCount": 0,
+              "placeholderCount": 0,
+              "pedagogyPanelCount": 1,
+              "quizToggleCount": 0,
+              "overlaps": [],
+              "overflowElements": [],
+              "activeElement": "button",
+              "activeOutline": {
+                "outlineStyle": "solid",
+                "outlineWidth": "3px",
+                "boxShadow": "none"
+              }
+            },
+            "collapsedMetrics": {
+              "title": "물질의 상태 변화 어휘 정리",
+              "viewport": {
+                "width": 1280,
+                "height": 900
+              },
+              "scrollWidth": 1280,
+              "clientWidth": 1280,
+              "horizontalOverflow": false,
+              "branchCount": 4,
+              "connectorCount": 0,
+              "placeholderCount": 0,
+              "pedagogyPanelCount": 1,
+              "quizToggleCount": 0,
+              "overlaps": [],
+              "overflowElements": [],
+              "activeElement": "button",
+              "activeOutline": {
+                "outlineStyle": "solid",
+                "outlineWidth": "3px",
+                "boxShadow": "none"
+              }
+            }
+          },
+          "captures": [
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\02-_-_-_-_-_-1280x900-rest.png",
+              "sampleLabel": "02-_-_-_-_-_",
+              "viewportLabel": "1280x900",
+              "state": "rest"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\02-_-_-_-_-_-1280x900-hover.png",
+              "sampleLabel": "02-_-_-_-_-_",
+              "viewportLabel": "1280x900",
+              "state": "hover"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\02-_-_-_-_-_-1280x900-focus-visible.png",
+              "sampleLabel": "02-_-_-_-_-_",
+              "viewportLabel": "1280x900",
+              "state": "focus-visible"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\02-_-_-_-_-_-1280x900-active-pressed.png",
+              "sampleLabel": "02-_-_-_-_-_",
+              "viewportLabel": "1280x900",
+              "state": "active-pressed"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\02-_-_-_-_-_-1280x900-expanded-mid.png",
+              "sampleLabel": "02-_-_-_-_-_",
+              "viewportLabel": "1280x900",
+              "state": "expanded-mid"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\02-_-_-_-_-_-1280x900-expanded-settled.png",
+              "sampleLabel": "02-_-_-_-_-_",
+              "viewportLabel": "1280x900",
+              "state": "expanded-settled"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\02-_-_-_-_-_-1280x900-collapsed.png",
+              "sampleLabel": "02-_-_-_-_-_",
+              "viewportLabel": "1280x900",
+              "state": "collapsed"
+            }
+          ]
+        },
+        {
+          "id": "02-_-_-_-_-_-1280x900-reduced-motion",
+          "viewport": {
+            "width": 1280,
+            "height": 900,
+            "label": "1280x900"
+          },
+          "media": "screen",
+          "reducedMotion": true,
+          "metrics": {
+            "title": "물질의 상태 변화 어휘 정리",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "scrollWidth": 1280,
+            "clientWidth": 1280,
+            "horizontalOverflow": false,
+            "branchCount": 4,
+            "connectorCount": 0,
+            "placeholderCount": 0,
+            "pedagogyPanelCount": 1,
+            "quizToggleCount": 0,
+            "overlaps": [],
+            "overflowElements": [],
+            "activeElement": "body",
+            "activeOutline": {
+              "outlineStyle": "none",
+              "outlineWidth": "3px",
+              "boxShadow": "none"
+            }
+          },
+          "reducedMotionMetrics": [
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            }
+          ],
+          "captures": [
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\02-_-_-_-_-_-1280x900-reduced-motion.png",
+              "sampleLabel": "02-_-_-_-_-_",
+              "viewportLabel": "1280x900",
+              "state": "reduced-motion"
+            }
+          ]
+        },
+        {
+          "id": "02-_-_-_-_-_-768x1000",
+          "viewport": {
+            "width": 768,
+            "height": 1000,
+            "label": "768x1000"
+          },
+          "media": "screen",
+          "metrics": {
+            "title": "물질의 상태 변화 어휘 정리",
+            "viewport": {
+              "width": 768,
+              "height": 1000
+            },
+            "scrollWidth": 768,
+            "clientWidth": 768,
+            "horizontalOverflow": false,
+            "branchCount": 4,
+            "connectorCount": 0,
+            "placeholderCount": 0,
+            "pedagogyPanelCount": 1,
+            "quizToggleCount": 0,
+            "overlaps": [],
+            "overflowElements": [],
+            "activeElement": "body",
+            "activeOutline": {
+              "outlineStyle": "none",
+              "outlineWidth": "3px",
+              "boxShadow": "none"
+            }
+          },
+          "interactions": {
+            "focusMetrics": {
+              "title": "물질의 상태 변화 어휘 정리",
+              "viewport": {
+                "width": 768,
+                "height": 1000
+              },
+              "scrollWidth": 768,
+              "clientWidth": 768,
+              "horizontalOverflow": false,
+              "branchCount": 4,
+              "connectorCount": 0,
+              "placeholderCount": 0,
+              "pedagogyPanelCount": 1,
+              "quizToggleCount": 0,
+              "overlaps": [],
+              "overflowElements": [],
+              "activeElement": "button",
+              "activeOutline": {
+                "outlineStyle": "solid",
+                "outlineWidth": "3px",
+                "boxShadow": "none"
+              }
+            },
+            "expandedMetrics": {
+              "title": "물질의 상태 변화 어휘 정리",
+              "viewport": {
+                "width": 768,
+                "height": 1000
+              },
+              "scrollWidth": 768,
+              "clientWidth": 768,
+              "horizontalOverflow": false,
+              "branchCount": 4,
+              "connectorCount": 0,
+              "placeholderCount": 0,
+              "pedagogyPanelCount": 1,
+              "quizToggleCount": 0,
+              "overlaps": [],
+              "overflowElements": [],
+              "activeElement": "button",
+              "activeOutline": {
+                "outlineStyle": "solid",
+                "outlineWidth": "3px",
+                "boxShadow": "none"
+              }
+            },
+            "collapsedMetrics": {
+              "title": "물질의 상태 변화 어휘 정리",
+              "viewport": {
+                "width": 768,
+                "height": 1000
+              },
+              "scrollWidth": 768,
+              "clientWidth": 768,
+              "horizontalOverflow": false,
+              "branchCount": 4,
+              "connectorCount": 0,
+              "placeholderCount": 0,
+              "pedagogyPanelCount": 1,
+              "quizToggleCount": 0,
+              "overlaps": [],
+              "overflowElements": [],
+              "activeElement": "button",
+              "activeOutline": {
+                "outlineStyle": "solid",
+                "outlineWidth": "3px",
+                "boxShadow": "none"
+              }
+            }
+          },
+          "captures": [
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\02-_-_-_-_-_-768x1000-rest.png",
+              "sampleLabel": "02-_-_-_-_-_",
+              "viewportLabel": "768x1000",
+              "state": "rest"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\02-_-_-_-_-_-768x1000-hover.png",
+              "sampleLabel": "02-_-_-_-_-_",
+              "viewportLabel": "768x1000",
+              "state": "hover"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\02-_-_-_-_-_-768x1000-focus-visible.png",
+              "sampleLabel": "02-_-_-_-_-_",
+              "viewportLabel": "768x1000",
+              "state": "focus-visible"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\02-_-_-_-_-_-768x1000-active-pressed.png",
+              "sampleLabel": "02-_-_-_-_-_",
+              "viewportLabel": "768x1000",
+              "state": "active-pressed"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\02-_-_-_-_-_-768x1000-expanded-mid.png",
+              "sampleLabel": "02-_-_-_-_-_",
+              "viewportLabel": "768x1000",
+              "state": "expanded-mid"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\02-_-_-_-_-_-768x1000-expanded-settled.png",
+              "sampleLabel": "02-_-_-_-_-_",
+              "viewportLabel": "768x1000",
+              "state": "expanded-settled"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\02-_-_-_-_-_-768x1000-collapsed.png",
+              "sampleLabel": "02-_-_-_-_-_",
+              "viewportLabel": "768x1000",
+              "state": "collapsed"
+            }
+          ]
+        },
+        {
+          "id": "02-_-_-_-_-_-768x1000-reduced-motion",
+          "viewport": {
+            "width": 768,
+            "height": 1000,
+            "label": "768x1000"
+          },
+          "media": "screen",
+          "reducedMotion": true,
+          "metrics": {
+            "title": "물질의 상태 변화 어휘 정리",
+            "viewport": {
+              "width": 768,
+              "height": 1000
+            },
+            "scrollWidth": 768,
+            "clientWidth": 768,
+            "horizontalOverflow": false,
+            "branchCount": 4,
+            "connectorCount": 0,
+            "placeholderCount": 0,
+            "pedagogyPanelCount": 1,
+            "quizToggleCount": 0,
+            "overlaps": [],
+            "overflowElements": [],
+            "activeElement": "body",
+            "activeOutline": {
+              "outlineStyle": "none",
+              "outlineWidth": "3px",
+              "boxShadow": "none"
+            }
+          },
+          "reducedMotionMetrics": [
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            }
+          ],
+          "captures": [
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\02-_-_-_-_-_-768x1000-reduced-motion.png",
+              "sampleLabel": "02-_-_-_-_-_",
+              "viewportLabel": "768x1000",
+              "state": "reduced-motion"
+            }
+          ]
+        },
+        {
+          "id": "02-_-_-_-_-_-390x1200",
+          "viewport": {
+            "width": 390,
+            "height": 1200,
+            "label": "390x1200"
+          },
+          "media": "screen",
+          "metrics": {
+            "title": "물질의 상태 변화 어휘 정리",
+            "viewport": {
+              "width": 390,
+              "height": 1200
+            },
+            "scrollWidth": 390,
+            "clientWidth": 390,
+            "horizontalOverflow": false,
+            "branchCount": 4,
+            "connectorCount": 0,
+            "placeholderCount": 0,
+            "pedagogyPanelCount": 1,
+            "quizToggleCount": 0,
+            "overlaps": [],
+            "overflowElements": [],
+            "activeElement": "body",
+            "activeOutline": {
+              "outlineStyle": "none",
+              "outlineWidth": "3px",
+              "boxShadow": "none"
+            }
+          },
+          "interactions": {
+            "focusMetrics": {
+              "title": "물질의 상태 변화 어휘 정리",
+              "viewport": {
+                "width": 390,
+                "height": 1200
+              },
+              "scrollWidth": 390,
+              "clientWidth": 390,
+              "horizontalOverflow": false,
+              "branchCount": 4,
+              "connectorCount": 0,
+              "placeholderCount": 0,
+              "pedagogyPanelCount": 1,
+              "quizToggleCount": 0,
+              "overlaps": [],
+              "overflowElements": [],
+              "activeElement": "button",
+              "activeOutline": {
+                "outlineStyle": "solid",
+                "outlineWidth": "3px",
+                "boxShadow": "none"
+              }
+            },
+            "expandedMetrics": {
+              "title": "물질의 상태 변화 어휘 정리",
+              "viewport": {
+                "width": 390,
+                "height": 1200
+              },
+              "scrollWidth": 390,
+              "clientWidth": 390,
+              "horizontalOverflow": false,
+              "branchCount": 4,
+              "connectorCount": 0,
+              "placeholderCount": 0,
+              "pedagogyPanelCount": 1,
+              "quizToggleCount": 0,
+              "overlaps": [],
+              "overflowElements": [],
+              "activeElement": "button",
+              "activeOutline": {
+                "outlineStyle": "solid",
+                "outlineWidth": "3px",
+                "boxShadow": "none"
+              }
+            },
+            "collapsedMetrics": {
+              "title": "물질의 상태 변화 어휘 정리",
+              "viewport": {
+                "width": 390,
+                "height": 1200
+              },
+              "scrollWidth": 390,
+              "clientWidth": 390,
+              "horizontalOverflow": false,
+              "branchCount": 4,
+              "connectorCount": 0,
+              "placeholderCount": 0,
+              "pedagogyPanelCount": 1,
+              "quizToggleCount": 0,
+              "overlaps": [],
+              "overflowElements": [],
+              "activeElement": "button",
+              "activeOutline": {
+                "outlineStyle": "solid",
+                "outlineWidth": "3px",
+                "boxShadow": "none"
+              }
+            }
+          },
+          "captures": [
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\02-_-_-_-_-_-390x1200-rest.png",
+              "sampleLabel": "02-_-_-_-_-_",
+              "viewportLabel": "390x1200",
+              "state": "rest"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\02-_-_-_-_-_-390x1200-hover.png",
+              "sampleLabel": "02-_-_-_-_-_",
+              "viewportLabel": "390x1200",
+              "state": "hover"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\02-_-_-_-_-_-390x1200-focus-visible.png",
+              "sampleLabel": "02-_-_-_-_-_",
+              "viewportLabel": "390x1200",
+              "state": "focus-visible"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\02-_-_-_-_-_-390x1200-active-pressed.png",
+              "sampleLabel": "02-_-_-_-_-_",
+              "viewportLabel": "390x1200",
+              "state": "active-pressed"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\02-_-_-_-_-_-390x1200-expanded-mid.png",
+              "sampleLabel": "02-_-_-_-_-_",
+              "viewportLabel": "390x1200",
+              "state": "expanded-mid"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\02-_-_-_-_-_-390x1200-expanded-settled.png",
+              "sampleLabel": "02-_-_-_-_-_",
+              "viewportLabel": "390x1200",
+              "state": "expanded-settled"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\02-_-_-_-_-_-390x1200-collapsed.png",
+              "sampleLabel": "02-_-_-_-_-_",
+              "viewportLabel": "390x1200",
+              "state": "collapsed"
+            }
+          ]
+        },
+        {
+          "id": "02-_-_-_-_-_-390x1200-reduced-motion",
+          "viewport": {
+            "width": 390,
+            "height": 1200,
+            "label": "390x1200"
+          },
+          "media": "screen",
+          "reducedMotion": true,
+          "metrics": {
+            "title": "물질의 상태 변화 어휘 정리",
+            "viewport": {
+              "width": 390,
+              "height": 1200
+            },
+            "scrollWidth": 390,
+            "clientWidth": 390,
+            "horizontalOverflow": false,
+            "branchCount": 4,
+            "connectorCount": 0,
+            "placeholderCount": 0,
+            "pedagogyPanelCount": 1,
+            "quizToggleCount": 0,
+            "overlaps": [],
+            "overflowElements": [],
+            "activeElement": "body",
+            "activeOutline": {
+              "outlineStyle": "none",
+              "outlineWidth": "3px",
+              "boxShadow": "none"
+            }
+          },
+          "reducedMotionMetrics": [
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            }
+          ],
+          "captures": [
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\02-_-_-_-_-_-390x1200-reduced-motion.png",
+              "sampleLabel": "02-_-_-_-_-_",
+              "viewportLabel": "390x1200",
+              "state": "reduced-motion"
+            }
+          ]
+        },
+        {
+          "id": "02-_-_-_-_-_-1280x900-print",
+          "viewport": {
+            "width": 1280,
+            "height": 900,
+            "label": "1280x900"
+          },
+          "media": "print",
+          "metrics": {
+            "title": "물질의 상태 변화 어휘 정리",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "scrollWidth": 1280,
+            "clientWidth": 1280,
+            "horizontalOverflow": false,
+            "branchCount": 4,
+            "connectorCount": 0,
+            "placeholderCount": 0,
+            "pedagogyPanelCount": 1,
+            "quizToggleCount": 0,
+            "overlaps": [],
+            "overflowElements": [],
+            "activeElement": "body",
+            "activeOutline": {
+              "outlineStyle": "none",
+              "outlineWidth": "3px",
+              "boxShadow": "none"
+            }
+          },
+          "printMetrics": {
+            "contentStates": [
+              {
+                "maxHeight": "none",
+                "overflow": "visible",
+                "display": "block",
+                "ariaHidden": "true"
+              },
+              {
+                "maxHeight": "none",
+                "overflow": "visible",
+                "display": "block",
+                "ariaHidden": "true"
+              },
+              {
+                "maxHeight": "none",
+                "overflow": "visible",
+                "display": "block",
+                "ariaHidden": "true"
+              },
+              {
+                "maxHeight": "none",
+                "overflow": "visible",
+                "display": "block",
+                "ariaHidden": "true"
+              }
+            ],
+            "quizAnswerStates": [],
+            "hiddenControlStates": [
+              {
+                "selector": {},
+                "display": "none"
+              },
+              {
+                "selector": "icon",
+                "display": "none"
+              },
+              {
+                "selector": "icon",
+                "display": "none"
+              },
+              {
+                "selector": "icon",
+                "display": "none"
+              },
+              {
+                "selector": "icon",
+                "display": "none"
+              },
+              {
+                "selector": "hint",
+                "display": "none"
+              }
+            ]
+          },
+          "captures": [
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\02-_-_-_-_-_-1280x900-print.png",
+              "sampleLabel": "02-_-_-_-_-_",
+              "viewportLabel": "1280x900",
+              "state": "print"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sample": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\out\\상태_점검_쇼케이스_퀴즈형.html",
+      "sampleLabel": "03-_-_-_",
+      "checks": [
+        {
+          "id": "03-_-_-_-1280x900",
+          "viewport": {
+            "width": 1280,
+            "height": 900,
+            "label": "1280x900"
+          },
+          "media": "screen",
+          "metrics": {
+            "title": "상태 점검 쇼케이스",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "scrollWidth": 1280,
+            "clientWidth": 1280,
+            "horizontalOverflow": false,
+            "branchCount": 8,
+            "connectorCount": 0,
+            "placeholderCount": 0,
+            "pedagogyPanelCount": 1,
+            "quizToggleCount": 2,
+            "overlaps": [],
+            "overflowElements": [],
+            "activeElement": "body",
+            "activeOutline": {
+              "outlineStyle": "none",
+              "outlineWidth": "3px",
+              "boxShadow": "none"
+            }
+          },
+          "interactions": {
+            "focusMetrics": {
+              "title": "상태 점검 쇼케이스",
+              "viewport": {
+                "width": 1280,
+                "height": 900
+              },
+              "scrollWidth": 1280,
+              "clientWidth": 1280,
+              "horizontalOverflow": false,
+              "branchCount": 8,
+              "connectorCount": 0,
+              "placeholderCount": 0,
+              "pedagogyPanelCount": 1,
+              "quizToggleCount": 2,
+              "overlaps": [],
+              "overflowElements": [],
+              "activeElement": "button",
+              "activeOutline": {
+                "outlineStyle": "solid",
+                "outlineWidth": "3px",
+                "boxShadow": "none"
+              }
+            },
+            "expandedMetrics": {
+              "title": "상태 점검 쇼케이스",
+              "viewport": {
+                "width": 1280,
+                "height": 900
+              },
+              "scrollWidth": 1280,
+              "clientWidth": 1280,
+              "horizontalOverflow": false,
+              "branchCount": 8,
+              "connectorCount": 0,
+              "placeholderCount": 0,
+              "pedagogyPanelCount": 1,
+              "quizToggleCount": 2,
+              "overlaps": [],
+              "overflowElements": [],
+              "activeElement": "button",
+              "activeOutline": {
+                "outlineStyle": "solid",
+                "outlineWidth": "3px",
+                "boxShadow": "none"
+              }
+            },
+            "collapsedMetrics": {
+              "title": "상태 점검 쇼케이스",
+              "viewport": {
+                "width": 1280,
+                "height": 900
+              },
+              "scrollWidth": 1280,
+              "clientWidth": 1280,
+              "horizontalOverflow": false,
+              "branchCount": 8,
+              "connectorCount": 0,
+              "placeholderCount": 0,
+              "pedagogyPanelCount": 1,
+              "quizToggleCount": 2,
+              "overlaps": [],
+              "overflowElements": [],
+              "activeElement": "button",
+              "activeOutline": {
+                "outlineStyle": "solid",
+                "outlineWidth": "3px",
+                "boxShadow": "none"
+              }
+            },
+            "quizOpenMetrics": {
+              "title": "상태 점검 쇼케이스",
+              "viewport": {
+                "width": 1280,
+                "height": 900
+              },
+              "scrollWidth": 1280,
+              "clientWidth": 1280,
+              "horizontalOverflow": false,
+              "branchCount": 8,
+              "connectorCount": 0,
+              "placeholderCount": 0,
+              "pedagogyPanelCount": 1,
+              "quizToggleCount": 2,
+              "overlaps": [],
+              "overflowElements": [],
+              "activeElement": "button",
+              "activeOutline": {
+                "outlineStyle": "none",
+                "outlineWidth": "3px",
+                "boxShadow": "none"
+              }
+            },
+            "quizClosedMetrics": {
+              "title": "상태 점검 쇼케이스",
+              "viewport": {
+                "width": 1280,
+                "height": 900
+              },
+              "scrollWidth": 1280,
+              "clientWidth": 1280,
+              "horizontalOverflow": false,
+              "branchCount": 8,
+              "connectorCount": 0,
+              "placeholderCount": 0,
+              "pedagogyPanelCount": 1,
+              "quizToggleCount": 2,
+              "overlaps": [],
+              "overflowElements": [],
+              "activeElement": "button",
+              "activeOutline": {
+                "outlineStyle": "none",
+                "outlineWidth": "3px",
+                "boxShadow": "none"
+              }
+            }
+          },
+          "captures": [
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\03-_-_-_-1280x900-rest.png",
+              "sampleLabel": "03-_-_-_",
+              "viewportLabel": "1280x900",
+              "state": "rest"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\03-_-_-_-1280x900-hover.png",
+              "sampleLabel": "03-_-_-_",
+              "viewportLabel": "1280x900",
+              "state": "hover"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\03-_-_-_-1280x900-focus-visible.png",
+              "sampleLabel": "03-_-_-_",
+              "viewportLabel": "1280x900",
+              "state": "focus-visible"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\03-_-_-_-1280x900-active-pressed.png",
+              "sampleLabel": "03-_-_-_",
+              "viewportLabel": "1280x900",
+              "state": "active-pressed"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\03-_-_-_-1280x900-expanded-mid.png",
+              "sampleLabel": "03-_-_-_",
+              "viewportLabel": "1280x900",
+              "state": "expanded-mid"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\03-_-_-_-1280x900-expanded-settled.png",
+              "sampleLabel": "03-_-_-_",
+              "viewportLabel": "1280x900",
+              "state": "expanded-settled"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\03-_-_-_-1280x900-collapsed.png",
+              "sampleLabel": "03-_-_-_",
+              "viewportLabel": "1280x900",
+              "state": "collapsed"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\03-_-_-_-1280x900-quiz-open.png",
+              "sampleLabel": "03-_-_-_",
+              "viewportLabel": "1280x900",
+              "state": "quiz-open"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\03-_-_-_-1280x900-quiz-closed.png",
+              "sampleLabel": "03-_-_-_",
+              "viewportLabel": "1280x900",
+              "state": "quiz-closed"
+            }
+          ]
+        },
+        {
+          "id": "03-_-_-_-1280x900-reduced-motion",
+          "viewport": {
+            "width": 1280,
+            "height": 900,
+            "label": "1280x900"
+          },
+          "media": "screen",
+          "reducedMotion": true,
+          "metrics": {
+            "title": "상태 점검 쇼케이스",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "scrollWidth": 1280,
+            "clientWidth": 1280,
+            "horizontalOverflow": false,
+            "branchCount": 8,
+            "connectorCount": 0,
+            "placeholderCount": 0,
+            "pedagogyPanelCount": 1,
+            "quizToggleCount": 2,
+            "overlaps": [],
+            "overflowElements": [],
+            "activeElement": "body",
+            "activeOutline": {
+              "outlineStyle": "none",
+              "outlineWidth": "3px",
+              "boxShadow": "none"
+            }
+          },
+          "reducedMotionMetrics": [
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "quiz-toggle",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "quiz-toggle",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            }
+          ],
+          "captures": [
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\03-_-_-_-1280x900-reduced-motion.png",
+              "sampleLabel": "03-_-_-_",
+              "viewportLabel": "1280x900",
+              "state": "reduced-motion"
+            }
+          ]
+        },
+        {
+          "id": "03-_-_-_-768x1000",
+          "viewport": {
+            "width": 768,
+            "height": 1000,
+            "label": "768x1000"
+          },
+          "media": "screen",
+          "metrics": {
+            "title": "상태 점검 쇼케이스",
+            "viewport": {
+              "width": 768,
+              "height": 1000
+            },
+            "scrollWidth": 768,
+            "clientWidth": 768,
+            "horizontalOverflow": false,
+            "branchCount": 8,
+            "connectorCount": 0,
+            "placeholderCount": 0,
+            "pedagogyPanelCount": 1,
+            "quizToggleCount": 2,
+            "overlaps": [],
+            "overflowElements": [],
+            "activeElement": "body",
+            "activeOutline": {
+              "outlineStyle": "none",
+              "outlineWidth": "3px",
+              "boxShadow": "none"
+            }
+          },
+          "interactions": {
+            "focusMetrics": {
+              "title": "상태 점검 쇼케이스",
+              "viewport": {
+                "width": 768,
+                "height": 1000
+              },
+              "scrollWidth": 768,
+              "clientWidth": 768,
+              "horizontalOverflow": false,
+              "branchCount": 8,
+              "connectorCount": 0,
+              "placeholderCount": 0,
+              "pedagogyPanelCount": 1,
+              "quizToggleCount": 2,
+              "overlaps": [],
+              "overflowElements": [],
+              "activeElement": "button",
+              "activeOutline": {
+                "outlineStyle": "solid",
+                "outlineWidth": "3px",
+                "boxShadow": "none"
+              }
+            },
+            "expandedMetrics": {
+              "title": "상태 점검 쇼케이스",
+              "viewport": {
+                "width": 768,
+                "height": 1000
+              },
+              "scrollWidth": 768,
+              "clientWidth": 768,
+              "horizontalOverflow": false,
+              "branchCount": 8,
+              "connectorCount": 0,
+              "placeholderCount": 0,
+              "pedagogyPanelCount": 1,
+              "quizToggleCount": 2,
+              "overlaps": [],
+              "overflowElements": [],
+              "activeElement": "button",
+              "activeOutline": {
+                "outlineStyle": "solid",
+                "outlineWidth": "3px",
+                "boxShadow": "none"
+              }
+            },
+            "collapsedMetrics": {
+              "title": "상태 점검 쇼케이스",
+              "viewport": {
+                "width": 768,
+                "height": 1000
+              },
+              "scrollWidth": 768,
+              "clientWidth": 768,
+              "horizontalOverflow": false,
+              "branchCount": 8,
+              "connectorCount": 0,
+              "placeholderCount": 0,
+              "pedagogyPanelCount": 1,
+              "quizToggleCount": 2,
+              "overlaps": [],
+              "overflowElements": [],
+              "activeElement": "button",
+              "activeOutline": {
+                "outlineStyle": "solid",
+                "outlineWidth": "3px",
+                "boxShadow": "none"
+              }
+            },
+            "quizOpenMetrics": {
+              "title": "상태 점검 쇼케이스",
+              "viewport": {
+                "width": 768,
+                "height": 1000
+              },
+              "scrollWidth": 768,
+              "clientWidth": 768,
+              "horizontalOverflow": false,
+              "branchCount": 8,
+              "connectorCount": 0,
+              "placeholderCount": 0,
+              "pedagogyPanelCount": 1,
+              "quizToggleCount": 2,
+              "overlaps": [],
+              "overflowElements": [],
+              "activeElement": "button",
+              "activeOutline": {
+                "outlineStyle": "none",
+                "outlineWidth": "3px",
+                "boxShadow": "none"
+              }
+            },
+            "quizClosedMetrics": {
+              "title": "상태 점검 쇼케이스",
+              "viewport": {
+                "width": 768,
+                "height": 1000
+              },
+              "scrollWidth": 768,
+              "clientWidth": 768,
+              "horizontalOverflow": false,
+              "branchCount": 8,
+              "connectorCount": 0,
+              "placeholderCount": 0,
+              "pedagogyPanelCount": 1,
+              "quizToggleCount": 2,
+              "overlaps": [],
+              "overflowElements": [],
+              "activeElement": "button",
+              "activeOutline": {
+                "outlineStyle": "none",
+                "outlineWidth": "3px",
+                "boxShadow": "none"
+              }
+            }
+          },
+          "captures": [
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\03-_-_-_-768x1000-rest.png",
+              "sampleLabel": "03-_-_-_",
+              "viewportLabel": "768x1000",
+              "state": "rest"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\03-_-_-_-768x1000-hover.png",
+              "sampleLabel": "03-_-_-_",
+              "viewportLabel": "768x1000",
+              "state": "hover"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\03-_-_-_-768x1000-focus-visible.png",
+              "sampleLabel": "03-_-_-_",
+              "viewportLabel": "768x1000",
+              "state": "focus-visible"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\03-_-_-_-768x1000-active-pressed.png",
+              "sampleLabel": "03-_-_-_",
+              "viewportLabel": "768x1000",
+              "state": "active-pressed"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\03-_-_-_-768x1000-expanded-mid.png",
+              "sampleLabel": "03-_-_-_",
+              "viewportLabel": "768x1000",
+              "state": "expanded-mid"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\03-_-_-_-768x1000-expanded-settled.png",
+              "sampleLabel": "03-_-_-_",
+              "viewportLabel": "768x1000",
+              "state": "expanded-settled"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\03-_-_-_-768x1000-collapsed.png",
+              "sampleLabel": "03-_-_-_",
+              "viewportLabel": "768x1000",
+              "state": "collapsed"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\03-_-_-_-768x1000-quiz-open.png",
+              "sampleLabel": "03-_-_-_",
+              "viewportLabel": "768x1000",
+              "state": "quiz-open"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\03-_-_-_-768x1000-quiz-closed.png",
+              "sampleLabel": "03-_-_-_",
+              "viewportLabel": "768x1000",
+              "state": "quiz-closed"
+            }
+          ]
+        },
+        {
+          "id": "03-_-_-_-768x1000-reduced-motion",
+          "viewport": {
+            "width": 768,
+            "height": 1000,
+            "label": "768x1000"
+          },
+          "media": "screen",
+          "reducedMotion": true,
+          "metrics": {
+            "title": "상태 점검 쇼케이스",
+            "viewport": {
+              "width": 768,
+              "height": 1000
+            },
+            "scrollWidth": 768,
+            "clientWidth": 768,
+            "horizontalOverflow": false,
+            "branchCount": 8,
+            "connectorCount": 0,
+            "placeholderCount": 0,
+            "pedagogyPanelCount": 1,
+            "quizToggleCount": 2,
+            "overlaps": [],
+            "overflowElements": [],
+            "activeElement": "body",
+            "activeOutline": {
+              "outlineStyle": "none",
+              "outlineWidth": "3px",
+              "boxShadow": "none"
+            }
+          },
+          "reducedMotionMetrics": [
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "quiz-toggle",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "quiz-toggle",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            }
+          ],
+          "captures": [
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\03-_-_-_-768x1000-reduced-motion.png",
+              "sampleLabel": "03-_-_-_",
+              "viewportLabel": "768x1000",
+              "state": "reduced-motion"
+            }
+          ]
+        },
+        {
+          "id": "03-_-_-_-390x1200",
+          "viewport": {
+            "width": 390,
+            "height": 1200,
+            "label": "390x1200"
+          },
+          "media": "screen",
+          "metrics": {
+            "title": "상태 점검 쇼케이스",
+            "viewport": {
+              "width": 390,
+              "height": 1200
+            },
+            "scrollWidth": 390,
+            "clientWidth": 390,
+            "horizontalOverflow": false,
+            "branchCount": 8,
+            "connectorCount": 0,
+            "placeholderCount": 0,
+            "pedagogyPanelCount": 1,
+            "quizToggleCount": 2,
+            "overlaps": [],
+            "overflowElements": [],
+            "activeElement": "body",
+            "activeOutline": {
+              "outlineStyle": "none",
+              "outlineWidth": "3px",
+              "boxShadow": "none"
+            }
+          },
+          "interactions": {
+            "focusMetrics": {
+              "title": "상태 점검 쇼케이스",
+              "viewport": {
+                "width": 390,
+                "height": 1200
+              },
+              "scrollWidth": 390,
+              "clientWidth": 390,
+              "horizontalOverflow": false,
+              "branchCount": 8,
+              "connectorCount": 0,
+              "placeholderCount": 0,
+              "pedagogyPanelCount": 1,
+              "quizToggleCount": 2,
+              "overlaps": [],
+              "overflowElements": [],
+              "activeElement": "button",
+              "activeOutline": {
+                "outlineStyle": "solid",
+                "outlineWidth": "3px",
+                "boxShadow": "none"
+              }
+            },
+            "expandedMetrics": {
+              "title": "상태 점검 쇼케이스",
+              "viewport": {
+                "width": 390,
+                "height": 1200
+              },
+              "scrollWidth": 390,
+              "clientWidth": 390,
+              "horizontalOverflow": false,
+              "branchCount": 8,
+              "connectorCount": 0,
+              "placeholderCount": 0,
+              "pedagogyPanelCount": 1,
+              "quizToggleCount": 2,
+              "overlaps": [],
+              "overflowElements": [],
+              "activeElement": "button",
+              "activeOutline": {
+                "outlineStyle": "solid",
+                "outlineWidth": "3px",
+                "boxShadow": "none"
+              }
+            },
+            "collapsedMetrics": {
+              "title": "상태 점검 쇼케이스",
+              "viewport": {
+                "width": 390,
+                "height": 1200
+              },
+              "scrollWidth": 390,
+              "clientWidth": 390,
+              "horizontalOverflow": false,
+              "branchCount": 8,
+              "connectorCount": 0,
+              "placeholderCount": 0,
+              "pedagogyPanelCount": 1,
+              "quizToggleCount": 2,
+              "overlaps": [],
+              "overflowElements": [],
+              "activeElement": "button",
+              "activeOutline": {
+                "outlineStyle": "solid",
+                "outlineWidth": "3px",
+                "boxShadow": "none"
+              }
+            },
+            "quizOpenMetrics": {
+              "title": "상태 점검 쇼케이스",
+              "viewport": {
+                "width": 390,
+                "height": 1200
+              },
+              "scrollWidth": 390,
+              "clientWidth": 390,
+              "horizontalOverflow": false,
+              "branchCount": 8,
+              "connectorCount": 0,
+              "placeholderCount": 0,
+              "pedagogyPanelCount": 1,
+              "quizToggleCount": 2,
+              "overlaps": [],
+              "overflowElements": [],
+              "activeElement": "button",
+              "activeOutline": {
+                "outlineStyle": "none",
+                "outlineWidth": "3px",
+                "boxShadow": "none"
+              }
+            },
+            "quizClosedMetrics": {
+              "title": "상태 점검 쇼케이스",
+              "viewport": {
+                "width": 390,
+                "height": 1200
+              },
+              "scrollWidth": 390,
+              "clientWidth": 390,
+              "horizontalOverflow": false,
+              "branchCount": 8,
+              "connectorCount": 0,
+              "placeholderCount": 0,
+              "pedagogyPanelCount": 1,
+              "quizToggleCount": 2,
+              "overlaps": [],
+              "overflowElements": [],
+              "activeElement": "button",
+              "activeOutline": {
+                "outlineStyle": "none",
+                "outlineWidth": "3px",
+                "boxShadow": "none"
+              }
+            }
+          },
+          "captures": [
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\03-_-_-_-390x1200-rest.png",
+              "sampleLabel": "03-_-_-_",
+              "viewportLabel": "390x1200",
+              "state": "rest"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\03-_-_-_-390x1200-hover.png",
+              "sampleLabel": "03-_-_-_",
+              "viewportLabel": "390x1200",
+              "state": "hover"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\03-_-_-_-390x1200-focus-visible.png",
+              "sampleLabel": "03-_-_-_",
+              "viewportLabel": "390x1200",
+              "state": "focus-visible"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\03-_-_-_-390x1200-active-pressed.png",
+              "sampleLabel": "03-_-_-_",
+              "viewportLabel": "390x1200",
+              "state": "active-pressed"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\03-_-_-_-390x1200-expanded-mid.png",
+              "sampleLabel": "03-_-_-_",
+              "viewportLabel": "390x1200",
+              "state": "expanded-mid"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\03-_-_-_-390x1200-expanded-settled.png",
+              "sampleLabel": "03-_-_-_",
+              "viewportLabel": "390x1200",
+              "state": "expanded-settled"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\03-_-_-_-390x1200-collapsed.png",
+              "sampleLabel": "03-_-_-_",
+              "viewportLabel": "390x1200",
+              "state": "collapsed"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\03-_-_-_-390x1200-quiz-open.png",
+              "sampleLabel": "03-_-_-_",
+              "viewportLabel": "390x1200",
+              "state": "quiz-open"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\03-_-_-_-390x1200-quiz-closed.png",
+              "sampleLabel": "03-_-_-_",
+              "viewportLabel": "390x1200",
+              "state": "quiz-closed"
+            }
+          ]
+        },
+        {
+          "id": "03-_-_-_-390x1200-reduced-motion",
+          "viewport": {
+            "width": 390,
+            "height": 1200,
+            "label": "390x1200"
+          },
+          "media": "screen",
+          "reducedMotion": true,
+          "metrics": {
+            "title": "상태 점검 쇼케이스",
+            "viewport": {
+              "width": 390,
+              "height": 1200
+            },
+            "scrollWidth": 390,
+            "clientWidth": 390,
+            "horizontalOverflow": false,
+            "branchCount": 8,
+            "connectorCount": 0,
+            "placeholderCount": 0,
+            "pedagogyPanelCount": 1,
+            "quizToggleCount": 2,
+            "overlaps": [],
+            "overflowElements": [],
+            "activeElement": "body",
+            "activeOutline": {
+              "outlineStyle": "none",
+              "outlineWidth": "3px",
+              "boxShadow": "none"
+            }
+          },
+          "reducedMotionMetrics": [
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "quiz-toggle",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "quiz-toggle",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            }
+          ],
+          "captures": [
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\03-_-_-_-390x1200-reduced-motion.png",
+              "sampleLabel": "03-_-_-_",
+              "viewportLabel": "390x1200",
+              "state": "reduced-motion"
+            }
+          ]
+        },
+        {
+          "id": "03-_-_-_-1280x900-print",
+          "viewport": {
+            "width": 1280,
+            "height": 900,
+            "label": "1280x900"
+          },
+          "media": "print",
+          "metrics": {
+            "title": "상태 점검 쇼케이스",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "scrollWidth": 1280,
+            "clientWidth": 1280,
+            "horizontalOverflow": false,
+            "branchCount": 8,
+            "connectorCount": 0,
+            "placeholderCount": 0,
+            "pedagogyPanelCount": 1,
+            "quizToggleCount": 2,
+            "overlaps": [],
+            "overflowElements": [],
+            "activeElement": "body",
+            "activeOutline": {
+              "outlineStyle": "none",
+              "outlineWidth": "3px",
+              "boxShadow": "none"
+            }
+          },
+          "printMetrics": {
+            "contentStates": [
+              {
+                "maxHeight": "none",
+                "overflow": "visible",
+                "display": "block",
+                "ariaHidden": "true"
+              },
+              {
+                "maxHeight": "none",
+                "overflow": "visible",
+                "display": "block",
+                "ariaHidden": "true"
+              },
+              {
+                "maxHeight": "none",
+                "overflow": "visible",
+                "display": "block",
+                "ariaHidden": "true"
+              },
+              {
+                "maxHeight": "none",
+                "overflow": "visible",
+                "display": "block",
+                "ariaHidden": "true"
+              },
+              {
+                "maxHeight": "none",
+                "overflow": "visible",
+                "display": "block",
+                "ariaHidden": "true"
+              },
+              {
+                "maxHeight": "none",
+                "overflow": "visible",
+                "display": "block",
+                "ariaHidden": "true"
+              },
+              {
+                "maxHeight": "none",
+                "overflow": "visible",
+                "display": "block",
+                "ariaHidden": "true"
+              },
+              {
+                "maxHeight": "none",
+                "overflow": "visible",
+                "display": "block",
+                "ariaHidden": "true"
+              }
+            ],
+            "quizAnswerStates": [
+              {
+                "display": "block",
+                "ariaHidden": "true",
+                "textLength": 26
+              },
+              {
+                "display": "block",
+                "ariaHidden": "true",
+                "textLength": 15
+              }
+            ],
+            "hiddenControlStates": [
+              {
+                "selector": {},
+                "display": "none"
+              },
+              {
+                "selector": "icon",
+                "display": "none"
+              },
+              {
+                "selector": "icon",
+                "display": "none"
+              },
+              {
+                "selector": "icon",
+                "display": "none"
+              },
+              {
+                "selector": "icon",
+                "display": "none"
+              },
+              {
+                "selector": "quiz-toggle",
+                "display": "none"
+              },
+              {
+                "selector": "icon",
+                "display": "none"
+              },
+              {
+                "selector": "icon",
+                "display": "none"
+              },
+              {
+                "selector": "quiz-toggle",
+                "display": "none"
+              },
+              {
+                "selector": "icon",
+                "display": "none"
+              },
+              {
+                "selector": "icon",
+                "display": "none"
+              },
+              {
+                "selector": "hint",
+                "display": "none"
+              }
+            ]
+          },
+          "captures": [
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\03-_-_-_-1280x900-print.png",
+              "sampleLabel": "03-_-_-_",
+              "viewportLabel": "1280x900",
+              "state": "print"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sample": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\out\\일제강점기_국내외_민족_운동의_전개와_국제_정세_변화_교과용.html",
+      "sampleLabel": "04-_-_-_-_-_-_-_-_",
+      "checks": [
+        {
+          "id": "04-_-_-_-_-_-_-_-_-1280x900",
+          "viewport": {
+            "width": 1280,
+            "height": 900,
+            "label": "1280x900"
+          },
+          "media": "screen",
+          "metrics": {
+            "title": "일제강점기 국내외 민족 운동의 전개와 국제 정세 변화",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "scrollWidth": 1280,
+            "clientWidth": 1280,
+            "horizontalOverflow": false,
+            "branchCount": 4,
+            "connectorCount": 0,
+            "placeholderCount": 0,
+            "pedagogyPanelCount": 1,
+            "quizToggleCount": 0,
+            "overlaps": [],
+            "overflowElements": [],
+            "activeElement": "body",
+            "activeOutline": {
+              "outlineStyle": "none",
+              "outlineWidth": "3px",
+              "boxShadow": "none"
+            }
+          },
+          "interactions": {
+            "focusMetrics": {
+              "title": "일제강점기 국내외 민족 운동의 전개와 국제 정세 변화",
+              "viewport": {
+                "width": 1280,
+                "height": 900
+              },
+              "scrollWidth": 1280,
+              "clientWidth": 1280,
+              "horizontalOverflow": false,
+              "branchCount": 4,
+              "connectorCount": 0,
+              "placeholderCount": 0,
+              "pedagogyPanelCount": 1,
+              "quizToggleCount": 0,
+              "overlaps": [],
+              "overflowElements": [],
+              "activeElement": "button",
+              "activeOutline": {
+                "outlineStyle": "solid",
+                "outlineWidth": "3px",
+                "boxShadow": "none"
+              }
+            },
+            "expandedMetrics": {
+              "title": "일제강점기 국내외 민족 운동의 전개와 국제 정세 변화",
+              "viewport": {
+                "width": 1280,
+                "height": 900
+              },
+              "scrollWidth": 1280,
+              "clientWidth": 1280,
+              "horizontalOverflow": false,
+              "branchCount": 4,
+              "connectorCount": 0,
+              "placeholderCount": 0,
+              "pedagogyPanelCount": 1,
+              "quizToggleCount": 0,
+              "overlaps": [],
+              "overflowElements": [],
+              "activeElement": "button",
+              "activeOutline": {
+                "outlineStyle": "solid",
+                "outlineWidth": "3px",
+                "boxShadow": "none"
+              }
+            },
+            "collapsedMetrics": {
+              "title": "일제강점기 국내외 민족 운동의 전개와 국제 정세 변화",
+              "viewport": {
+                "width": 1280,
+                "height": 900
+              },
+              "scrollWidth": 1280,
+              "clientWidth": 1280,
+              "horizontalOverflow": false,
+              "branchCount": 4,
+              "connectorCount": 0,
+              "placeholderCount": 0,
+              "pedagogyPanelCount": 1,
+              "quizToggleCount": 0,
+              "overlaps": [],
+              "overflowElements": [],
+              "activeElement": "button",
+              "activeOutline": {
+                "outlineStyle": "solid",
+                "outlineWidth": "3px",
+                "boxShadow": "none"
+              }
+            }
+          },
+          "captures": [
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\04-_-_-_-_-_-_-_-_-1280x900-rest.png",
+              "sampleLabel": "04-_-_-_-_-_-_-_-_",
+              "viewportLabel": "1280x900",
+              "state": "rest"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\04-_-_-_-_-_-_-_-_-1280x900-hover.png",
+              "sampleLabel": "04-_-_-_-_-_-_-_-_",
+              "viewportLabel": "1280x900",
+              "state": "hover"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\04-_-_-_-_-_-_-_-_-1280x900-focus-visible.png",
+              "sampleLabel": "04-_-_-_-_-_-_-_-_",
+              "viewportLabel": "1280x900",
+              "state": "focus-visible"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\04-_-_-_-_-_-_-_-_-1280x900-active-pressed.png",
+              "sampleLabel": "04-_-_-_-_-_-_-_-_",
+              "viewportLabel": "1280x900",
+              "state": "active-pressed"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\04-_-_-_-_-_-_-_-_-1280x900-expanded-mid.png",
+              "sampleLabel": "04-_-_-_-_-_-_-_-_",
+              "viewportLabel": "1280x900",
+              "state": "expanded-mid"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\04-_-_-_-_-_-_-_-_-1280x900-expanded-settled.png",
+              "sampleLabel": "04-_-_-_-_-_-_-_-_",
+              "viewportLabel": "1280x900",
+              "state": "expanded-settled"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\04-_-_-_-_-_-_-_-_-1280x900-collapsed.png",
+              "sampleLabel": "04-_-_-_-_-_-_-_-_",
+              "viewportLabel": "1280x900",
+              "state": "collapsed"
+            }
+          ]
+        },
+        {
+          "id": "04-_-_-_-_-_-_-_-_-1280x900-reduced-motion",
+          "viewport": {
+            "width": 1280,
+            "height": 900,
+            "label": "1280x900"
+          },
+          "media": "screen",
+          "reducedMotion": true,
+          "metrics": {
+            "title": "일제강점기 국내외 민족 운동의 전개와 국제 정세 변화",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "scrollWidth": 1280,
+            "clientWidth": 1280,
+            "horizontalOverflow": false,
+            "branchCount": 4,
+            "connectorCount": 0,
+            "placeholderCount": 0,
+            "pedagogyPanelCount": 1,
+            "quizToggleCount": 0,
+            "overlaps": [],
+            "overflowElements": [],
+            "activeElement": "body",
+            "activeOutline": {
+              "outlineStyle": "none",
+              "outlineWidth": "3px",
+              "boxShadow": "none"
+            }
+          },
+          "reducedMotionMetrics": [
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            }
+          ],
+          "captures": [
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\04-_-_-_-_-_-_-_-_-1280x900-reduced-motion.png",
+              "sampleLabel": "04-_-_-_-_-_-_-_-_",
+              "viewportLabel": "1280x900",
+              "state": "reduced-motion"
+            }
+          ]
+        },
+        {
+          "id": "04-_-_-_-_-_-_-_-_-768x1000",
+          "viewport": {
+            "width": 768,
+            "height": 1000,
+            "label": "768x1000"
+          },
+          "media": "screen",
+          "metrics": {
+            "title": "일제강점기 국내외 민족 운동의 전개와 국제 정세 변화",
+            "viewport": {
+              "width": 768,
+              "height": 1000
+            },
+            "scrollWidth": 768,
+            "clientWidth": 768,
+            "horizontalOverflow": false,
+            "branchCount": 4,
+            "connectorCount": 0,
+            "placeholderCount": 0,
+            "pedagogyPanelCount": 1,
+            "quizToggleCount": 0,
+            "overlaps": [],
+            "overflowElements": [],
+            "activeElement": "body",
+            "activeOutline": {
+              "outlineStyle": "none",
+              "outlineWidth": "3px",
+              "boxShadow": "none"
+            }
+          },
+          "interactions": {
+            "focusMetrics": {
+              "title": "일제강점기 국내외 민족 운동의 전개와 국제 정세 변화",
+              "viewport": {
+                "width": 768,
+                "height": 1000
+              },
+              "scrollWidth": 768,
+              "clientWidth": 768,
+              "horizontalOverflow": false,
+              "branchCount": 4,
+              "connectorCount": 0,
+              "placeholderCount": 0,
+              "pedagogyPanelCount": 1,
+              "quizToggleCount": 0,
+              "overlaps": [],
+              "overflowElements": [],
+              "activeElement": "button",
+              "activeOutline": {
+                "outlineStyle": "solid",
+                "outlineWidth": "3px",
+                "boxShadow": "none"
+              }
+            },
+            "expandedMetrics": {
+              "title": "일제강점기 국내외 민족 운동의 전개와 국제 정세 변화",
+              "viewport": {
+                "width": 768,
+                "height": 1000
+              },
+              "scrollWidth": 768,
+              "clientWidth": 768,
+              "horizontalOverflow": false,
+              "branchCount": 4,
+              "connectorCount": 0,
+              "placeholderCount": 0,
+              "pedagogyPanelCount": 1,
+              "quizToggleCount": 0,
+              "overlaps": [],
+              "overflowElements": [],
+              "activeElement": "button",
+              "activeOutline": {
+                "outlineStyle": "solid",
+                "outlineWidth": "3px",
+                "boxShadow": "none"
+              }
+            },
+            "collapsedMetrics": {
+              "title": "일제강점기 국내외 민족 운동의 전개와 국제 정세 변화",
+              "viewport": {
+                "width": 768,
+                "height": 1000
+              },
+              "scrollWidth": 768,
+              "clientWidth": 768,
+              "horizontalOverflow": false,
+              "branchCount": 4,
+              "connectorCount": 0,
+              "placeholderCount": 0,
+              "pedagogyPanelCount": 1,
+              "quizToggleCount": 0,
+              "overlaps": [],
+              "overflowElements": [],
+              "activeElement": "button",
+              "activeOutline": {
+                "outlineStyle": "solid",
+                "outlineWidth": "3px",
+                "boxShadow": "none"
+              }
+            }
+          },
+          "captures": [
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\04-_-_-_-_-_-_-_-_-768x1000-rest.png",
+              "sampleLabel": "04-_-_-_-_-_-_-_-_",
+              "viewportLabel": "768x1000",
+              "state": "rest"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\04-_-_-_-_-_-_-_-_-768x1000-hover.png",
+              "sampleLabel": "04-_-_-_-_-_-_-_-_",
+              "viewportLabel": "768x1000",
+              "state": "hover"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\04-_-_-_-_-_-_-_-_-768x1000-focus-visible.png",
+              "sampleLabel": "04-_-_-_-_-_-_-_-_",
+              "viewportLabel": "768x1000",
+              "state": "focus-visible"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\04-_-_-_-_-_-_-_-_-768x1000-active-pressed.png",
+              "sampleLabel": "04-_-_-_-_-_-_-_-_",
+              "viewportLabel": "768x1000",
+              "state": "active-pressed"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\04-_-_-_-_-_-_-_-_-768x1000-expanded-mid.png",
+              "sampleLabel": "04-_-_-_-_-_-_-_-_",
+              "viewportLabel": "768x1000",
+              "state": "expanded-mid"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\04-_-_-_-_-_-_-_-_-768x1000-expanded-settled.png",
+              "sampleLabel": "04-_-_-_-_-_-_-_-_",
+              "viewportLabel": "768x1000",
+              "state": "expanded-settled"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\04-_-_-_-_-_-_-_-_-768x1000-collapsed.png",
+              "sampleLabel": "04-_-_-_-_-_-_-_-_",
+              "viewportLabel": "768x1000",
+              "state": "collapsed"
+            }
+          ]
+        },
+        {
+          "id": "04-_-_-_-_-_-_-_-_-768x1000-reduced-motion",
+          "viewport": {
+            "width": 768,
+            "height": 1000,
+            "label": "768x1000"
+          },
+          "media": "screen",
+          "reducedMotion": true,
+          "metrics": {
+            "title": "일제강점기 국내외 민족 운동의 전개와 국제 정세 변화",
+            "viewport": {
+              "width": 768,
+              "height": 1000
+            },
+            "scrollWidth": 768,
+            "clientWidth": 768,
+            "horizontalOverflow": false,
+            "branchCount": 4,
+            "connectorCount": 0,
+            "placeholderCount": 0,
+            "pedagogyPanelCount": 1,
+            "quizToggleCount": 0,
+            "overlaps": [],
+            "overflowElements": [],
+            "activeElement": "body",
+            "activeOutline": {
+              "outlineStyle": "none",
+              "outlineWidth": "3px",
+              "boxShadow": "none"
+            }
+          },
+          "reducedMotionMetrics": [
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            }
+          ],
+          "captures": [
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\04-_-_-_-_-_-_-_-_-768x1000-reduced-motion.png",
+              "sampleLabel": "04-_-_-_-_-_-_-_-_",
+              "viewportLabel": "768x1000",
+              "state": "reduced-motion"
+            }
+          ]
+        },
+        {
+          "id": "04-_-_-_-_-_-_-_-_-390x1200",
+          "viewport": {
+            "width": 390,
+            "height": 1200,
+            "label": "390x1200"
+          },
+          "media": "screen",
+          "metrics": {
+            "title": "일제강점기 국내외 민족 운동의 전개와 국제 정세 변화",
+            "viewport": {
+              "width": 390,
+              "height": 1200
+            },
+            "scrollWidth": 390,
+            "clientWidth": 390,
+            "horizontalOverflow": false,
+            "branchCount": 4,
+            "connectorCount": 0,
+            "placeholderCount": 0,
+            "pedagogyPanelCount": 1,
+            "quizToggleCount": 0,
+            "overlaps": [],
+            "overflowElements": [],
+            "activeElement": "body",
+            "activeOutline": {
+              "outlineStyle": "none",
+              "outlineWidth": "3px",
+              "boxShadow": "none"
+            }
+          },
+          "interactions": {
+            "focusMetrics": {
+              "title": "일제강점기 국내외 민족 운동의 전개와 국제 정세 변화",
+              "viewport": {
+                "width": 390,
+                "height": 1200
+              },
+              "scrollWidth": 390,
+              "clientWidth": 390,
+              "horizontalOverflow": false,
+              "branchCount": 4,
+              "connectorCount": 0,
+              "placeholderCount": 0,
+              "pedagogyPanelCount": 1,
+              "quizToggleCount": 0,
+              "overlaps": [],
+              "overflowElements": [],
+              "activeElement": "button",
+              "activeOutline": {
+                "outlineStyle": "solid",
+                "outlineWidth": "3px",
+                "boxShadow": "none"
+              }
+            },
+            "expandedMetrics": {
+              "title": "일제강점기 국내외 민족 운동의 전개와 국제 정세 변화",
+              "viewport": {
+                "width": 390,
+                "height": 1200
+              },
+              "scrollWidth": 390,
+              "clientWidth": 390,
+              "horizontalOverflow": false,
+              "branchCount": 4,
+              "connectorCount": 0,
+              "placeholderCount": 0,
+              "pedagogyPanelCount": 1,
+              "quizToggleCount": 0,
+              "overlaps": [],
+              "overflowElements": [],
+              "activeElement": "button",
+              "activeOutline": {
+                "outlineStyle": "solid",
+                "outlineWidth": "3px",
+                "boxShadow": "none"
+              }
+            },
+            "collapsedMetrics": {
+              "title": "일제강점기 국내외 민족 운동의 전개와 국제 정세 변화",
+              "viewport": {
+                "width": 390,
+                "height": 1200
+              },
+              "scrollWidth": 390,
+              "clientWidth": 390,
+              "horizontalOverflow": false,
+              "branchCount": 4,
+              "connectorCount": 0,
+              "placeholderCount": 0,
+              "pedagogyPanelCount": 1,
+              "quizToggleCount": 0,
+              "overlaps": [],
+              "overflowElements": [],
+              "activeElement": "button",
+              "activeOutline": {
+                "outlineStyle": "solid",
+                "outlineWidth": "3px",
+                "boxShadow": "none"
+              }
+            }
+          },
+          "captures": [
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\04-_-_-_-_-_-_-_-_-390x1200-rest.png",
+              "sampleLabel": "04-_-_-_-_-_-_-_-_",
+              "viewportLabel": "390x1200",
+              "state": "rest"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\04-_-_-_-_-_-_-_-_-390x1200-hover.png",
+              "sampleLabel": "04-_-_-_-_-_-_-_-_",
+              "viewportLabel": "390x1200",
+              "state": "hover"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\04-_-_-_-_-_-_-_-_-390x1200-focus-visible.png",
+              "sampleLabel": "04-_-_-_-_-_-_-_-_",
+              "viewportLabel": "390x1200",
+              "state": "focus-visible"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\04-_-_-_-_-_-_-_-_-390x1200-active-pressed.png",
+              "sampleLabel": "04-_-_-_-_-_-_-_-_",
+              "viewportLabel": "390x1200",
+              "state": "active-pressed"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\04-_-_-_-_-_-_-_-_-390x1200-expanded-mid.png",
+              "sampleLabel": "04-_-_-_-_-_-_-_-_",
+              "viewportLabel": "390x1200",
+              "state": "expanded-mid"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\04-_-_-_-_-_-_-_-_-390x1200-expanded-settled.png",
+              "sampleLabel": "04-_-_-_-_-_-_-_-_",
+              "viewportLabel": "390x1200",
+              "state": "expanded-settled"
+            },
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\04-_-_-_-_-_-_-_-_-390x1200-collapsed.png",
+              "sampleLabel": "04-_-_-_-_-_-_-_-_",
+              "viewportLabel": "390x1200",
+              "state": "collapsed"
+            }
+          ]
+        },
+        {
+          "id": "04-_-_-_-_-_-_-_-_-390x1200-reduced-motion",
+          "viewport": {
+            "width": 390,
+            "height": 1200,
+            "label": "390x1200"
+          },
+          "media": "screen",
+          "reducedMotion": true,
+          "metrics": {
+            "title": "일제강점기 국내외 민족 운동의 전개와 국제 정세 변화",
+            "viewport": {
+              "width": 390,
+              "height": 1200
+            },
+            "scrollWidth": 390,
+            "clientWidth": 390,
+            "horizontalOverflow": false,
+            "branchCount": 4,
+            "connectorCount": 0,
+            "placeholderCount": 0,
+            "pedagogyPanelCount": 1,
+            "quizToggleCount": 0,
+            "overlaps": [],
+            "overflowElements": [],
+            "activeElement": "body",
+            "activeOutline": {
+              "outlineStyle": "none",
+              "outlineWidth": "3px",
+              "boxShadow": "none"
+            }
+          },
+          "reducedMotionMetrics": [
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "button",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "icon",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "background-color, border-color, box-shadow, color, filter, transform",
+              "animationDuration": "1e-05s"
+            },
+            {
+              "selector": "content",
+              "transitionDuration": "1e-05s",
+              "transitionProperty": "none",
+              "animationDuration": "1e-05s"
+            }
+          ],
+          "captures": [
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\04-_-_-_-_-_-_-_-_-390x1200-reduced-motion.png",
+              "sampleLabel": "04-_-_-_-_-_-_-_-_",
+              "viewportLabel": "390x1200",
+              "state": "reduced-motion"
+            }
+          ]
+        },
+        {
+          "id": "04-_-_-_-_-_-_-_-_-1280x900-print",
+          "viewport": {
+            "width": 1280,
+            "height": 900,
+            "label": "1280x900"
+          },
+          "media": "print",
+          "metrics": {
+            "title": "일제강점기 국내외 민족 운동의 전개와 국제 정세 변화",
+            "viewport": {
+              "width": 1280,
+              "height": 900
+            },
+            "scrollWidth": 1280,
+            "clientWidth": 1280,
+            "horizontalOverflow": false,
+            "branchCount": 4,
+            "connectorCount": 0,
+            "placeholderCount": 0,
+            "pedagogyPanelCount": 1,
+            "quizToggleCount": 0,
+            "overlaps": [],
+            "overflowElements": [],
+            "activeElement": "body",
+            "activeOutline": {
+              "outlineStyle": "none",
+              "outlineWidth": "3px",
+              "boxShadow": "none"
+            }
+          },
+          "printMetrics": {
+            "contentStates": [
+              {
+                "maxHeight": "none",
+                "overflow": "visible",
+                "display": "block",
+                "ariaHidden": "true"
+              },
+              {
+                "maxHeight": "none",
+                "overflow": "visible",
+                "display": "block",
+                "ariaHidden": "true"
+              },
+              {
+                "maxHeight": "none",
+                "overflow": "visible",
+                "display": "block",
+                "ariaHidden": "true"
+              },
+              {
+                "maxHeight": "none",
+                "overflow": "visible",
+                "display": "block",
+                "ariaHidden": "true"
+              }
+            ],
+            "quizAnswerStates": [],
+            "hiddenControlStates": [
+              {
+                "selector": {},
+                "display": "none"
+              },
+              {
+                "selector": "icon",
+                "display": "none"
+              },
+              {
+                "selector": "icon",
+                "display": "none"
+              },
+              {
+                "selector": "icon",
+                "display": "none"
+              },
+              {
+                "selector": "icon",
+                "display": "none"
+              },
+              {
+                "selector": "hint",
+                "display": "none"
+              }
+            ]
+          },
+          "captures": [
+            {
+              "path": "C:\\Users\\홍주형\\.claude\\skills\\mindmap-html-generator\\.omo\\evidence\\design-next\\screenshots\\2026-08-07T14-28-17-640Z\\04-_-_-_-_-_-_-_-_-1280x900-print.png",
+              "sampleLabel": "04-_-_-_-_-_-_-_-_",
+              "viewportLabel": "1280x900",
+              "state": "print"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "verdict": "PASS",
+    "failures": []
+  }
+}

@@ -62,6 +62,10 @@ Miro, IBM, Apple, Cursor, and Airbnb-style references are inspiration and weight
 logos, product chrome, marketing hero layouts, marketplace cards, IDE mockups, retro/campaign/developer aesthetics,
 bokeh/orbs, or generic AI gradients. If a needed token or state is missing, update `DESIGN.md` first and then use it.
 
+As of v3.1, restrained skeuomorphism (paper-texture sticky notes, tape, a whiteboard frame, a desktop-only
+micro-tilt) and a 6+ hue note palette across every subject theme are the default. Skeuomorphic cues are CSS-only
+and fully flatten in print.
+
 ## Auto-build (preferred)
 
 Save the JSON spec as UTF-8 and run the builder. The full spec format is in the docstring at the top of `build_mindmap.py`.

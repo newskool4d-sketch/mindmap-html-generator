@@ -43,7 +43,7 @@ The workspace is rendered with restrained skeuomorphism: branch notes read as re
 
 ### Subject Themes
 
-Subject themes may shift `--center-*`, `--line-connector`, and `--note-*` tokens, but each theme must remain light by default, readable on projection, and printable. Theme color is a teaching cue, not brand decoration.
+Subject themes may shift `--center-*` and `--line-connector`, but must not override `--surface-note-*`; each theme must remain light by default, readable on projection, and printable. Theme color is a teaching cue, not brand decoration.
 
 ### Rules
 
@@ -187,7 +187,7 @@ All spacing is based on 4px increments. Template work should migrate informal va
 
 ### Legacy Alias Layer
 
-Subject themes override the legacy tokens `--bg`, `--panel`, `--text`, `--muted`, `--line`, `--center1/2`, `--card1`-`--card8`, `--shadow`. The semantic tokens above consume them via `var()` aliases (e.g. `--surface-canvas: var(--bg)`). This alias layer is the intentional theme-override surface; new CSS must reference the semantic tokens, never the legacy names directly.
+Subject themes override only the legacy tokens `--bg`, `--center1`, `--center2`, `--line`. The semantic tokens above consume the legacy layer via `var()` aliases (e.g. `--surface-canvas: var(--bg)`). `--card1`-`--card8` remain in `:root` as the shared 8-hue note palette and must **not** be overridden per theme (enforced by `TemplateContractTests`). New CSS must reference the semantic tokens, never the legacy names directly.
 
 ## 7. Depth
 
