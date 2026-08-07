@@ -11,7 +11,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 BUILDER = REPO_ROOT / "scripts" / "build_mindmap.py"
 FIXTURES = REPO_ROOT / "tests" / "fixtures"
-EVIDENCE_OUT = REPO_ROOT / ".omo" / "evidence" / "task-3-mindmap-html-generator-upgrade" / "out"
+SCRATCH_OUT = REPO_ROOT / "tests" / ".out"
 
 
 @dataclass(frozen=True, slots=True)
@@ -37,10 +37,10 @@ def run_builder(fixture_name: str, out_dir: Path) -> BuilderRun:
 
 class BuildMindmapCompatibilityTests(unittest.TestCase):
     def setUp(self) -> None:
-        EVIDENCE_OUT.mkdir(parents=True, exist_ok=True)
+        SCRATCH_OUT.mkdir(parents=True, exist_ok=True)
 
     def test_current_v2_spec_generates_expected_html_markers(self) -> None:
-        out_dir = EVIDENCE_OUT / "current-v2-valid"
+        out_dir = SCRATCH_OUT / "current-v2-valid"
         if out_dir.exists():
             shutil.rmtree(out_dir)
 
@@ -61,7 +61,7 @@ class BuildMindmapCompatibilityTests(unittest.TestCase):
         self.assertIn("[완료]", result.stdout)
 
     def test_unsupported_subject_falls_back_to_default_theme(self) -> None:
-        out_dir = EVIDENCE_OUT / "unsupported-subject-fallback"
+        out_dir = SCRATCH_OUT / "unsupported-subject-fallback"
         if out_dir.exists():
             shutil.rmtree(out_dir)
 
@@ -77,19 +77,19 @@ class BuildMindmapCompatibilityTests(unittest.TestCase):
         self.assertNotIn("{{", html)
 
     def test_invalid_too_many_branches_exits_nonzero_with_korean_error(self) -> None:
-        result = run_builder("invalid-too-many-branches.json", EVIDENCE_OUT / "invalid-too-many")
+        result = run_builder("invalid-too-many-branches.json", SCRATCH_OUT / "invalid-too-many")
 
         self.assertNotEqual(result.returncode, 0)
         self.assertIn("[오류] 브랜치 9개 — 최대 8개", result.stdout)
 
     def test_invalid_quiz_requires_question_and_answer(self) -> None:
-        result = run_builder("invalid-quiz-qa.json", EVIDENCE_OUT / "invalid-quiz-qa")
+        result = run_builder("invalid-quiz-qa.json", SCRATCH_OUT / "invalid-quiz-qa")
 
         self.assertNotEqual(result.returncode, 0)
         self.assertIn("[오류] branches[1].quiz는 q와 a가 모두 필요", result.stdout)
 
     def test_invalid_mode_lists_supported_modes(self) -> None:
-        result = run_builder("invalid-mode-validation.json", EVIDENCE_OUT / "invalid-mode")
+        result = run_builder("invalid-mode-validation.json", SCRATCH_OUT / "invalid-mode")
 
         self.assertNotEqual(result.returncode, 0)
         self.assertIn("[오류] mode '토론용' 미지원", result.stdout)
@@ -98,7 +98,7 @@ class BuildMindmapCompatibilityTests(unittest.TestCase):
         self.assertIn("퀴즈형", result.stdout)
 
     def test_v3_pedagogy_spec_renders_optional_support_panel(self) -> None:
-        out_dir = EVIDENCE_OUT / "v3-pedagogy"
+        out_dir = SCRATCH_OUT / "v3-pedagogy"
         if out_dir.exists():
             shutil.rmtree(out_dir)
 
@@ -122,7 +122,7 @@ class BuildMindmapCompatibilityTests(unittest.TestCase):
         self.assertNotIn("{{", html)
 
     def test_quiz_block_renders_only_for_branches_with_quiz_data(self) -> None:
-        out_dir = EVIDENCE_OUT / "quiz-approved"
+        out_dir = SCRATCH_OUT / "quiz-approved"
         if out_dir.exists():
             shutil.rmtree(out_dir)
 
@@ -140,7 +140,7 @@ class BuildMindmapCompatibilityTests(unittest.TestCase):
         self.assertNotIn("{{", html)
 
     def test_quiz_mode_without_quiz_data_does_not_create_quiz_block(self) -> None:
-        out_dir = EVIDENCE_OUT / "quiz-mode-no-quiz"
+        out_dir = SCRATCH_OUT / "quiz-mode-no-quiz"
         if out_dir.exists():
             shutil.rmtree(out_dir)
 
@@ -156,7 +156,7 @@ class BuildMindmapCompatibilityTests(unittest.TestCase):
         self.assertNotIn("{{", html)
 
     def test_invalid_pedagogy_type_exits_nonzero_with_korean_error(self) -> None:
-        result = run_builder("invalid-pedagogy-type.json", EVIDENCE_OUT / "invalid-pedagogy")
+        result = run_builder("invalid-pedagogy-type.json", SCRATCH_OUT / "invalid-pedagogy")
 
         self.assertNotEqual(result.returncode, 0)
         self.assertIn("[오류] pedagogy는 객체여야 함", result.stdout)
