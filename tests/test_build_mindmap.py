@@ -204,6 +204,21 @@ class BuildMindmapCompatibilityTests(unittest.TestCase):
         self.assertIn("오개념 점검", html)
         self.assertNotIn("{{", html)
 
+    def test_design_state_showcase_covers_max_branches_and_quiz(self) -> None:
+        out_dir = SCRATCH_OUT / "design-state-showcase"
+        if out_dir.exists():
+            shutil.rmtree(out_dir)
+
+        result = run_builder("design-state-showcase.json", out_dir)
+
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        html = (out_dir / "상태_점검_쇼케이스_퀴즈형.html").read_text(encoding="utf-8")
+        self.assertEqual(html.count('<div class="node branch-'), 8)
+        self.assertEqual(html.count('<div class="quiz">'), 2)
+        self.assertIn('<aside class="pedagogy"', html)
+        self.assertIn('data-mode="퀴즈형"', html)
+        self.assertNotIn("{{", html)
+
 
 import importlib.util
 

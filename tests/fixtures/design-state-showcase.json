@@ -1,0 +1,22 @@
+{
+  "title": "상태 점검 쇼케이스",
+  "description": "브랜치 8개·퀴즈·학습 지원 패널의 모든 상호작용 상태를 한 파일로 점검하는 QA 전용 fixture",
+  "subject": "정보",
+  "mode": "퀴즈형",
+  "center": {"title": "상태 쇼케이스", "text": "collapsed·expanded·hover·focus·quiz·print"},
+  "branches": [
+    {"title": "정의", "sub": "짧은 부제", "icon": "bi-book", "details": ["기본 브랜치 상태 점검용 불릿"]},
+    {"title": "분류", "details": ["두 번째 브랜치", "불릿 두 줄 케이스"]},
+    {"title": "규칙", "details": ["세 번째 브랜치"]},
+    {"title": "예시", "details": ["네 번째 브랜치"], "quiz": {"q": "이 브랜치의 상태는 무엇으로 점검하나요?", "a": "정답 보기 버튼의 열림·닫힘 상태로 점검합니다."}},
+    {"title": "한계", "details": ["다섯 번째 브랜치"]},
+    {"title": "적용", "details": ["여섯 번째 브랜치"], "quiz": {"q": "퀴즈 두 번째 상태 점검 질문은?", "a": "두 번째 정답 텍스트입니다."}},
+    {"title": "비교", "details": ["일곱 번째 브랜치"]},
+    {"title": "정리", "details": ["여덟 번째 브랜치 — 최대치 확인"]}
+  ],
+  "pedagogy": {
+    "focus_question": "모든 상태가 시각적으로 구분되는가?",
+    "lesson_purpose": "평가",
+    "assessment_prompt_types": ["explanation", "misconception check"]
+  }
+}
