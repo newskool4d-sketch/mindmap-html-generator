@@ -121,6 +121,22 @@ class BuildMindmapCompatibilityTests(unittest.TestCase):
         self.assertIn("&lt;구름&gt;", html)
         self.assertNotIn("{{", html)
 
+    def test_single_field_pedagogy_renders_only_that_item(self) -> None:
+        out_dir = SCRATCH_OUT / "pedagogy-single-field"
+        if out_dir.exists():
+            shutil.rmtree(out_dir)
+
+        result = run_builder("pedagogy-single-field.json", out_dir)
+
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        html = (out_dir / "분수의_덧셈_교과용.html").read_text(encoding="utf-8")
+        self.assertIn('<aside class="pedagogy" aria-label="학습 지원 정보">', html)
+        self.assertEqual(html.count('<li class="pedagogy-item">'), 1)
+        self.assertIn("초점 질문", html)
+        for absent_label in ("학년군", "선수 지식", "오개념 점검", "어휘 지원", "형성 확인 유형"):
+            self.assertNotIn(absent_label, html)
+        self.assertNotIn("{{", html)
+
     def test_quiz_block_renders_only_for_branches_with_quiz_data(self) -> None:
         out_dir = SCRATCH_OUT / "quiz-approved"
         if out_dir.exists():

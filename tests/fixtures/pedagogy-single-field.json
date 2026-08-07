@@ -1,0 +1,11 @@
+{
+  "title": "분수의 덧셈",
+  "description": "분모가 같은 분수의 덧셈 정리",
+  "subject": "수학",
+  "center": {"title": "분수의 덧셈", "text": "분모가 같을 때"},
+  "branches": [
+    {"title": "개념", "details": ["분모는 그대로 두고 분자끼리 더한다"]},
+    {"title": "예시", "details": ["1/5 + 2/5 = 3/5"]}
+  ],
+  "pedagogy": {"focus_question": "왜 분모는 더하지 않을까?"}
+}
