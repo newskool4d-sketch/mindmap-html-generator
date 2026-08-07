@@ -65,6 +65,14 @@
       --shadow-focus: 0 18px 38px rgba(89, 120, 109, 0.20);
       --motion-expand: max-height 0.35s ease, padding 0.35s ease;
       --motion-control: background-color 0.16s ease-out, border-color 0.16s ease-out, box-shadow 0.16s ease-out, color 0.16s ease-out, filter 0.16s ease-out, transform 0.16s ease-out;
+      --shadow-note-rest: 0 1px 2px rgba(56, 72, 66, 0.10), 0 10px 18px rgba(56, 72, 66, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.65);
+      --shadow-note-raised: 0 2px 4px rgba(56, 72, 66, 0.12), 0 18px 30px rgba(56, 72, 66, 0.17), inset 0 1px 0 rgba(255, 255, 255, 0.65);
+      --shadow-note-pressed: inset 0 2px 5px rgba(56, 72, 66, 0.16);
+      --paper-sheen: linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 46%);
+      --surface-tape: rgba(255, 255, 255, 0.5);
+      --border-tape: rgba(255, 255, 255, 0.68);
+      --surface-frame: #eef1ef;
+      --border-frame: rgba(92, 109, 102, 0.28);
     }
 
     * {
@@ -134,6 +142,8 @@
       box-shadow: var(--shadow-board);
       overflow: hidden;
       isolation: isolate;
+      border: 10px solid var(--surface-frame);
+      outline: 1px solid var(--border-frame);
     }
 
     .sr-only {
@@ -170,17 +180,18 @@
       z-index: 1;
       width: 260px;
       border-radius: var(--radius-node);
-      overflow: hidden;
-      box-shadow: var(--shadow-rest);
+      overflow: visible;
+      box-shadow: var(--shadow-note-rest);
       border: 1px solid var(--border-on-note);
       background: var(--surface-panel);
+      background-image: var(--paper-sheen);
       transition: var(--motion-control);
     }
 
     .node:not(.center):hover,
     .node.active {
       border-color: var(--border-active);
-      box-shadow: var(--shadow-focus);
+      box-shadow: var(--shadow-note-raised);
     }
 
     .node > button {
@@ -192,7 +203,12 @@
       font: inherit;
       cursor: pointer;
       min-height: 48px;
+      border-radius: calc(var(--radius-node) - 1px);
       transition: var(--motion-control);
+    }
+
+    .node.active > button {
+      border-radius: calc(var(--radius-node) - 1px) calc(var(--radius-node) - 1px) 0 0;
     }
 
     .node > button:hover,
@@ -202,6 +218,7 @@
 
     .node > button:active {
       transform: translateY(1px);
+      box-shadow: var(--shadow-note-pressed);
     }
 
     .node > button:focus-visible {
@@ -290,7 +307,7 @@
       text-align: center;
       padding: var(--space-7);
       border: 6px solid rgba(255, 255, 255, 0.78);
-      box-shadow: var(--shadow-focus), inset 0 1px 0 rgba(255, 255, 255, 0.34);
+      box-shadow: var(--shadow-focus), inset 0 2px 0 rgba(255, 255, 255, 0.4), inset 0 -12px 26px rgba(36, 50, 45, 0.16);
     }
 
     .center-inner h2 {
@@ -314,6 +331,22 @@
     .branch-6 { background: var(--surface-note-6); }
     .branch-7 { background: var(--surface-note-7); }
     .branch-8 { background: var(--surface-note-8); }
+
+    .node:not(.center)::after {
+      content: "";
+      position: absolute;
+      top: -9px;
+      left: 50%;
+      width: 76px;
+      height: 22px;
+      transform: translateX(-50%) rotate(-2.5deg);
+      background: var(--surface-tape);
+      border: 1px solid var(--border-tape);
+      border-radius: 2px;
+      box-shadow: 0 1px 2px rgba(56, 72, 66, 0.12);
+      pointer-events: none;
+      z-index: 2;
+    }
 
     .hint {
       text-align: center;
@@ -444,68 +477,42 @@
     /* ── 교과별 테마 (html 태그의 data-subject 속성에만 적용) ── */
     [data-subject="국어"] {
       --bg:#fdf7f0; --center1:#c8956c; --center2:#a5714a; --line:#ddb99a;
-      --card1:#fce8d8; --card2:#f9dfc8; --card3:#f7e8c0; --card4:#f4f0e0;
-      --card5:#ede8d8; --card6:#e8e0d0; --card7:#f0e0c8; --card8:#f5e8d8;
     }
     [data-subject="수학"] {
       --bg:#f0f4fa; --center1:#6b8fc7; --center2:#4a6fa5; --line:#a8bfd8;
-      --card1:#dce8f8; --card2:#cde0f5; --card3:#d8e8f8; --card4:#e0eefc;
-      --card5:#d0e4f8; --card6:#c8dcf4; --card7:#d4e4f8; --card8:#dceaf8;
     }
     [data-subject="과학"] {
       --bg:#f0faf4; --center1:#5aac7a; --center2:#3d8a5e; --line:#9ed4b4;
-      --card1:#d8f0e4; --card2:#d0ecd8; --card3:#d8f4e0; --card4:#e0f8e8;
-      --card5:#d4f0dc; --card6:#cce8d4; --card7:#d8f0e0; --card8:#dcf0e4;
     }
     [data-subject="사회"] {
       --bg:#faf4ed; --center1:#d4895a; --center2:#b06840; --line:#e0b898;
-      --card1:#fce0c8; --card2:#f8d8b8; --card3:#f5e0c0; --card4:#f8e8d0;
-      --card5:#f4dcc0; --card6:#f0d4b8; --card7:#f5dcc8; --card8:#f8e4d0;
     }
     [data-subject="영어"] {
       --bg:#f2f0f8; --center1:#7b6fbc; --center2:#5d539c; --line:#b4aed8;
-      --card1:#e4e0f4; --card2:#ddd8f0; --card3:#e4dff0; --card4:#eae8f8;
-      --card5:#e0daf4; --card6:#d8d0f0; --card7:#dcd8f4; --card8:#e2def8;
     }
     [data-subject="미술"] {
       --bg:#fdf5f8; --center1:#d4709a; --center2:#b04f7a; --line:#e8a8c0;
-      --card1:#fce4ec; --card2:#fcdce8; --card3:#fce0f0; --card4:#f8e4f4;
-      --card5:#f4dcea; --card6:#f0d8e8; --card7:#f4dcec; --card8:#f8e0f0;
     }
     [data-subject="음악"] {
       --bg:#f4f0fa; --center1:#9370b8; --center2:#7050a0; --line:#c0a8d8;
-      --card1:#ecdce8; --card2:#e8d8f4; --card3:#ecd8f8; --card4:#f0dcf8;
-      --card5:#e8d4f4; --card6:#e0ccec; --card7:#e8d8f0; --card8:#ecdef8;
     }
     [data-subject="체육"] {
       --bg:#fdf4f0; --center1:#e06040; --center2:#c04030; --line:#e8a898;
-      --card1:#fce0d8; --card2:#fad4c8; --card3:#fcdcc0; --card4:#fce4c8;
-      --card5:#f8d8c0; --card6:#f4ccb8; --card7:#f8d8c4; --card8:#fcdcc8;
     }
     [data-subject="역사"] {
       --bg:#f8f4ec; --center1:#9a8060; --center2:#786048; --line:#c8b898;
-      --card1:#f0e4cc; --card2:#ecdcc0; --card3:#f0e4c8; --card4:#f4e8cc;
-      --card5:#eee0c0; --card6:#e8d8b8; --card7:#eee0c4; --card8:#f0e4c8;
     }
     [data-subject="도덕"] {
       --bg:#f0f8f4; --center1:#6aab88; --center2:#4a8a68; --line:#a8cdb8;
-      --card1:#dcf0e4; --card2:#d4ecdc; --card3:#daf0e4; --card4:#e0f4e8;
-      --card5:#d8eee0; --card6:#d0e8d8; --card7:#d8f0e0; --card8:#dcf0e4;
     }
     [data-subject="정보"] {
       --bg:#eff6f8; --center1:#4f9cad; --center2:#377d8e; --line:#9ac8d4;
-      --card1:#d8ecf2; --card2:#d0e8ee; --card3:#d8f0f4; --card4:#e0f2f6;
-      --card5:#d4ecf0; --card6:#cce4ec; --card7:#d8eef2; --card8:#dcf0f4;
     }
     [data-subject="실과"] {
       --bg:#f5f7ee; --center1:#8ba35c; --center2:#6b8342; --line:#becf9c;
-      --card1:#e8f0d4; --card2:#e0ecc8; --card3:#e8f2d0; --card4:#eef6d8;
-      --card5:#e4eecc; --card6:#dce8c4; --card7:#e6f0d0; --card8:#eaf2d8;
     }
     [data-subject="진로"] {
       --bg:#faf6ec; --center1:#c0a050; --center2:#9c7e34; --line:#dcc890;
-      --card1:#f6ecd0; --card2:#f2e6c4; --card3:#f6eecc; --card4:#f8f0d4;
-      --card5:#f4eac8; --card6:#f0e2bc; --card7:#f4ecca; --card8:#f6f0d4;
     }
 
     /* Desktop: full spatial map with SVG connectors. */
@@ -513,6 +520,11 @@
       .map {
         min-height: 1180px;
       }
+
+      .node:not(.center) { transform: rotate(-0.45deg); }
+      .node.branch-2, .node.branch-5, .node.branch-8 { transform: rotate(0.5deg); }
+      .node.branch-3, .node.branch-6 { transform: rotate(-0.2deg); }
+      .node:not(.center):hover, .node.active { transform: rotate(0deg); }
     }
 
     /* Tablet and small classroom displays: stack cards, hide decorative connectors. */
@@ -654,6 +666,9 @@
       .pedagogy-item { margin-bottom: 8px; }
       .map { box-shadow: none; min-height: auto !important; padding: 0; background: white; }
       .lines, .icon, .hint, .quiz-toggle { display: none; }
+      .node:not(.center)::after { display: none; }
+      .node { transform: none; box-shadow: none; background-image: none; }
+      .map { border: 1px solid var(--border-subtle); outline: none; }
       .node, .center {
         position: static;
         width: 100%;

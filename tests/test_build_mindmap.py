@@ -272,5 +272,25 @@ class BuilderUnitTests(unittest.TestCase):
         self.assertIn("필수 키 누락: branches", ctx.exception.errors)
 
 
+class TemplateContractTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls.template = (REPO_ROOT / "assets" / "base-mindmap-template.html").read_text(encoding="utf-8")
+
+    def test_subject_themes_inherit_multi_hue_note_palette(self) -> None:
+        # --cardN 정의는 :root 1곳뿐이어야 함 — 테마 블록이 단색조로 덮어쓰면 실패
+        for n in range(1, 9):
+            self.assertEqual(
+                self.template.count(f"--card{n}:"), 1,
+                f"--card{n} 재정의 발견 — 테마 블록은 기본 8색 팔레트를 상속해야 함",
+            )
+
+    def test_template_declares_skeuomorph_tokens_and_print_flatten(self) -> None:
+        for token in ("--shadow-note-rest", "--shadow-note-raised", "--shadow-note-pressed",
+                      "--paper-sheen", "--surface-tape", "--surface-frame"):
+            self.assertIn(token, self.template)
+        self.assertIn(".node:not(.center)::after", self.template)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

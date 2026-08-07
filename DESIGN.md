@@ -13,6 +13,8 @@ Reference weighting:
 
 Do not clone any brand identity. The reference files are inspiration, not source palettes, logos, proprietary typefaces, product chrome, or marketing layouts.
 
+The workspace is rendered with restrained skeuomorphism: branch notes read as real paper sticky notes (paper sheen, layered contact shadows, translucent tape, a slight resting tilt on desktop), and the board reads as a physical whiteboard with a light frame. Skeuomorphic cues are texture-free CSS only, must never reduce Korean text contrast, and must flatten in print.
+
 ## 2. Color
 
 ### Palette
@@ -35,6 +37,9 @@ Do not clone any brand identity. The reference files are inspiration, not source
 | Center end | `--center-end` | subject-aware deep tone | Center node gradient end |
 | Note 1-8 | `--surface-note-1` to `--surface-note-8` | soft subject-compatible tints | Branch note surfaces |
 | Border on note | `--border-on-note` | translucent white | Branch note inner border |
+| Tape | `--surface-tape` / `--border-tape` | translucent white | Sticky-note tape accent |
+| Frame | `--surface-frame` / `--border-frame` | light warm gray | Whiteboard frame around the map |
+| Sheen | `--paper-sheen` | white-fade linear gradient | Paper top-light on branch notes |
 
 ### Subject Themes
 
@@ -47,6 +52,7 @@ Subject themes may shift `--center-*`, `--line-connector`, and `--note-*` tokens
 - Treat `--text-primary`, `--text-secondary`, `--focus-ring`, and `--surface-control` as contrast-sensitive tokens for classroom projection and keyboard use.
 - Never use exact reference-brand colors as defaults.
 - No bokeh, orbs, generic AI gradients, marketplace chrome, IDE mockups, campaign imagery, or retro stickers.
+- Branch note surfaces must span at least 6 distinct hue families in every subject theme. Subject identity lives in the canvas tint, center node, and connectors (legacy override surface `--bg`, `--center1/2`, `--line`) — never by collapsing note colors into a single hue.
 
 ## 3. Typography
 
@@ -196,6 +202,9 @@ Use mixed depth: tonal shift plus very soft shadows. Borders and hairlines carry
 | Rest | `--shadow-rest` | Branch notes at rest |
 | Board | `--shadow-board` | Main map board |
 | Focus | `--shadow-focus` | Focused or expanded node when helpful |
+| Note rest | `--shadow-note-rest` | Sticky notes at rest (contact + ambient + inner top light) |
+| Note raised | `--shadow-note-raised` | Hover/expanded "picked up" state |
+| Note pressed | `--shadow-note-pressed` | Button pressed inset |
 
 ### Rules
 
@@ -203,6 +212,7 @@ Use mixed depth: tonal shift plus very soft shadows. Borders and hairlines carry
 - Do not nest UI cards inside other cards.
 - Do not let shadows or translucency reduce Korean text contrast.
 - Print removes decorative depth and keeps content structure.
+- Paper-stack shadows, tape, and a light board frame are the default skeuomorphic depth. No glossy bevels, linen textures, or heavy 2010s-iOS gloss.
 
 ## Must Not Copy
 
