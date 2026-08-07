@@ -177,6 +177,33 @@ class BuildMindmapCompatibilityTests(unittest.TestCase):
         self.assertNotEqual(result.returncode, 0)
         self.assertIn("[오류] pedagogy는 객체여야 함", result.stdout)
 
+    def test_design_long_title_fixture_builds_clean(self) -> None:
+        out_dir = SCRATCH_OUT / "design-long-title"
+        if out_dir.exists():
+            shutil.rmtree(out_dir)
+
+        result = run_builder("design-long-title.json", out_dir)
+
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        html = (out_dir / "일제강점기_국내외_민족_운동의_전개와_국제_정세_변화_교과용.html").read_text(encoding="utf-8")
+        self.assertEqual(html.count('<div class="node branch-'), 4)
+        self.assertIn('data-subject="역사"', html)
+        self.assertNotIn("{{", html)
+
+    def test_design_vocab_heavy_fixture_builds_clean(self) -> None:
+        out_dir = SCRATCH_OUT / "design-vocab-heavy"
+        if out_dir.exists():
+            shutil.rmtree(out_dir)
+
+        result = run_builder("design-vocab-heavy.json", out_dir)
+
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        html = (out_dir / "물질의_상태_변화_어휘_정리_교과용.html").read_text(encoding="utf-8")
+        self.assertEqual(html.count('<div class="node branch-'), 4)
+        self.assertIn("어휘 지원", html)
+        self.assertIn("오개념 점검", html)
+        self.assertNotIn("{{", html)
+
 
 import importlib.util
 
