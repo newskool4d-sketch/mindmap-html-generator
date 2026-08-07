@@ -162,5 +162,57 @@ class BuildMindmapCompatibilityTests(unittest.TestCase):
         self.assertIn("[오류] pedagogy는 객체여야 함", result.stdout)
 
 
+import importlib.util
+
+
+def _load_builder_module():
+    module_spec = importlib.util.spec_from_file_location("build_mindmap", BUILDER)
+    module = importlib.util.module_from_spec(module_spec)
+    module_spec.loader.exec_module(module)
+    return module
+
+
+class BuilderUnitTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls.bm = _load_builder_module()
+        cls.template = (REPO_ROOT / "assets" / "base-mindmap-template.html").read_text(encoding="utf-8")
+
+    def test_render_html_returns_html_and_meta_without_io(self) -> None:
+        spec = {
+            "title": "테스트 주제",
+            "mode": "퀴즈형",
+            "center": {"title": "중심", "text": "설명"},
+            "branches": [{"title": "가지", "details": ["항목"]}],
+        }
+        html_text, meta = self.bm.render_html(spec, self.template)
+        self.assertNotIn("{{", html_text)
+        self.assertIn('data-mode="퀴즈형"', html_text)
+        self.assertEqual(meta["mode"], "퀴즈형")
+        self.assertEqual(meta["sides"], ["left"])
+        self.assertEqual(meta["warnings"], ["퀴즈형 모드인데 quiz 항목이 있는 브랜치가 없음"])
+
+    def test_render_html_unsupported_subject_falls_back_with_warning(self) -> None:
+        spec = {
+            "title": "테스트",
+            "subject": "철학",
+            "center": {"title": "중심", "text": "설명"},
+            "branches": [{"title": "가지"}],
+        }
+        html_text, meta = self.bm.render_html(spec, self.template)
+        self.assertEqual(meta["subject"], "")
+        self.assertNotIn("data-subject=", html_text.splitlines()[1])
+        self.assertIn("교과 '철학' 테마 미지원", meta["warnings"][0])
+
+    def test_build_raises_spec_error_with_korean_messages(self) -> None:
+        SCRATCH_OUT.mkdir(parents=True, exist_ok=True)
+        bad = SCRATCH_OUT / "bad-spec.json"
+        bad.write_text('{"title": "x"}', encoding="utf-8")
+        with self.assertRaises(self.bm.SpecError) as ctx:
+            self.bm.build(bad, SCRATCH_OUT / "bad-out")
+        self.assertIn("필수 키 누락: center", ctx.exception.errors)
+        self.assertIn("필수 키 누락: branches", ctx.exception.errors)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

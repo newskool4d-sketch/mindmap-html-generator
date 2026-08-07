@@ -219,30 +219,32 @@ def validate_spec(spec):
     return errors
 
 
-def build(spec_path, out_dir=None, template_path=None):
-    spec_path = Path(spec_path)
-    spec = json.loads(spec_path.read_text(encoding="utf-8"))
+class SpecError(ValueError):
+    """스펙 검증 실패. errors에 한국어 메시지 목록을 담는다."""
 
-    errors = validate_spec(spec)
-    if errors:
-        for err in errors:
-            print(f"[오류] {err}")
-        sys.exit(1)
+    def __init__(self, errors):
+        super().__init__("; ".join(errors))
+        self.errors = list(errors)
 
-    if template_path is None:
-        template_path = Path(__file__).resolve().parent.parent / "assets" / "base-mindmap-template.html"
-    template = Path(template_path).read_text(encoding="utf-8")
 
+def render_html(spec, template):
+    """검증된 spec과 템플릿 문자열로 최종 HTML을 만든다 (파일 I/O 없음).
+
+    반환: (html 문자열, meta dict) — meta 키: mode, subject, sides, warnings
+    """
+    warnings = []
     mode = spec.get("mode", "교과용")
     subject = (spec.get("subject") or "").strip()
     if subject and subject not in SUPPORTED_SUBJECTS:
-        print(f"[경고] 교과 '{subject}' 테마 미지원 — 기본 테마 적용 (지원: {', '.join(SUPPORTED_SUBJECTS)})")
+        warnings.append(
+            f"교과 '{subject}' 테마 미지원 — 기본 테마 적용 (지원: {', '.join(SUPPORTED_SUBJECTS)})"
+        )
         subject = ""
 
     branches = spec["branches"]
     sides = assign_sides(branches)
     if mode == "퀴즈형" and not any(b.get("quiz") for b in branches):
-        print("[경고] 퀴즈형 모드인데 quiz 항목이 있는 브랜치가 없음")
+        warnings.append("퀴즈형 모드인데 quiz 항목이 있는 브랜치가 없음")
 
     branch_html = "\n\n      ".join(
         build_branch_html(branch, i + 1, sides[i]) for i, branch in enumerate(branches)
@@ -266,15 +268,37 @@ def build(spec_path, out_dir=None, template_path=None):
         .replace("{{BRANCHES}}", branch_html)
         .replace("{{HINT}}", esc(spec.get("hint", default_hint)))
     )
+    return result, {"mode": mode, "subject": subject, "sides": sides, "warnings": warnings}
+
+
+def build(spec_path, out_dir=None, template_path=None):
+    spec_path = Path(spec_path)
+    spec = json.loads(spec_path.read_text(encoding="utf-8"))
+
+    errors = validate_spec(spec)
+    if errors:
+        raise SpecError(errors)
+
+    if template_path is None:
+        template_path = Path(__file__).resolve().parent.parent / "assets" / "base-mindmap-template.html"
+    template = Path(template_path).read_text(encoding="utf-8")
+
+    result, meta = render_html(spec, template)
+    for warning in meta["warnings"]:
+        print(f"[경고] {warning}")
 
     out_dir = Path(out_dir) if out_dir else spec_path.parent
     out_dir.mkdir(parents=True, exist_ok=True)
-    out_path = out_dir / f"{sanitize_filename(spec['title'])}_{mode}.html"
+    out_path = out_dir / f"{sanitize_filename(spec['title'])}_{meta['mode']}.html"
     out_path.write_text(result, encoding="utf-8")
 
+    sides = meta["sides"]
     left_count = sides.count("left")
     print(f"[완료] {out_path}")
-    print(f"  모드: {mode} / 교과 테마: {subject or '기본(그린)'} / 브랜치: {len(branches)}개 (좌 {left_count}·우 {len(branches) - left_count})")
+    print(
+        f"  모드: {meta['mode']} / 교과 테마: {meta['subject'] or '기본(그린)'} / "
+        f"브랜치: {len(sides)}개 (좌 {left_count}·우 {len(sides) - left_count})"
+    )
     return out_path
 
 
@@ -284,7 +308,12 @@ def main():
     parser.add_argument("-o", "--out-dir", default=None, help="출력 폴더 (기본: 스펙 파일 위치)")
     parser.add_argument("--template", default=None, help="템플릿 경로 (기본: 스킬 내장 템플릿)")
     args = parser.parse_args()
-    build(args.spec, args.out_dir, args.template)
+    try:
+        build(args.spec, args.out_dir, args.template)
+    except SpecError as err:
+        for message in err.errors:
+            print(f"[오류] {message}")
+        sys.exit(1)
 
 
 if __name__ == "__main__":
