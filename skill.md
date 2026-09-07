@@ -1,10 +1,6 @@
 ---
 name: mindmap-html-generator
-description: |
-  한국어 HTML 마인드맵 생성 스킬 — JSON 스펙 → 자동 빌드, 13개 교과 테마,
-  교과용·발표용·퀴즈형 모드. "마인드맵/개념도(concept map) 만들어줘" 등 명시 요청,
-  그리고 주제를 가지(브랜치) 형태로 시각 구조화해달라는 요청이면
-  스킬 이름을 언급하지 않더라도 이 스킬을 사용할 것.
+description: "JSON 스펙에서 한국어 HTML 마인드맵·개념도 생성(교과 테마·퀴즈 모드). 마인드맵·개념도·가지형 시각 구조화 요청 시."
 ---
 
 # Mindmap HTML Generator
