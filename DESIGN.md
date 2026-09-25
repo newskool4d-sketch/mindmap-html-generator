@@ -51,7 +51,7 @@ Subject themes may shift `--center-*` and `--line-connector`, but must not overr
 - Keep accent color tied to meaning: subject identity, focus, connector direction, or interaction state.
 - Treat `--text-primary`, `--text-secondary`, `--focus-ring`, and `--surface-control` as contrast-sensitive tokens for classroom projection and keyboard use.
 - Never use exact reference-brand colors as defaults.
-- No bokeh, orbs, generic AI gradients, marketplace chrome, IDE mockups, campaign imagery, or retro stickers.
+- No bokeh, orbs, page- or board-wide decorative gradient backgrounds (e.g. purple-to-blue sweeps), gradient-filled headline text, marketplace chrome, IDE mockups, campaign imagery, or retro stickers. Subject-theme tokens (canvas tint, `--center-start` / `--center-end`, `--line-connector`) and `--paper-sheen` are exempt.
 - Branch note surfaces must span at least 6 distinct hue families in every subject theme. Subject identity lives in the canvas tint, center node, and connectors (legacy override surface `--bg`, `--center1/2`, `--line`) — never by collapsing note colors into a single hue.
 
 ## 3. Typography

@@ -79,7 +79,7 @@ The `achievement-standard note` field may hold a plain human-authored note, but 
     "grade_band": "elementary 3-4",
     "audience_level": "introductory",
     "focus_question": "물이 모습과 위치를 바꾸며 순환하는 이유는 무엇인가?",
-    "lesson_purpose": "물의 순환 과정을 주요 개념과 관계 중심으로 설명한다.",
+    "lesson_purpose": "정리",
     "achievement_standard_note": "공식 교육과정 성취기준 매핑은 포함하지 않은 교사용 메모입니다.",
     "prior_knowledge": ["물의 세 가지 상태", "날씨 현상"],
     "misconceptions": ["구름은 수증기 자체라는 오해", "증발은 끓을 때만 일어난다는 오해"],
