@@ -126,14 +126,14 @@ def build_pedagogy_html(pedagogy):
 
 def build_branch_html(branch, index, side):
     title = esc(branch["title"])
-    icon = branch.get("icon", "").strip()
+    icon = (branch.get("icon") or "").strip()
     icon_html = f'<i class="bi {esc(icon)}"></i> ' if icon else ""
     content_id = f"branch-{index}-content"
     sub_html = ""
     if branch.get("sub"):
         sub_html = f'\n    <div class="node-sub">{esc(branch["sub"])}</div>'
 
-    details = "\n".join(f"      <li>{esc(item)}</li>" for item in branch.get("details", []))
+    details = "\n".join(f"      <li>{esc(item)}</li>" for item in (branch.get("details") or []))
     quiz_html = ""
     quiz = branch.get("quiz")
     if quiz:
@@ -180,24 +180,53 @@ def sanitize_filename(name):
 
 def validate_spec(spec):
     errors = []
+    if not isinstance(spec, dict):
+        return ["스펙 최상위는 JSON 객체여야 함"]
     for key in ("title", "center", "branches"):
         if key not in spec:
             errors.append(f"필수 키 누락: {key}")
+    for key in ("title", "description", "hint", "subject"):
+        if key in spec and spec[key] is not None and not isinstance(spec[key], str):
+            errors.append(f"{key}는 문자열이어야 함")
     if "center" in spec:
-        for key in ("title", "text"):
-            if key not in spec["center"]:
-                errors.append(f"center.{key} 누락")
+        if not isinstance(spec["center"], dict):
+            errors.append("center는 객체({title, text})여야 함")
+        else:
+            for key in ("title", "text"):
+                if key not in spec["center"]:
+                    errors.append(f"center.{key} 누락")
+                elif not isinstance(spec["center"][key], str):
+                    errors.append(f"center.{key}는 문자열이어야 함")
     branches = spec.get("branches", [])
-    if not branches:
+    if not isinstance(branches, list):
+        errors.append("branches는 목록이어야 함")
+        branches = []
+    elif not branches:
         errors.append("branches가 비어 있음")
     if len(branches) > MAX_BRANCHES:
         errors.append(f"브랜치 {len(branches)}개 — 최대 {MAX_BRANCHES}개 (인접 항목을 통합할 것)")
     for i, branch in enumerate(branches, 1):
+        if not isinstance(branch, dict):
+            errors.append(f"branches[{i}]는 객체여야 함")
+            continue
         if "title" not in branch:
             errors.append(f"branches[{i}].title 누락")
+        for key in ("title", "sub", "icon", "side"):
+            if branch.get(key) is not None and not isinstance(branch[key], str):
+                errors.append(f"branches[{i}].{key}는 문자열이어야 함")
+        details = branch.get("details")
+        if details is not None and (
+            not isinstance(details, list) or any(not isinstance(d, str) for d in details)
+        ):
+            errors.append(f"branches[{i}].details는 문자열 목록이어야 함")
         quiz = branch.get("quiz")
-        if quiz and ("q" not in quiz or "a" not in quiz):
-            errors.append(f"branches[{i}].quiz는 q와 a가 모두 필요")
+        if quiz is not None:
+            if not isinstance(quiz, dict):
+                errors.append(f"branches[{i}].quiz는 객체({{q, a}})여야 함")
+            elif "q" not in quiz or "a" not in quiz:
+                errors.append(f"branches[{i}].quiz는 q와 a가 모두 필요")
+            elif not all(isinstance(quiz[k], str) for k in ("q", "a")):
+                errors.append(f"branches[{i}].quiz.q/a는 문자열이어야 함")
     pedagogy = spec.get("pedagogy")
     if pedagogy is not None:
         if not isinstance(pedagogy, dict):
@@ -257,23 +286,32 @@ def render_html(spec, template):
         result = result.replace('data-subject="{{SUBJECT}}"', f'data-subject="{esc(subject)}"')
     else:
         result = result.replace(' data-subject="{{SUBJECT}}"', "")
-    result = (
-        result
-        .replace("{{MODE}}", esc(mode))
-        .replace("{{TITLE}}", esc(spec["title"]))
-        .replace("{{DESCRIPTION}}", esc(spec.get("description", "")))
-        .replace("{{CENTER_TITLE}}", esc(spec["center"]["title"]))
-        .replace("{{CENTER_TEXT}}", esc(spec["center"]["text"]))
-        .replace("{{PEDAGOGY}}", pedagogy_html)
-        .replace("{{BRANCHES}}", branch_html)
-        .replace("{{HINT}}", esc(spec.get("hint", default_hint)))
-    )
+    # 자리표시자를 한 번에 치환 — 연쇄 replace 는 title 에 "{{BRANCHES}}" 같은 값이 들어오면
+    # 앞 치환 결과 안의 문자열을 뒤 치환이 다시 바꿔 중복 id·구조 깨짐이 생긴다
+    values = {
+        "MODE": esc(mode),
+        "TITLE": esc(spec["title"]),
+        "DESCRIPTION": esc(spec.get("description") or ""),
+        "CENTER_TITLE": esc(spec["center"]["title"]),
+        "CENTER_TEXT": esc(spec["center"]["text"]),
+        "PEDAGOGY": pedagogy_html,
+        "BRANCHES": branch_html,
+        "HINT": esc(spec.get("hint") or default_hint),
+    }
+    result = re.sub(r"\{\{([A-Z_]+)\}\}", lambda m: values.get(m.group(1), m.group(0)), result)
     return result, {"mode": mode, "subject": subject, "sides": sides, "warnings": warnings}
 
 
 def build(spec_path, out_dir=None, template_path=None):
     spec_path = Path(spec_path)
-    spec = json.loads(spec_path.read_text(encoding="utf-8"))
+    try:
+        spec = json.loads(spec_path.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        raise SpecError([f"스펙 파일 없음: {spec_path}"])
+    except UnicodeDecodeError as err:
+        raise SpecError([f"스펙 파일을 UTF-8로 읽을 수 없음: {err.reason}"])
+    except json.JSONDecodeError as err:
+        raise SpecError([f"JSON 문법 오류: {err.msg} (line {err.lineno}, col {err.colno})"])
 
     errors = validate_spec(spec)
     if errors:
@@ -281,7 +319,10 @@ def build(spec_path, out_dir=None, template_path=None):
 
     if template_path is None:
         template_path = Path(__file__).resolve().parent.parent / "assets" / "base-mindmap-template.html"
-    template = Path(template_path).read_text(encoding="utf-8")
+    try:
+        template = Path(template_path).read_text(encoding="utf-8")
+    except OSError as err:
+        raise SpecError([f"템플릿을 읽을 수 없음: {template_path} ({err.strerror})"])
 
     result, meta = render_html(spec, template)
     for warning in meta["warnings"]:
